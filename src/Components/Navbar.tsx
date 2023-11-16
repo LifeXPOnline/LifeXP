@@ -13,12 +13,16 @@ const Navbar = () =>{
     return(
     <div >
         {/* options not opened */}
-        <div className='flex flex-row justify-between py-2' >
+        <div className='flex flex-row justify-between py-2 z-50' >
             <div className='flex flex-row justify-center items-center space-x-2'> 
-                <div className='bg-white border-2 border-black w-[25px] h-[25px] ml-6'></div><h1 className='text-lg'>Life XP</h1>
+                <div className='bg-gray-300 border-2 border-black w-[25px] h-[25px] ml-6'></div>
+                <h1 className='text-md'>Life XP</h1>
             </div>
             <div className=''>
-                <RxHamburgerMenu size={30} className='cursor-pointer mr-6' onClick={()=>{setHamburgerOption(!hamburgerOption)}}/>
+                <RxHamburgerMenu 
+                    size={28} 
+                    className='cursor-pointer mr-6' 
+                    onClick={()=>{setHamburgerOption(!hamburgerOption)}}/>
             </div>
         </div>
 
@@ -27,7 +31,7 @@ const Navbar = () =>{
             
             <div className='absolute top-3 right-4'>
                 <RxHamburgerMenu 
-                    size={30}
+                    size={28}
                     className='cursor-pointer' 
                     onClick={()=>{setHamburgerOption(!hamburgerOption)}}
                 />
