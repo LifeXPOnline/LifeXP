@@ -3,7 +3,18 @@
 @tailwind utilities;
 
 
+.icon-hover {
+  transition: transform 0.3s ease;
+}
+
+.icon-hover:hover {
+  transform: scale(1.2); /* Adjust the scale value to control the size increase */
+}
+
+
+
 .custom-checkbox {
+  cursor: pointer;
   border-radius: 0; /* Sharp edges */
   border-width: 2px; /* Bolder border */
   border-color: black; /* Darker border */
