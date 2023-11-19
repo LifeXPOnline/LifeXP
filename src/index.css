@@ -4,7 +4,7 @@
 
 
 .icon-hover {
-  transition: transform 0.3s ease;
+  transition: transform 0.15s ease;
 }
 
 .icon-hover:hover {
@@ -15,13 +15,13 @@
 
 .custom-checkbox {
   cursor: pointer;
-  border-radius: 0; /* Sharp edges */
-  border-width: 2px; /* Bolder border */
-  border-color: black; /* Darker border */
-  accent-color: #3a3a3a; /* Grayish-black check */
+  border-radius: 0; 
+  border-width: 2px; 
+  border-color: black;
+  accent-color: #3a3a3a; 
 }
 
-
+/* 
 .hover-lift {
     position: relative;
     transition: transform 0.2s;
@@ -32,7 +32,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Your shadow here */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     top: 0;
     left: 0;
     z-index: -1;
@@ -44,6 +44,6 @@
   }
   
   .hover-lift:hover::before {
-    opacity: 0; /* Hide the shadow on hover */
+    opacity: 0; 
   }
-  
+   */

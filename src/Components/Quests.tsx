@@ -5,6 +5,7 @@ const Quests = ()=> {
         <h1 className="underline mb-10">My Quests</h1>
         <div className="w-96 h-4/5 border border-black">
             Daily Quests
+            
         </div>
     </div>)
 }
