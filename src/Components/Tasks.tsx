@@ -27,7 +27,7 @@ const Tasks = () => {
             <div className=" ">
                 <div className="flex justify-between"><h1 className="text-normal mb-2">Fitness</h1> <button><CiSquarePlus size={25} className="icon-hover"/></button>
 </div>
-                <div className="flex justify-between w-96 h-32 border custom-gray border-black shadow-sharp  cursor-pointer hover:translate-y-[-5px] transition-transform duration-200 cursor-pointer" >
+                <div className="flex justify-between w-96 h-32 border custom-gray border-black shadow-sharp hover:translate-y-[-5px] transition-transform duration-200 cursor-pointer" >
                     <div className="ml-6 mt-4 space-y-4">
                         <form className="flex items-center">
                             <input type="checkbox" name="category" id="fitness" className="custom-checkbox form-radio h-5 w-5 rounded-none text-gray-600" />
