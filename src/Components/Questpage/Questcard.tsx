@@ -24,7 +24,7 @@ return(
                 <h1 className="text-sm mb-1">Reward</h1>
                 <h1 className="text-sm tracking-normal font-bold">500 XP</h1>
             </div>
-            <button className="bg-gray-800 text-white w-28 h-10 rounded-md text-xs">
+            <button className="bg-gray-800 text-white w-28 h-10 rounded-md text-xs hover:bg-gray-600">
                 Accept
             </button>
         </div>

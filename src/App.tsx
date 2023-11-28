@@ -1,6 +1,6 @@
 import Navbar from "./Components/Navbar"
-import Home from "./Components/Home"
-import Quests from "./Components/Quests"
+import Home from "./Components/Homepage/Home"
+import Quests from "./Components/Questpage/Quests"
 import './index.css'
 function App() {
 
