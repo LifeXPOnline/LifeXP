@@ -6,6 +6,7 @@ import { FaTree } from "react-icons/fa";
 import { PiSmileyFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";
 import { FaDoorOpen } from "react-icons/fa";
+import { MdGamepad } from "react-icons/md";
 // import { BsFillDpadFill } from "react-icons/bs";
 
 const Navbar = () =>{
@@ -14,9 +15,9 @@ const Navbar = () =>{
     <div >
         {/* options not opened */}
         <div className='flex flex-row justify-between py-2 z-50' >
-            <div className='flex flex-row justify-center items-center space-x-2'> 
-                <div className='bg-gray-300 border-2 border-black w-[25px] h-[25px] ml-6'></div>
-                <h1 className='text-md'>Life XP</h1>
+            <div className='flex flex-row justify-center items-center ml-6'> 
+                <div><MdGamepad size = {24}/></div>
+                <h1 className='text-md ml-2' >Life XP</h1>
             </div>
             <div className=''>
                 <RxHamburgerMenu 
