@@ -4,7 +4,7 @@ import MyQuests from "./MyQuests"
 
 const Quests = () =>{
     return (<div>
-        <div className="hidden==">
+        <div className="hidden">
             <AcceptedQuests />
         </div>
         <div className="block">

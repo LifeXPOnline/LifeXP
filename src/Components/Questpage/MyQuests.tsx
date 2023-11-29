@@ -2,7 +2,7 @@ import Questcard from "./Questcard";
 import { FaFilter } from "react-icons/fa";
 
 const MyQuests = ()=> {
-    return(<div className="h-screen md:w-[99%] border-[1.5px] border-black mt-[6px]">
+    return(<div className="h-screen md:w-[99%] border-[1.5px] border-black mt-[10px]">
         <div className="flex flex-col  items-center">
                 {/* header and options */}
                 <div className=" w-full flex flex-row justify-between mt-3">

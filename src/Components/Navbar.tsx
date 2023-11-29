@@ -25,7 +25,7 @@ const Navbar = () =>{
     return(
     <div >
         {/* options not opened */}
-        <div className='flex flex-row justify-between py-2 border-[1.5px] border-black  md:w-[99%]' >
+        <div className='flex flex-row justify-between py-2 border-[1.5px] border-black md:w-[99%]' >
             <div className='flex flex-row justify-center items-center ml-6'> 
                 {/* <div><MdGamepad size = {24}/></div> */}
                 {gameIcon()}
@@ -35,14 +35,15 @@ const Navbar = () =>{
                 <RxHamburgerMenu 
                     size={28} 
                     className='cursor-pointer mr-6' 
-                    onClick={()=>{setHamburgerOption(!hamburgerOption)}}/>
+                    onClick={()=>{setHamburgerOption(!hamburgerOption)}}
+                />
             </div>
         </div>
 
         {/* options opened - small screens */}
         <div className={`${hamburgerOption?'block':'hidden'} flex flex-col items-center justify-center fixed inset-0 bg-slate-50 `}>
             
-            <div className='absolute top-3 right-4'>
+            <div className='absolute top-[9px] right-[25.5px]'>
                 <RxHamburgerMenu 
                     size={28}
                     className='cursor-pointer' 
