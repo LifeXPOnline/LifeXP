@@ -1,7 +1,7 @@
-const Accepted = () => {
+const AcceptedQuests = () => {
     return(<div>
-        
+        You don't have any quests yet
     </div>)
 }
 
-export default Accepted
+export default AcceptedQuests

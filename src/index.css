@@ -47,3 +47,26 @@
     opacity: 0; 
   }
    */
+
+   /* For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;  /* Width of the vertical scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D9D9;  /* Color of the scroll thumb */
+  border-radius: 10px;
+  border: 1.5px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5c5c5c;  /* Color of the scroll thumb on hover */
+  border-radius: 10px;
+  border: 1.5px solid black;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}

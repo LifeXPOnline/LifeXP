@@ -1,15 +1,17 @@
 import { GiBiceps } from "react-icons/gi";
 import { FaStar } from "react-icons/fa";
+
 const Questcard = () =>{
 return(
-    <div className=" flex flex-col space-y-5 items-center justify-center rounded-xl border-black w-64 h-[450px] border-1 shadow-sharp">
-            <h1 className="tracking-widest text-sm ">Fitness</h1>
+    <div className="flex flex-col space-y-5 items-center justify-center rounded-xl border-black w-64 h-[450px] border-1 shadow-sharp-sm 
+                    hover:translate-y-[-5px] transition-transform duration-200 cursor-default">
+            <h1 className="tracking-widest text-sm ">Fitness</h1> 
 
             <GiBiceps size={55}/>
            
             <div className="ml-3 ">
                 <div className="h-[82px] mt-2 mb-2">
-                    <p className=" text-xs text-center tracking-wide ">
+                    <p className=" text-xs text-center tracking-wide">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium perferendis! Explicabo adipisci eius provident
                     </p>
                 </div>
@@ -27,7 +29,7 @@ return(
             <button className="bg-gray-800 text-white w-28 h-10 rounded-md text-xs hover:bg-gray-600">
                 Accept
             </button>
-        </div>
+    </div>
 )
 }
 export default Questcard

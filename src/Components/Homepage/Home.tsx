@@ -1,4 +1,4 @@
-import Tasks from "../Tasks";
+import Tasks from "./Tasks";
 
 const Home = ()=> {
     return(
