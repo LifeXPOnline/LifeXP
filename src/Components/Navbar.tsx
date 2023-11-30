@@ -33,7 +33,7 @@ const Navbar = () =>{
             </div>
             <div className=''>
                 <RxHamburgerMenu 
-                    size={28} 
+                    size={25} 
                     className='cursor-pointer mr-6' 
                     onClick={()=>{setHamburgerOption(!hamburgerOption)}}
                 />
@@ -45,7 +45,7 @@ const Navbar = () =>{
             
             <div className='absolute top-[9px] right-[25.5px]'>
                 <RxHamburgerMenu 
-                    size={28}
+                    size={25}
                     className='cursor-pointer' 
                     onClick={()=>{setHamburgerOption(!hamburgerOption)}}
                 />
