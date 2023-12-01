@@ -2,7 +2,9 @@ import Questcard from "./Questcard";
 import { FaFilter } from "react-icons/fa";
 
 const MyQuests = ()=> {
-    return(<div className="h-screen md:w-[99%] border-[1.5px] border-black mt-[10px]">
+    return(
+    <div className="md:flex md:justify-center">
+    <div className="h-full  md:w-[99%] md:border-[1.5px] md:border-black md:mt-[10px]">
         <div className="flex flex-col  items-center">
                 {/* header and options */}
                 <div className=" w-full flex flex-row justify-between mt-3">
@@ -17,9 +19,16 @@ const MyQuests = ()=> {
                     </button>
                     
                 </div>
-                <Questcard />
+                <div className="flex flex-col justify-center">
+                <Questcard title="Daily Quest" reward="300 XP"/>
+                <Questcard title="Fitness" reward="500 XP" />
+                <Questcard title="Work" reward="200 XP" />
+                <Questcard title="Personal" reward="180 XP"/>
+                
+                </div>
             </div>
         
+    </div>
     </div>
     )
 }

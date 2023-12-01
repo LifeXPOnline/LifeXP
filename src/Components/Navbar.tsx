@@ -23,9 +23,9 @@ const Navbar = () =>{
             </svg>    
     }
     return(
-    <div >
+    <div className='md:flex md:justify-center'>
         {/* options not opened */}
-        <div className='flex flex-row justify-between py-2 border-[1.5px] border-black md:w-[99%]' >
+        <div className='flex flex-row justify-between py-2 md:border-[1.5px] md:border-black md:w-[99%]' >
             <div className='flex flex-row justify-center items-center ml-6'> 
                 {/* <div><MdGamepad size = {24}/></div> */}
                 {gameIcon()}
