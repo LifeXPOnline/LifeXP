@@ -26,6 +26,10 @@ export default {
       },
       colors: {
         'custom-gray': '#f9f9f9',
+        'quest-gray1': '#D9D9D9',
+        'quest-gray2': '#393939',
+        'quest-gray3': '#8C8C8C',
+        'quest-gray4': '#757575'
       },
     },
   },

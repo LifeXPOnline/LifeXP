@@ -6,12 +6,12 @@ import Checkin from "./Components/CheckinPage/Checkin"
 function App() {
 
   return (
-    <div className="items-center bg-slate-50 font-source-code-pro tracking-tight">
+    <div className=" bg-slate-50 font-source-code-pro tracking-tight">
       <Navbar />
       <div className="hidden">
         <Home />
       </div>
-      <div className="block===">
+      <div className="block">
         <Quests />
       </div>
       <div className="hidden">

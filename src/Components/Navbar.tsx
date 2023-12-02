@@ -23,25 +23,60 @@ const Navbar = () =>{
             </svg>    
     }
     return(
-    <div className='md:flex md:justify-center'>
+    <div className='md:flex md:justify-center w-full bg-slate-50 fixed z-50'>
         {/* options not opened */}
-        <div className='flex flex-row justify-between py-2 md:border-[1.5px] md:border-black md:w-[99%]' >
+        <div className='flex flex-row justify-between py-3 md:border-[1.5px] md:border-black md:w-[99%]' >
             <div className='flex flex-row justify-center items-center ml-6'> 
                 {/* <div><MdGamepad size = {24}/></div> */}
                 {gameIcon()}
-                <h1 className='text-md ml-2' >Life XP</h1>
+                <h1 className='text-lg ml-2' >Life XP</h1>
             </div>
-            <div className=''>
+            <div className='md:hidden'>
                 <RxHamburgerMenu 
                     size={25} 
                     className='cursor-pointer mr-6' 
                     onClick={()=>{setHamburgerOption(!hamburgerOption)}}
                 />
             </div>
+
+            <ul className='hidden md:flex flex-row  space-x-9'>
+                <li className='flex items-center cursor-pointer'>
+                    <div className='flex flex-row justify-center items-center space-x-2 border-2 py-1 border-black rounded-3xl w-28'>
+                        <MdHome size = {30}/>
+                        <span className='tracking-wide'>
+                            Home
+                        </span>
+                    </div>
+                </li>
+                <li className='flex items-center space-x-3 cursor-pointer'>
+                    <GiScrollUnfurled size = {24}/>
+                    <span>
+                        Quests
+                    </span>
+                </li>
+                <li className='flex items-center space-x-2 cursor-pointer'>
+                    <FaTree size = {26}/>
+                    <span>
+                        Skill Tree
+                    </span>
+                </li>
+                <li className='flex items-center space-x-2 cursor-pointer'>
+                    <PiSmileyFill size = {27}/>
+                    <span>
+                        Check-in
+                    </span>
+                </li>
+                
+            </ul>
+
+            {/* profile circle icon */}
+            <div className='hidden md:flex border border-black rounded-full w-[40px] h-[40px] mr-4 cursor-pointer'>
+        
+            </div>
         </div>
 
         {/* options opened - small screens */}
-        <div className={`${hamburgerOption?'block':'hidden'} flex flex-col items-center justify-center fixed inset-0 bg-slate-50 `}>
+        <div className={`${hamburgerOption?'block':'hidden'} flex flex-col items-center justify-center fixed inset-0 bg-slate-50 z-50`}>
             
             <div className='absolute top-[9px] right-[25.5px]'>
                 <RxHamburgerMenu 
@@ -94,7 +129,9 @@ const Navbar = () =>{
                <h1>Logout</h1> <FaDoorOpen size={23}/>
             </div>
         </div>
-
+        <div className='flex justify-center items-center'>
+        <div className=' border-b-[1.5px] border-black w-[95%]'></div>
+        </div>
     </div>
     )
 }
