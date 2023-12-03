@@ -11,10 +11,10 @@ function App() {
       <div className="hidden">
         <Home />
       </div>
-      <div className="block">
+      <div className="hidden">
         <Quests />
       </div>
-      <div className="hidden">
+      <div className="block">
         <Checkin />
       </div>
     </div>

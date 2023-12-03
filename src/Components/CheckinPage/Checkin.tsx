@@ -1,4 +1,5 @@
-import { HiEmojiHappy } from "react-icons/hi";
+// import { HiEmojiHappy } from "react-icons/hi";
+import Moodcard from "./Moodcard";
 
 const Checkin = () => {
 
@@ -8,6 +9,7 @@ const Checkin = () => {
             </svg>
         
     }
+
 
     return(
     <div className="border-[1.5px] border-black h-screen md:w-[99%]">
@@ -21,18 +23,13 @@ const Checkin = () => {
                 How's your mood today?
             </h1>
             {/* Mood cards */}
-            <div>
-                <div className=" flex flex-col items-center w-28 h-44 
-                rounded-md border-[1.2px] border-black shadow-sharp-md">
-                    
-                    <h1 className="mt-1 mb-2">
-                        Happy
-                    </h1>
-
-                    {Happy()}
-
-                    <button className="h-8 w-20 mt-6 rounded-md bg-black text-white border border-black">Select</button>
-                </div>
+            <div className="flex flex-row space-x-6">
+                <Moodcard Mood = {Happy()} />
+                <Moodcard Mood = {Happy()} />
+                <Moodcard Mood = {Happy()} />
+                <Moodcard Mood = {Happy()} />
+                <Moodcard Mood = {Happy()} />
+                <Moodcard Mood = {Happy()} />
             </div>
 
         </div>
