@@ -25,8 +25,8 @@ const Navbar = () =>{
     return(
     <div className='md:flex md:justify-center w-full bg-slate-50 fixed z-50'>
         {/* options not opened */}
-        <div className='flex flex-row justify-between py-3 md:border-[1.5px] md:border-black md:w-[99%]' >
-            <div className='flex flex-row justify-center items-center ml-6'> 
+        <div className='flex flex-row justify-between py-3 md:border-[1.2px] md:border-black md:w-[99%]' >
+            <div className='flex flex-row icon-hover justify-center items-center ml-6 cursor-default'> 
                 {/* <div><MdGamepad size = {24}/></div> */}
                 {gameIcon()}
                 <h1 className='text-lg ml-2' >Life XP</h1>
@@ -41,26 +41,26 @@ const Navbar = () =>{
 
             <ul className='hidden md:flex flex-row  space-x-9'>
                 <li className='flex items-center cursor-pointer'>
-                    <div className='flex flex-row justify-center items-center space-x-2 border-2 py-1 border-black rounded-3xl w-28'>
+                    <div className='flex flex-row icon-hover justify-center items-center space-x-2 border-[1.5px] py-1 border-black shadow-sharp-sm rounded-3xl w-28'>
                         <MdHome size = {30}/>
                         <span className='tracking-wide'>
                             Home
                         </span>
                     </div>
                 </li>
-                <li className='flex items-center space-x-3 cursor-pointer'>
+                <li className='flex items-center icon-hover space-x-3 cursor-pointer'>
                     <GiScrollUnfurled size = {24}/>
                     <span>
                         Quests
                     </span>
                 </li>
-                <li className='flex items-center space-x-2 cursor-pointer'>
+                <li className='flex items-center icon-hover space-x-2 cursor-pointer'>
                     <FaTree size = {26}/>
                     <span>
                         Skill Tree
                     </span>
                 </li>
-                <li className='flex items-center space-x-2 cursor-pointer'>
+                <li className='flex items-center icon-hover space-x-2 cursor-pointer'>
                     <PiSmileyFill size = {27}/>
                     <span>
                         Check-in

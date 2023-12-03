@@ -10,9 +10,11 @@ const Checkin = () => {
     }
 
     return(
-    <div className="border-[1.5px] border-black mt-[10px] h-screen md:w-[99%]">
-        <button>
-
+    <div className="border-[1.5px] border-black h-screen md:w-[99%]">
+       
+       <div className="mt-16">
+         <button>
+            3
         </button>
         <div className="flex flex-col items-center">
             <h1 className="mb-4">
@@ -34,7 +36,7 @@ const Checkin = () => {
             </div>
 
         </div>
-
+        </div>
     </div>)
 }
 export default Checkin
