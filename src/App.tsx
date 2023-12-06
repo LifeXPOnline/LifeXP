@@ -8,10 +8,10 @@ function App() {
   return (
     <div className=" bg-slate-50 font-source-code-pro tracking-tight">
       <Navbar />
-      <div className="hidden">
+      <div className="block">
         <Home />
       </div>
-      <div className="block">
+      <div className="hidden">
         <Quests />
       </div>
       <div className="hidden">

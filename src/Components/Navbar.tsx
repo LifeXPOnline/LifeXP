@@ -24,7 +24,7 @@ const Navbar = () =>{
     }
     return(
     <div className='md:flex md:justify-center w-full bg-slate-50 fixed z-50'>
-        {/* options not opened */}
+        {/* hamburger not opened */}
         <div className='flex flex-row justify-between py-3 md:border-[1.2px] md:border-black md:w-[99%] rounded-md' >
             <div className='flex flex-row icon-hover justify-center items-center ml-6 cursor-default'> 
                 {/* <div><MdGamepad size = {24}/></div> */}
@@ -41,26 +41,26 @@ const Navbar = () =>{
 
             <ul className='hidden md:flex flex-row  space-x-9'>
                 <li className='flex items-center cursor-pointer'>
-                    <div className='flex flex-row icon-hover justify-center items-center space-x-2 border-[1.5px] py-1 border-black shadow-sharp-sm rounded-3xl w-28'>
+                    <div className='flex flex-row icon-hover2 justify-center items-center space-x-2 border-[1.5px] py-1 border-black shadow-sharp-sm rounded-3xl w-28'>
                         <MdHome size = {30}/>
                         <span className='tracking-wide'>
                             Home
                         </span>
                     </div>
                 </li>
-                <li className='flex items-center icon-hover space-x-3 cursor-pointer'>
+                <li className='flex items-center icon-hover2 space-x-3 cursor-pointer'>
                     <GiScrollUnfurled size = {24}/>
                     <span>
                         Quests
                     </span>
                 </li>
-                <li className='flex items-center icon-hover space-x-2 cursor-pointer'>
+                <li className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
                     <FaTree size = {26}/>
                     <span>
                         Skill Tree
                     </span>
                 </li>
-                <li className='flex items-center icon-hover space-x-2 cursor-pointer'>
+                <li className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
                     <PiSmileyFill size = {27}/>
                     <span>
                         Check-in
@@ -75,7 +75,7 @@ const Navbar = () =>{
             </div>
         </div>
 
-        {/* options opened - small screens */}
+        {/* hamburger opened - small screens */}
         <div className={`${hamburgerOption?'block':'hidden'} flex flex-col items-center justify-center fixed inset-0 bg-slate-50 z-50`}>
             
             <div className='absolute top-[9px] right-[25.5px]'>
@@ -130,7 +130,7 @@ const Navbar = () =>{
             </div>
         </div>
         <div className='flex justify-center items-center'>
-        <div className=' border-b-[1.5px] border-black w-[95%]'></div>
+        {/* <div className=' border-b-[1.5px] border-black w-[95%]'></div> */}
         </div>
     </div>
     )

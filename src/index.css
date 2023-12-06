@@ -5,10 +5,18 @@
 
 .icon-hover {
   transition: transform 0.15s ease;
+ 
 }
-
+.icon-hover2 {
+  transition: transform 0.15s ease;
+ 
+}
 .icon-hover:hover {
   transform: scale(1.2); /* Adjust the scale value to control the size increase */
+}
+.icon-hover2:hover {
+  transform: scale(1.05); /* Adjust the scale value to control the size increase */
+  text-decoration: underline;
 }
 
 
