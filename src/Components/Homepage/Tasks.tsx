@@ -6,10 +6,10 @@ import { IoIosCheckbox } from "react-icons/io";
 
 const Tasks = () => {
     return (
-        <div className="flex flex-col items-center h-screen  space-y-6">
+        <div className="flex flex-col md:border md:border-black md:w-5/6 items-center h-screen  space-y-6">
             
             <div className="flex flex-row mt-20 items-center justify-between w-96">
-                <div className="ml-0 flex items-center justify-center h-11 w-11 border-1 
+                <div className="ml-0 md:hidden flex items-center justify-center h-11 w-11 border-1 
                                 bg-slate-100 border-black shadow-sharp-sm cursor-pointer 
                                 hover:translate-y-[-5px] transition-transform duration-200">
                     <h1 className="tracking-wide ">XP</h1>
@@ -25,9 +25,10 @@ const Tasks = () => {
             
             {/* Fitness */}
             <div className=" ">
-                <div className="flex justify-between"><h1 className="text-normal mb-2">Fitness</h1> <button><CiSquarePlus size={25} className="icon-hover"/></button>
+                <div className="flex justify-between">
+                    <h1 className="text-normal mb-2">Fitness</h1> <button><CiSquarePlus size={25} className="icon-hover"/></button>
 </div>
-                <div className="flex justify-between w-96 h-32 border custom-gray border-black shadow-sharp hover:translate-y-[-5px] transition-transform duration-200 cursor-pointer" >
+                <div className="flex justify-between w-96 md:w-[828px] h-32 border custom-gray border-black shadow-sharp hover:translate-y-[-5px] transition-transform duration-200 cursor-pointer" >
                     <div className="ml-6 mt-4 space-y-4">
                         <form className="flex items-center">
                             <input type="checkbox" name="category" id="fitness" className="custom-checkbox form-radio h-5 w-5 rounded-none text-gray-600" />
@@ -55,7 +56,7 @@ const Tasks = () => {
                     <h1 className="text-normal mb-2">Work</h1> 
                     <button><CiSquarePlus size={25} className="icon-hover"/></button>
                 </div>
-                <div className="w-96 h-24 border custom-gray border-black shadow-sharp hover:translate-y-[-5px] transition-transform duration-200 cursor-pointer">
+                <div className="w-96 md:w-[828px] h-24 border custom-gray border-black shadow-sharp hover:translate-y-[-5px] transition-transform duration-200 cursor-pointer">
                     <div className="ml-6 mt-4 space-y-4">
                         <form className="flex items-center">
                             <input type="checkbox" name="category" id="fitness" className="custom-checkbox form-radio h-5 w-5 text-gray-600" />
@@ -76,7 +77,7 @@ const Tasks = () => {
                     <h1 className="text-normal mb-2">Personal</h1> 
                     <button><CiSquarePlus size={25} className="icon-hover"/></button>
                 </div>
-                <div className="w-96 h-32 border custom-gray border-black shadow-sharp hover:translate-y-[-5px] transition-transform duration-200 cursor-pointer">
+                <div className="w-96 md:w-[828px] h-32 border custom-gray border-black shadow-sharp hover:translate-y-[-5px] transition-transform duration-200 cursor-pointer">
                     <div className="ml-6 mt-4 space-y-4">
                         <form className="flex items-center">
                             <input type="checkbox" name="category" id="fitness" className="custom-checkbox form-radio h-5 w-5 text-gray-600" />

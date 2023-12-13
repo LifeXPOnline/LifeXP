@@ -38,17 +38,17 @@ const Navbar = () =>{
                     onClick={()=>{setHamburgerOption(!hamburgerOption)}}
                 />
             </div>
-
+            
             <ul className='hidden md:flex flex-row  space-x-9'>
                 <li className='flex items-center cursor-pointer'>
-                    <div className='flex flex-row icon-hover2 justify-center items-center space-x-2 border-[1.5px] py-1 border-black shadow-sharp-sm rounded-3xl w-28'>
+                    <div className='flex flex-row icon-hover2 justify-center items-center space-x-1 border-[1.5px] py-1 border-black shadow-sharp-sm rounded-3xl w-28'>
                         <MdHome size = {30}/>
                         <span className='tracking-wide'>
                             Home
                         </span>
                     </div>
                 </li>
-                <li className='flex items-center icon-hover2 space-x-3 cursor-pointer'>
+                <li className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
                     <GiScrollUnfurled size = {24}/>
                     <span>
                         Quests
