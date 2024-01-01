@@ -1,6 +1,6 @@
 const AcceptedQuests = () => {
 
-    const scroll = () => {
+    const scroll = (): React.ReactNode => {
         return <div className="mb-10">
         <svg width="222" height="222" viewBox="0 0 222 222" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <rect width="222" height="222" fill="url(#pattern0)"/>
@@ -14,13 +14,17 @@ const AcceptedQuests = () => {
     </div>
     }
 
-    return(<div className="h-screen flex flex-col items-center md:99% border-[1.5px] border-black mt-[10px]">
-        
-        <div className="border-b-[1.5px] border-black flex justify-center w-48 mb-4 mt-2" >
-            <h1>Accepted</h1>
+    return(<div className="h-screen flex flex-col items-center  border-[1.5px] border-black ">
+        <h1 className="mt-20 underline w-[95%] flex justify-start pl-5 text-lg">
+            Accepted
+        </h1>
+
+        <div className=" items-center  border-black flex justify-center w-48 mb-2 mt-20">   
+             {scroll()}
         </div>
-        {scroll()}
-        You don't have any quests yet.
+        
+        <h1> You don&apos;t have any quests yet. </h1>
+
     </div>)
 }
 

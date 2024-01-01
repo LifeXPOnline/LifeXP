@@ -1,5 +1,6 @@
 // import { HiEmojiHappy } from "react-icons/hi";
 import Moodcard from "./Moodcard";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Checkin = () => {
 
@@ -36,8 +37,8 @@ const Checkin = () => {
     <div className="border-[1.5px] border-black h-screen md:w-[99%]">
        
        <div className="mt-16">
-            <button>
-                {">"}
+            <button className="border border-black rounded-sm mt-2 ml-2">
+                <IoIosArrowForward size={30}/>
             </button>
             <div className="flex flex-col items-center">
                 <h1 className="mb-4">
@@ -52,18 +53,24 @@ const Checkin = () => {
                     <Moodcard Title="Really sad" Mood = {face.Reallysad} />
                     <Moodcard Title="Depressed" Mood = {face.Depressed} />
                 </div>
-                <h1 className="text-sm md:text-base mt-10 mb-2">
-                    Here you can journal your thoughts and how you're feeling
-                </h1>
-                <div className="w-10/12 space-y-3 flex flex-col justify-center items-center">
-                    <input 
-                        className="border border-black text-sm py-1 w-11/12 md:w-10/12"
-                        placeholder="Title of entry"
-                    />
-                    <input 
-                        className="border border-black text-sm py-1 w-11/12 md:w-10/12 h-64 "
-                        placeholder="Journal your thoughts here"
-                    />
+                {/* Journal entry area */}
+                <div className="space-y-5 mt-8 w-full flex items-center flex-col">
+                    <h1 className="text-[14px] mb-5 mt-10 md:text-base md:mb-2">
+                        Here you can journal your thoughts and how you're feeling
+                    </h1>
+                    <div className="w-10/12 space-y-3 flex flex-col justify-center items-center">
+                        <textarea
+                            className="border border-black text-sm  w-11/12 md:w-10/12"
+                            placeholder="Title of entry"
+                        />
+                        <textarea 
+                            className="border border-black text-sm py-1 w-11/12 md:w-10/12 h-64 "
+                            placeholder="Journal your thoughts here"
+                        />
+                        <button className="relative">
+                            Submit
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

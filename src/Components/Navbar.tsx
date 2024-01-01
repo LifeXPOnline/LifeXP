@@ -41,7 +41,7 @@ const Navbar = () =>{
             
             <ul className='hidden md:flex flex-row  space-x-9'>
                 <li className='flex items-center cursor-pointer'>
-                    <div className='flex flex-row icon-hover2 justify-center items-center space-x-1 border-[1.5px] py-1 border-black shadow-sharp-sm rounded-3xl w-28'>
+                    <div className='flex flex-row icon-hover2 justify-center items-center space-x-1 border-2 py-1 border-black rounded-3xl w-28'>
                         <MdHome size = {30}/>
                         <span className='tracking-wide'>
                             Home

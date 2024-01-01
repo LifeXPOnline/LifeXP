@@ -3,7 +3,9 @@ import Home from "./Components/Homepage/Home"
 import Quests from "./Components/Questpage/Quests"
 import './index.css'
 import Checkin from "./Components/CheckinPage/Checkin"
-function App() {
+import Logs from "./Components/CheckinPage/Logs"
+
+const App = ()=> {
 
   return (
     <div className=" bg-slate-50 font-source-code-pro tracking-tight">
@@ -11,11 +13,14 @@ function App() {
       <div className="hidden">
         <Home />
       </div>
-      <div className="hidden">
+      <div className="block">
         <Quests />
       </div>
-      <div className="block">
+      <div className="hidden">
         <Checkin />
+      </div>
+      <div className="hidden">
+        <Logs />
       </div>
     </div>
   )

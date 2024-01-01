@@ -18,7 +18,7 @@ const Questcard: React.FC<QuestcardProps> = ({ Title, Reward }) =>{
             
                 <div className="flex items-center justify-center h-[58px] w-5/6 mt-2 mb-2 bg-quest-gray1">
                     <p className=" text-md text-center font-mono tracking-wide">
-                    Bench 20 lbs
+                        Bench 20 lbs
                     </p>
                 </div>
                 
@@ -32,7 +32,8 @@ const Questcard: React.FC<QuestcardProps> = ({ Title, Reward }) =>{
                     <h1 className="text-sm mb-1">Reward</h1>
                     <h1 className="text-sm tracking-normal font-bold">{Reward}</h1>
                 </div>
-                <button className="bg-quest-gray2 border-[1.5px] border-black text-white w-7/12 h-10 rounded-md text-xs hover:bg-quest-gray4">
+                <button className="bg-quest-gray2 border-[1.5px] border-black text-white 
+                                    w-7/12 h-10 rounded-md text-xs hover:bg-quest-gray4">
                     Accept
                 </button>
         </div>
