@@ -14,7 +14,8 @@ const MyQuests = ()=> {
                     </div>
                     <div className="flex space-x-4 mr-8">
                         {/* <h3 className="text-sm">Accepted</h3> */}
-                        <button className="border-[1.5px] icon-hover p-2 border-black bg-white rounded-md fixed bottom-10 left-8 z-0">
+                        
+                        <button className="border-[1.5px] shadow-sharp-sm icon-hover p-2 border-black bg-white rounded-md fixed bottom-10 left-8 z-0">
                             <GiScrollQuill  size={28} />
                         </button>
                         {/* <button className="mr-8 w-5 h-5 border-2 border-black rounded-sm cursor-pointer">
@@ -27,12 +28,12 @@ const MyQuests = ()=> {
                     </div>
                     
                 </div>
+                        
                 <div className="flex flex-col justify-center md:flex-row">
-                <Questcard title="Daily Quest" reward="300 XP"/>
-                <Questcard title="Fitness" reward="500 XP" />
-                <Questcard title="Work" reward="200 XP" />
-                <Questcard title="Personal" reward="180 XP"/>
-                
+                    <Questcard title="Daily Quest" reward="300 XP"/>
+                    <Questcard title="Fitness" reward="500 XP" />
+                    <Questcard title="Work" reward="200 XP" />
+                    <Questcard title="Personal" reward="180 XP"/>                   
                 </div>
             </div>
         

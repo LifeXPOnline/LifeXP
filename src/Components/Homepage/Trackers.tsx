@@ -1,6 +1,6 @@
 const Trackers = () => {
     return (
-        <div className="w-96 border border-black">
+        <div className="hidden md:flex w-96 border border-black">
 
         </div>
     )

@@ -1,17 +1,18 @@
 import { GiBiceps } from "react-icons/gi";
 import { FaStar } from "react-icons/fa";
+import PropTypes from 'prop-types'
 
 
 interface QuestcardProps {
-    title: string
-    reward: string
+    Title: string
+    Reward: string
 }
 
-const Questcard: React.FC<QuestcardProps> = ({ title, reward }) =>{
+const Questcard: React.FC<QuestcardProps> = ({ Title, Reward }) =>{
     return(
         <div className="flex flex-col space-y-5 items-center justify-center rounded-xl border-black w-[256px] h-[420px] border-1 shadow-sharp-sm 
                         hover:translate-y-[-5px] mb-10 mr-10 ml-10 transition-transform duration-200 cursor-default">
-                <h1 className="tracking-widest text-sm mb-1">{title}</h1> 
+                <h1 className="tracking-widest text-sm mb-1">{Title}</h1> 
 
                 <GiBiceps size={55}/>
             
@@ -29,7 +30,7 @@ const Questcard: React.FC<QuestcardProps> = ({ title, reward }) =>{
                 </div>
                 <div className="flex flex-col items-center">
                     <h1 className="text-sm mb-1">Reward</h1>
-                    <h1 className="text-sm tracking-normal font-bold">{reward}</h1>
+                    <h1 className="text-sm tracking-normal font-bold">{Reward}</h1>
                 </div>
                 <button className="bg-quest-gray2 border-[1.5px] border-black text-white w-7/12 h-10 rounded-md text-xs hover:bg-quest-gray4">
                     Accept
@@ -37,4 +38,9 @@ const Questcard: React.FC<QuestcardProps> = ({ title, reward }) =>{
         </div>
     )
 }
+
+Questcard.propTypes = {
+    Reward: PropTypes.string.isRequired,
+    Title: PropTypes.string.isRequired
+};
 export default Questcard
