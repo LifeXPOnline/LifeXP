@@ -43,26 +43,26 @@ const Navbar = () =>{
                 <li className='flex items-center cursor-pointer'>
                     <div className='flex flex-row icon-hover2  justify-center items-center space-x-1 border-2 py-1 border-black rounded-3xl w-28'>
                         <MdHome size = {30}/>
-                        <span className='tracking-wide'>
+                        <span className='tracking-wide text-sm'>
                             Home
                         </span>
                     </div>
                 </li>
                 <li className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
                     <GiScrollUnfurled size = {24}/>
-                    <span>
+                    <span className='text-sm'>
                         Quests
                     </span>
                 </li>
                 <li className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
                     <FaTree size = {26}/>
-                    <span>
+                    <span className='text-sm'>
                         Skill Tree
                     </span>
                 </li>
                 <li className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
                     <PiSmileyFill size = {27}/>
-                    <span>
+                    <span className='text-sm'>
                         Check-in
                     </span>
                 </li>

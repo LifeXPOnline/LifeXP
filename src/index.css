@@ -3,32 +3,27 @@
 @tailwind utilities;
 
 
-.icon-hover {
-  transition: transform 0.15s ease;
- 
-}
-.icon-hover2 {
-  transition: transform 0.15s ease;
-
-}
-.icon-hover3 {
-  transition: transform 0.15s ease;
-
-}
 .icon-hover:hover {
   transform: scale(1.2); 
+  transition: transform 0.15s ease;
 }
 .icon-hover2:hover {
-  /* transform: scale(1.05);  */
+  transform: scale(1.01); 
   text-decoration: underline;
+  transition: transform 0.15s ease;
 }
 .icon-hover3:hover {
   transform: scale(1.05);
+  transition: transform 0.15s ease;
 }
 .icon-hover4:hover {
   transform: scale(1.02);
+  transition: transform 0.18s ease;
+  
 }
-
+.shadow-transition {
+  transition: box-shadow 0.2s;
+}
 
 
 
