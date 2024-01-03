@@ -14,7 +14,7 @@ const Moodcard: React.FC<MoodcardProps>  = ({Mood, Title}) => {
 
             {Mood}
 
-            <button className="h-8 w-20 mt-6 rounded-md bg-black text-white border border-black hover:bg-quest-gray4">
+            <button className="hidden hover:block h-8 w-20 mt-6 rounded-md bg-black text-white border border-black hover:bg-quest-gray4">
                 Select
             </button>
         </div>

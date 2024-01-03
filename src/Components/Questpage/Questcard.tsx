@@ -11,7 +11,7 @@ interface QuestcardProps {
 const Questcard: React.FC<QuestcardProps> = ({ Title, Reward }) =>{
     return(
         <div className="flex flex-col space-y-5 items-center justify-center rounded-xl border-black w-[256px] h-[420px] border-1 shadow-sharp-sm 
-                        icon-hover4 mb-10 mr-10 ml-10 shadow-transition duration-200 cursor-default hover:shadow-sharp-lg">
+                        icon-hover4 mb-10 mr-10 ml-10 shadow-transition duration-200 cursor-default hover:shadow-sharp-lg cursor-pointer">
             <h1 className="tracking-widest text-sm mb-1">{Title}</h1> 
 
             <GiBiceps size={55}/>

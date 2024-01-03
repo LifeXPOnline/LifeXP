@@ -26,7 +26,7 @@ const Navbar = () =>{
     <div className='md:flex md:justify-center w-full bg-slate-50 fixed z-50'>
         {/* hamburger not opened */}
         <div className='flex flex-row justify-between py-3 md:border-[1.2px] md:border-black md:w-[99%] rounded-md' >
-            <div className='flex flex-row cursor-pointer justify-center items-center ml-6 cursor-default'> 
+            <div className='flex flex-row cursor-pointer justify-center items-center ml-6'> 
                 {/* <div><MdGamepad size = {24}/></div> */}
                 {gameIcon()}
                 <h1 className='text-lg ml-2' >Life XP</h1>
