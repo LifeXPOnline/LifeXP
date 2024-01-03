@@ -16,15 +16,19 @@
 
 }
 .icon-hover:hover {
-  transform: scale(1.2); /* Adjust the scale value to control the size increase */
+  transform: scale(1.2); 
 }
 .icon-hover2:hover {
-  transform: scale(1.05); /* Adjust the scale value to control the size increase */
+  /* transform: scale(1.05);  */
   text-decoration: underline;
 }
 .icon-hover3:hover {
   transform: scale(1.05);
 }
+.icon-hover4:hover {
+  transform: scale(1.02);
+}
+
 
 
 

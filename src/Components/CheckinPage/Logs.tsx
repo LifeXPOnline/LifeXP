@@ -32,25 +32,25 @@ const Logs = () => {
                         </div>
                     </div>
 
-                    <div className="border-2 py-2 rounded-md border-black text-sm flex justify-between icon-hover3">
+                    <div className="border-2 py-2 rounded-md border-black text-sm flex justify-between icon-hover3 cursor-pointer">
                         <h1 className="ml-3">10/24/2023</h1>
                         <h1>Title: Went to the park</h1>
                         <h1 className="mr-3">Mood: Ok</h1>
                     </div>
 
-                    <div className="border-2 border-black text-sm py-2 flex justify-between rounded-md icon-hover3">
+                    <div className="border-2 border-black text-sm py-2 flex justify-between rounded-md icon-hover3 cursor-pointer">
                         <h1 className="ml-3">10/24/2023</h1>    
                         <h1 className="ml-2 mr-2">Title: Ate some good pho</h1>
                         <h1 className="mr-3">Mood: Ok</h1>
                     </div>
 
-                    <div className="border-2 border-black text-sm py-2 flex justify-between rounded-md icon-hover3">
+                    <div className="border-2 border-black text-sm py-2 flex justify-between rounded-md icon-hover3 cursor-pointer">
                         <h1 className="ml-3">10/28/2023</h1>  
                         <h1 className="ml-2 mr-2">Title: text text text</h1>
                         <h1 className="mr-4">Mood: Sad</h1>
                     </div>
 
-                    <div className="border-2 border-black text-sm py-2 flex justify-between rounded-md icon-hover3">
+                    <div className="border-2 border-black text-sm py-2 flex justify-between rounded-md icon-hover3 cursor-pointer">
                         <h1 className="ml-3">10/29/2023</h1>  
                         <h1 className="ml-2 mr-2">Title: text text text </h1>
                         <h1 className="mr-4">Mood: Depressed</h1>

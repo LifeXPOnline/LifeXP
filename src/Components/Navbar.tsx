@@ -26,7 +26,7 @@ const Navbar = () =>{
     <div className='md:flex md:justify-center w-full bg-slate-50 fixed z-50'>
         {/* hamburger not opened */}
         <div className='flex flex-row justify-between py-3 md:border-[1.2px] md:border-black md:w-[99%] rounded-md' >
-            <div className='flex flex-row icon-hover justify-center items-center ml-6 cursor-default'> 
+            <div className='flex flex-row cursor-pointer justify-center items-center ml-6 cursor-default'> 
                 {/* <div><MdGamepad size = {24}/></div> */}
                 {gameIcon()}
                 <h1 className='text-lg ml-2' >Life XP</h1>
@@ -41,7 +41,7 @@ const Navbar = () =>{
             
             <ul className='hidden md:flex flex-row  space-x-9'>
                 <li className='flex items-center cursor-pointer'>
-                    <div className='flex flex-row icon-hover2 justify-center items-center space-x-1 border-2 py-1 border-black rounded-3xl w-28'>
+                    <div className='flex flex-row icon-hover2  justify-center items-center space-x-1 border-2 py-1 border-black rounded-3xl w-28'>
                         <MdHome size = {30}/>
                         <span className='tracking-wide'>
                             Home

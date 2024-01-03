@@ -4,6 +4,7 @@ import Quests from "./Components/Questpage/Quests"
 import './index.css'
 import Checkin from "./Components/CheckinPage/Checkin"
 import Logs from "./Components/CheckinPage/Logs"
+import Welcomepage from "./Components/SkillTree/Welcomepage"
 
 const App = ()=> {
 
@@ -21,6 +22,9 @@ const App = ()=> {
       </div>
       <div className="hidden">
         <Logs />
+      </div>
+      <div className="hidden">
+        <Welcomepage />
       </div>
     </div>
   )
