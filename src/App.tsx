@@ -17,10 +17,10 @@ const App = ()=> {
       <div className="hidden">
         <Quests />
       </div>
-      <div className="block">
+      <div className="hidden">
         <Checkin />
       </div>
-      <div className="hidden">
+      <div className="block">
         <Logs />
       </div>
       <div className="hidden">
