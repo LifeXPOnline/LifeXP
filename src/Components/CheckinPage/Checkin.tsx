@@ -34,10 +34,10 @@ const Checkin = () => {
     }
 
     return(
-    <div className="border-[1.5px] border-black h-screen md:w-[99%]">
+    <div className="flex  flex-col h-screen md:w-full">
        
-       <div className="mt-16">
-            <button className="border border-black rounded-sm mt-2 ml-2">
+       <div className=" mt-10 md:mt-20 border-t border-black">
+            <button className="border border-black rounded-sm mt-8 mb-4 ml-2">
                 <IoIosArrowForward size={30}/>
             </button>
             <div className="flex flex-col items-center">
@@ -54,7 +54,7 @@ const Checkin = () => {
                     <Moodcard Title="Depressed" Mood = {face.Depressed} />
                 </div>
                 {/* Journal entry area */}
-                <div className="space-y-5 mt-8 w-full flex items-center flex-col">
+                {/* <div className="space-y-5 mt-8 w-full flex items-center flex-col">
                     <h1 className="text-[14px] mb-5 mt-10 md:text-base md:mb-2">
                         Here you can journal your thoughts and how you're feeling
                     </h1>
@@ -71,7 +71,7 @@ const Checkin = () => {
                             Submit
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>)

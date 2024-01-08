@@ -6,7 +6,7 @@ import { IoIosCheckbox } from "react-icons/io";
 
 const Tasks = () => {
     return (
-        <div className="flex flex-col md:border md:border-black md:w-5/6 items-center h-screen  space-y-6">
+        <div className="flex flex-col md:border-l md:border-t md:border-black md:w-5/6 items-center h-screen  space-y-6">
             
             <div className="flex flex-row mt-20 items-center justify-between w-96">
                 <div className="ml-0 md:hidden flex items-center justify-center h-11 w-11 border-1 
