@@ -4,7 +4,7 @@ import { GiScrollQuill } from "react-icons/gi";
 
 const MyQuests = ()=> {
     return(
-    <div className=" md:flex md:justify-center ">
+    <div className=" md:flex md:justify-center h-screen">
         <div className=" md:w-full md:border-t-[1.2px] md:border-black md:mt-20 ">
             <div className="flex flex-col items-center">
                     {/* header and options */}

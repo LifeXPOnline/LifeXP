@@ -43,8 +43,10 @@ const Navbar = () =>{
             <nav className='hidden md:block'>
                 <ul className='flex flex-row items-center  space-x-9'>
                     <li>
-                        <NavLink to ="/">
-                            <div className='flex items-center cursor-pointer flex-row icon-hover2  justify-center space-x-1 border-2 py-1 border-black rounded-3xl w-28'>
+                        <NavLink 
+                            to ="/" 
+                            className={({ isActive }) => isActive ? 'active-link' : ''}>
+                            <div className='flex items-center cursor-pointer icon-hover2 space-x-2'>
                                 <MdHome size = {30}/>
                                 <span className='tracking-wide text-sm'>
                                     Home
@@ -53,9 +55,12 @@ const Navbar = () =>{
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/quests">
-                            <div className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
-                                <GiScrollUnfurled size = {24}/>
+                        <NavLink 
+                            to="/quests"
+                            className={({ isActive }) => isActive ? 'active-link' : ''}
+                            >
+                            <div className='flex items-center space-x-2 cursor-pointer'>
+                                <GiScrollUnfurled size = {25}/>
                                 <span className='text-sm'>
                                     Quests
                                 </span>
@@ -63,9 +68,12 @@ const Navbar = () =>{
                         </NavLink>
                     </li>
                     <li >
-                        <NavLink to="/skilltree">
+                        <NavLink 
+                            to="/skilltree"
+                            className={({ isActive }) => isActive ? 'active-link' : ''}
+                            >
                             <div className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
-                                <FaTree size = {26}/>
+                                <FaTree size = {25}/>
                                 <span className='text-sm'>
                                     Skill Tree
                                 </span>
@@ -73,9 +81,12 @@ const Navbar = () =>{
                         </NavLink>
                     </li>
                     <li >
-                        <NavLink to="/checkin">
+                        <NavLink 
+                            to="/checkin"
+                             className={({ isActive }) => isActive ? 'active-link' : ''}
+                            >
                             <div className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
-                                <PiSmileyFill size = {27}/>
+                                <PiSmileyFill size = {25}/>
                                 <span className='text-sm'>
                                     Check-in
                                 </span>

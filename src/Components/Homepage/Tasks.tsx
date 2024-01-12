@@ -6,17 +6,17 @@ import { IoIosCheckbox } from "react-icons/io";
 
 const Tasks = () => {
     return (
-        <div className="flex flex-col md:border-l md:border-t md:border-black md:w-5/6 items-center h-screen  space-y-6">
+        <div className="flex flex-col md:border-l md:border-t md:border-black md:w-5/6 items-center space-y-6">
             
-            <div className="flex flex-row mt-20 items-center justify-between w-96">
+            <div className="flex flex-row mt-20 md:mt-14 items-center justify-between w-96">
                 <div className="ml-0 md:hidden flex items-center justify-center h-11 w-11 border-1 
                                 bg-slate-100 border-black shadow-sharp-sm cursor-pointer 
                                 icon-hover4 transition-transform duration-200 hover:shadow-sharp-md">
                     <h1 className="tracking-wide ">XP</h1>
                 </div>
-                <div className="flex row items-center mr-20">
+                <div className="flex items-center mr-20">
                     <WiStars size = {30}/>
-                    <h1 className="text-lg underline mb-1">Your Tasks</h1>
+                    <h1 className="text-lg underline mb-1 md:mb-4">Your Tasks</h1>
                 </div>
                 <div>
                     
