@@ -6,9 +6,9 @@ const Trackers = () => {
                 <div className="w-44 h-44 border border-black"></div>
                 {/* Task tracker */}
                 <div className="space-y-3">
-                    <p className="">Complete a fitness task</p>
-                    <p className="">Complete a fitness task</p>
-                    <p className="">Complete a fitness task</p>
+                    <p className="text-sm">Complete a fitness task</p>
+                    <p className="text-sm">Complete a fitness task</p>
+                    <p className="text-sm">Complete a fitness task</p>
                 </div>
             </div>
         </div>

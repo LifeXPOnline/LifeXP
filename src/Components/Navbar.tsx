@@ -35,7 +35,7 @@ const Navbar = () =>{
             <div className='md:hidden'>
                 <RxHamburgerMenu 
                     size={25} 
-                    className='cursor-pointer mr-6' 
+                    className='cursor-pointer mr-6 icon-hover2' 
                     onClick={()=>{setHamburgerOption(!hamburgerOption)}}
                 />
             </div>
@@ -59,7 +59,7 @@ const Navbar = () =>{
                             to="/quests"
                             className={({ isActive }) => isActive ? 'active-link' : ''}
                             >
-                            <div className='flex items-center space-x-2 cursor-pointer'>
+                            <div className='flex items-center icon-hover2 space-x-2 cursor-pointer'>
                                 <GiScrollUnfurled size = {25}/>
                                 <span className='text-sm'>
                                     Quests
@@ -104,12 +104,12 @@ const Navbar = () =>{
         </div>
 
         {/* navbar hamburger opened - small screens */}
-        <div className={`${hamburgerOption?'block':'hidden'} flex flex-col items-center justify-center fixed inset-0 bg-slate-50 z-50`}>
+        <div className={`${hamburgerOption?'block':'hidden'} md:hidden flex flex-col items-center justify-center fixed inset-0 bg-slate-50 z-50`}>
             
-            <div className='absolute top-[9px] right-[25.5px]'>
+            <div className='absolute top-[11.8px] right-[24.9px]'>
                 <RxHamburgerMenu 
                     size={25}
-                    className='cursor-pointer' 
+                    className='cursor-pointer icon-hover2' 
                     onClick={()=>{setHamburgerOption(!hamburgerOption)}}
                 />
             </div>
@@ -123,28 +123,46 @@ const Navbar = () =>{
             <nav>
                 <ul className='flex flex-col items-start space-y-12'>
                     <li >
-                        <NavLink to="/">
-                            <div className='flex items-center space-x-2 cursor-pointer'>
+                        <NavLink 
+                            to="/"
+                            className={({ isActive }) => isActive ? 'active-link2' : ''}
+                        >
+                            
+                            <div 
+                                className='flex items-center space-x-2 icon-hover2 cursor-pointer hover:underline'
+                                onClick={()=>{setHamburgerOption(!hamburgerOption)}}
+                                >
                                 <MdHome size = {30}/>
-                                <span className='underline tracking-wide'>
+                                <span className='tracking-wide hover:underline'>
                                     Home
                                 </span>
                             </div>
                         </NavLink>
                     </li>
                     <li >
-                        <NavLink to="/quests">
-                            <div className='flex items-center space-x-3 cursor-pointer'>
+                        <NavLink 
+                            to="/quests"
+                            className={({ isActive }) => isActive ? 'active-link2' : ''}>
+                            <div 
+                                className='flex items-center space-x-3 icon-hover2 cursor-pointer hover:underline'
+                                onClick={()=>{setHamburgerOption(!hamburgerOption)}}
+                                >
                                 <GiScrollUnfurled size = {24}/>
-                                <span>
+                                <span className='hover:underline'>
                                     Quests
                                 </span>
                             </div>
                         </NavLink>
                     </li>
                     <li >
-                        <NavLink to="/skilltree">
-                            <div className='flex items-center space-x-2 cursor-pointer'>
+                        <NavLink 
+                            to="/skilltree"
+                            className={({ isActive }) => isActive ? 'active-link2' : ''}>
+                            <div 
+                                className='flex items-center space-x-2 icon-hover2 cursor-pointer hover:underline'
+                                onClick={()=>{setHamburgerOption(!hamburgerOption)}}
+                                >
+                                
                                 <FaTree size = {26}/>
                                 <span>
                                     Skill Tree
@@ -153,10 +171,15 @@ const Navbar = () =>{
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/checkin">
-                            <div className='flex items-center space-x-2 cursor-pointer'>
+                        <NavLink 
+                            to="/checkin"
+                            className={({ isActive }) => isActive ? 'active-link2' : ''}>
+                            <div 
+                                className='flex items-center space-x-2 icon-hover2 cursor-pointer hover:underline'
+                                onClick={()=>{setHamburgerOption(!hamburgerOption)}}
+                                >
                                 <PiSmileyFill size = {27}/>
-                                <span>
+                                <span className='hover:underline'>
                                     Check-in
                                 </span>
                             </div>

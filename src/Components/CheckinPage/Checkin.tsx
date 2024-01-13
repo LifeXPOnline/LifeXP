@@ -1,10 +1,18 @@
 // import { HiEmojiHappy } from "react-icons/hi";
-import Moodcard from "./Moodcard";
-import { IoIosArrowForward } from "react-icons/io";
+import Moodcard from "./Moodcard"
+import { IoIosArrowForward } from "react-icons/io"
+import { useState } from 'react'
+import Entry from "./Entry";
 
 const Checkin = () => {
+    // const [activeMood, setActiveMood] = useState<string | null>(null);
+    const [selectedMood, setSelectedMood] = useState<string | null>(null);
 
-   
+    const handleMoodSelect = (mood: string) => {
+        setSelectedMood(mood);
+
+    };
+    //face object with corresponding svgs, title as values and svg as keys
     const face: Record<string, React.ReactElement> = {
         
         "Happy" : <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +29,7 @@ const Checkin = () => {
                 <path d="M31 0C24.8688 0 18.8753 1.81812 13.7773 5.22444C8.67941 8.63076 4.70606 13.4723 2.35975 19.1368C0.0134317 24.8013 -0.600471 31.0344 0.59567 37.0478C1.79181 43.0612 4.74428 48.5849 9.0797 52.9203C13.4151 57.2557 18.9388 60.2082 24.9522 61.4043C30.9656 62.6005 37.1987 61.9866 42.8632 59.6403C48.5277 57.2939 53.3692 53.3206 56.7756 48.2227C60.1819 43.1247 62 37.1312 62 31C62 22.7783 58.7339 14.8933 52.9203 9.07969C47.1067 3.26606 39.2217 0 31 0ZM48.4375 23.7925C48.4375 24.4823 48.233 25.1565 47.8498 25.73C47.4665 26.3036 46.9219 26.7506 46.2846 27.0145C45.6474 27.2785 44.9461 27.3475 44.2696 27.213C43.5931 27.0784 42.9717 26.7463 42.484 26.2585C41.9962 25.7708 41.6641 25.1494 41.5295 24.4729C41.3949 23.7964 41.464 23.0951 41.728 22.4579C41.9919 21.8206 42.4389 21.276 43.0125 20.8927C43.586 20.5095 44.2602 20.305 44.95 20.305C45.8749 20.305 46.762 20.6724 47.416 21.3265C48.0701 21.9805 48.4375 22.8676 48.4375 23.7925ZM18.3094 27.28C17.6196 27.28 16.9454 27.0755 16.3718 26.6922C15.7983 26.309 15.3513 25.7644 15.0874 25.1271C14.8234 24.4898 14.7543 23.7886 14.8889 23.1121C15.0235 22.4356 15.3556 21.8142 15.8434 21.3265C16.3311 20.8387 16.9525 20.5066 17.629 20.372C18.3055 20.2374 19.0067 20.3065 19.644 20.5705C20.2812 20.8344 20.8259 21.2814 21.2091 21.8549C21.5923 22.4285 21.7969 23.1027 21.7969 23.7925C21.797 24.2571 21.7043 24.717 21.5242 25.1452C21.3441 25.5735 21.0803 25.9615 20.7482 26.2863C20.4161 26.6112 20.0224 26.8665 19.5903 27.0371C19.1582 27.2077 18.6964 27.2903 18.2319 27.28H18.3094ZM45.4344 41.8694C45.7427 42.2805 45.8751 42.7972 45.8024 43.3059C45.7297 43.8146 45.458 44.2736 45.0469 44.5819C44.6358 44.8902 44.1191 45.0226 43.6104 44.9499C43.1017 44.8772 42.6427 44.6054 42.3344 44.1944C41.0559 42.4833 39.3913 41.0983 37.4762 40.1523C35.5611 39.2063 33.4497 38.7261 31.3138 38.7506C29.1779 38.7752 27.0781 39.3039 25.1852 40.2936C23.2924 41.2834 21.6601 42.7062 20.4213 44.4462C20.1232 44.865 19.671 45.1483 19.1642 45.2337C18.6573 45.3191 18.1372 45.1996 17.7184 44.9016C17.2997 44.6035 17.0164 44.1513 16.931 43.6444C16.8456 43.1376 16.9651 42.6175 17.2631 42.1987C18.8556 39.9618 20.9537 38.1324 23.3869 36.8598C25.82 35.5871 28.5194 34.907 31.2651 34.8749C34.0108 34.8428 36.7252 35.4596 39.1875 36.675C41.6497 37.8905 43.7901 39.6702 45.4344 41.8694Z" fill="black"/>
                 </svg>
         ,
-        "Reallysad" : <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+        "Really sad" : <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M31 0C13.875 0 0 13.875 0 31C0 48.125 13.875 62 31 62C48.125 62 62 48.125 62 31C62 13.875 48.125 0 31 0ZM41 21C43.2125 21 45 22.7875 45 25C45 27.2125 43.2125 29 41 29C38.7875 29 37 27.2125 37 25C37 22.7875 38.7875 21 41 21ZM19 51C15.6875 51 13 48.375 13 45.125C13 42.625 16.5625 37.575 18.2 35.4C18.6 34.8625 19.4 34.8625 19.8 35.4C21.4375 37.575 25 42.625 25 45.125C25 48.375 22.3125 51 19 51ZM21 29C18.7875 29 17 27.2125 17 25C17 22.7875 18.7875 21 21 21C23.2125 21 25 22.7875 25 25C25 27.2125 23.2125 29 21 29ZM42.275 48.275C39.475 44.925 35.3625 43 31 43C28.35 43 28.35 39 31 39C36.55 39 41.7875 41.45 45.3375 45.725C47.0625 47.775 43.9375 50.2875 42.275 48.275Z" fill="black"/>
                         </svg>
         ,
@@ -32,7 +40,7 @@ const Checkin = () => {
                         </svg>
         
     }
-
+  
     return(
     <div className="flex  flex-col h-screen md:w-full">
        
@@ -44,34 +52,32 @@ const Checkin = () => {
                 <h1 className="mb-4">
                     Hows your mood today?
                 </h1>
-                {/* Mood cards */}
+              
+         
+            
                 <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12 mt-4">
-                    <Moodcard Title="Happy" Mood = {face.Happy} />
-                    <Moodcard Title="Ok" Mood = {face.Ok} />
-                    <Moodcard Title="Angry" Mood = {face.Angry} />
-                    <Moodcard Title="Sad" Mood = {face.Sad} />
-                    <Moodcard Title="Really sad" Mood = {face.Reallysad} />
-                    <Moodcard Title="Depressed" Mood = {face.Depressed} />
+                {Object.entries(face).map(([title, moodElement]) => {
+                    // Render the card only if no mood is selected or the current card is the selected one
+                    if (!selectedMood || selectedMood === title) {
+                        return (
+                            <Moodcard
+                                key={title}
+                                Title={title}
+                                Mood={moodElement}
+                                onSelect={handleMoodSelect}
+                                isActive={selectedMood === title}
+                            />
+                        );
+                    }
+                    return null; // Don't render other cards if a mood is already selected
+                })}
                 </div>
-                {/* Journal entry area */}
-                {/* <div className="space-y-5 mt-8 w-full flex items-center flex-col">
-                    <h1 className="text-[14px] mb-5 mt-10 md:text-base md:mb-2">
-                        Here you can journal your thoughts and how you're feeling
-                    </h1>
-                    <div className="w-10/12 space-y-3 flex flex-col justify-center items-center">
-                        <textarea
-                            className="border border-black text-sm  w-11/12 md:w-10/12"
-                            placeholder="Title of entry"
-                        />
-                        <textarea 
-                            className="border border-black text-sm py-1 w-11/12 md:w-10/12 h-64 "
-                            placeholder="Journal your thoughts here"
-                        />
-                        <button className="relative">
-                            Submit
-                        </button>
-                    </div>
-                </div> */}
+                
+                {/* Journal entry area - Conditionally rendered */}
+                {selectedMood && (
+                    <Entry selectedMood={selectedMood} />
+                )
+                }
             </div>
         </div>
     </div>)

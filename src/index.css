@@ -8,7 +8,7 @@
   transition: all 0.15s ease;
 }
 .icon-hover2:hover {
-  transform: scale(1.01); 
+  transform: scale(1.09); 
   /* text-decoration: underline; */
   transition: all 0.15s ease;
 }
@@ -26,10 +26,11 @@
 }
 
 
+
 /* Base state for all NavLink divs */
 li div {
   border-width: 1px;
-  padding: 0.25rem 0.45rem;
+  padding: 0.25rem 0.50rem;
   border-color: transparent; /* Default border color */
   border-radius: 1.5rem;
   transition: border-color 0.2s ease, padding 0.3s ease;
@@ -40,6 +41,20 @@ li div {
   border-color: rgb(0,0,0); /* Active state border color */
   transition: border-color 0.5s ease, padding 0.3s ease;
 }
+.active-link div:hover{
+  transform: scale(1); /*to remove the hover effect*/
+}
+.active-link2 div{
+  text-decoration: underline;
+}
+
+.hover-reveal:hover .select-button {
+  display: block;
+}
+.journal-entry {
+  transition: all 3s ease;
+}
+
 
 .custom-checkbox {
   cursor: pointer;
@@ -48,6 +63,8 @@ li div {
   border-color: black;
   accent-color: #3a3a3a; 
 }
+
+
 
 /**
  * ----------------------------------------
