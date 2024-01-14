@@ -1,3 +1,5 @@
+import { FaFilter } from "react-icons/fa";
+
 const AcceptedQuests = () => {
 
     const scroll = (): React.ReactNode => {
@@ -14,17 +16,29 @@ const AcceptedQuests = () => {
     </div>
     }
 
-    return(<div className="h-screen flex flex-col items-center  border-[1.5px] border-black ">
-        <h1 className="mt-20 underline w-[95%] flex justify-start pl-5 text-lg">
-            Accepted
-        </h1>
-
-        <div className=" items-center  border-black flex justify-center w-48 mb-2 mt-20">   
-             {scroll()}
+    return(<div className="md:flex  h-screen ">
+        <div className=" md:w-full md:border-t md:border-black md:mt-20 ">
+            <div className="flex flex-col">
+                <div className="flex justify-start ml-8 border border-b-2 w-32 border-black mt-14 pl-5 ">
+                    <h1 className="tracking-wide">
+                        Accepted
+                    </h1>
+                </div>
+                <div className="flex justify-end mr-8">
+                    <div className="flex flex-row items-center mt-[2px] space-x-1 bottom-5 left-0 mr-2 cursor-pointer"> 
+                        <h1>Filter</h1>
+                        <FaFilter />
+                    </div>
+                </div>
+                <div className="flex flex-col items-center">
+                    <div className=" items-center  border-black flex justify-center w-48 mb-2 mt-10">   
+                        {scroll()}
+                    </div>
+                    <h1> You don&apos;t have any quests yet. </h1>
+                </div>
+                
+            </div>
         </div>
-        
-        <h1> You don&apos;t have any quests yet. </h1>
-
     </div>)
 }
 
