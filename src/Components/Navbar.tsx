@@ -1,17 +1,19 @@
 import {useState} from 'react'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import { MdHome } from "react-icons/md";
-import { GiScrollUnfurled } from "react-icons/gi";
+import { GiScrollUnfurled,GiAchievement } from "react-icons/gi";
 import { FaTree } from "react-icons/fa";
 import { PiSmileyFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";
 import { FaDoorOpen } from "react-icons/fa";
 import { NavLink } from "react-router-dom"
+// import { GrAchievement } from "react-icons/gr";
 // import { MdGamepad } from "react-icons/md";
 // import { BsFillDpadFill } from "react-icons/bs";
 
 const Navbar = () =>{
     const [hamburgerOption, setHamburgerOption] = useState<boolean>(false)
+    const [openProfileOptions, setOpenProfileOptions] = useState<boolean>(false)
 
     const gameIcon = () => {
         return <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,11 +28,12 @@ const Navbar = () =>{
     return(
     <div className='md:flex md:justify-center w-full bg-slate-50 fixed z-50'>
         {/* hamburger not opened */}
-        <div className='flex flex-row justify-between py-3 md:border-b-[1.2px] md:border-black w-full' >
+        <div className='flex flex-row justify-between py-3 md:border-b md:border-black w-full' >
             <div className='flex flex-row cursor-pointer justify-center items-center ml-6'> 
-                {/* <div><MdGamepad size = {24}/></div> */}
                 {gameIcon()}
-                <h1 className='text-lg ml-2' >Life XP</h1>
+                <h1 className='text-lg ml-2' >
+                    Life XP
+                </h1>
             </div>
             <div className='md:hidden'>
                 <RxHamburgerMenu 
@@ -98,8 +101,32 @@ const Navbar = () =>{
             </nav>
 
             {/* profile circle icon */}
-            <div className='hidden md:flex border border-black rounded-full w-[40px] h-[40px] mr-4 cursor-pointer'>
-        
+            <div className='hidden md:flex'>
+                <div
+                    onClick={()=>{setOpenProfileOptions(!openProfileOptions)}} 
+                    className='hidden md:flex border border-black rounded-full w-[40px] h-[40px] mr-4 cursor-pointer'>
+            
+                </div>
+
+                {/* options */}
+                {openProfileOptions&&
+                <div className='absolute hidden md:block'>
+                    <div className='flex flex-col relative right-24 top-12 w-36 h-20 border border-b-2 border-black bg-slate-50'>
+                        <div className='flex items-center space-x-1 flex-row ml-2 mt-2 hover:underline cursor-pointer'>
+                            <IoMdSettings size={24} />
+                            <h1 className='text-sm '>
+                                Settings
+                            </h1>
+                        </div>
+                        <div className='flex items-center flex-row ml-1 mt-2 hover:underline cursor-pointer'>
+                            <GiAchievement size={28}/>
+                            <h1 className='text-sm '>
+                                Achievements
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                }
             </div>
         </div>
 

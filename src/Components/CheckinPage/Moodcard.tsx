@@ -4,9 +4,10 @@ interface MoodcardProps  {
     Mood: React.ReactElement
     Title: string
     isActive: boolean
-    onSelect: (moodTitle: string) => void; //funct with string parameter
+    onSelect: (moodTitle: string) => void //funct with string parameter
+    selectedMood: string
 }
-const Moodcard: React.FC<MoodcardProps> = ({ Mood, Title, onSelect, isActive }) => {
+const Moodcard: React.FC<MoodcardProps> = ({ Mood, Title, onSelect, isActive, selectedMood }) => {
     const hoverClass = isActive ? "" : "hover-reveal"; // Apply hover class only when not active
 
     return (
@@ -20,11 +21,11 @@ const Moodcard: React.FC<MoodcardProps> = ({ Mood, Title, onSelect, isActive }) 
                 {Title}
             </h1>
             {Mood}
-            <button
-                className="select-button hidden h-8 w-20 mt-6 rounded-md bg-black hover:bg-quest-gray4 text-white border border-black"
+            <button className="select-button hidden h-8 w-20 mt-6 rounded-md bg-black hover:bg-quest-gray4 text-white border border-black"
             >
                 Select
             </button>
+            {selectedMood&&<h1 className='mt-7'>Selected!</h1>}
         </div>
     );
 };
@@ -34,6 +35,7 @@ Moodcard.propTypes = {
     Title: PropTypes.string.isRequired,
     onSelect: PropTypes.func.isRequired,
     isActive: PropTypes.bool.isRequired,
+    selectedMood: PropTypes.string.isRequired
 };
 
 export default Moodcard;

@@ -1,18 +1,41 @@
 // import { HiEmojiHappy } from "react-icons/hi";
-import Moodcard from "./Moodcard"
 // import { IoIosArrowForward } from "react-icons/io"
-import { useState } from 'react'
+import Moodcard from "./Moodcard"
+import { Dispatch, SetStateAction, useEffect, useState, useRef } from 'react'
 import Entry from "./Entry";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const Checkin = () => {
-    
+interface CheckinProps{
+    thePage:string
+    setThePage: Dispatch<SetStateAction<string>>
+}
+
+const Checkin: React.FC<CheckinProps> = ({thePage,setThePage}) => {
+
+    const[isVisible, setIsVisible] = useState(true)
+    const divRef = useRef()
     const [selectedMood, setSelectedMood] = useState<string | null>(null)
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
     const handleMoodSelect = (mood: string) => {
         setSelectedMood(mood)
 
     };
+
+    // Hide div when clicking outside of it
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (divRef.current && !divRef.current.contains(event.target)) {
+                setIsVisible(false);
+            }
+        }
+
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [divRef]);
     
     //face object with corresponding svgs, title as values and svg as keys
     const face: Record<string, React.ReactElement> = {
@@ -42,8 +65,6 @@ const Checkin = () => {
                         </svg>
         
     }
-    
-    
     const icon: Record<string, React.ReactElement> = {
         "book": <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 18.5C0 18.8978 0.158035 19.2794 0.43934 19.5607C0.720644 19.842 1.10218 20 1.5 20H3V0H1.5C1.10218 0 0.720644 0.158035 0.43934 0.43934C0.158035 0.720644 0 1.10218 0 1.5V18.5ZM4 0V20H14C14.5304 20 15.0391 19.7893 15.4142 19.4142C15.7893 19.0391 16 18.5304 16 18V2C16 1.46957 15.7893 0.960859 15.4142 0.585786C15.0391 0.210714 14.5304 0 14 0L4 0ZM11 8H6V7H11V8ZM14 6H6V5H14V6Z" fill="black"/>
@@ -62,23 +83,27 @@ const Checkin = () => {
                 <button 
                     onClick={()=>{setMenuOpen(!menuOpen)}}
                     className="rounded-sm mt-8 mb-4 ml-5">
-                    <RxHamburgerMenu size={30}/>
+                    <RxHamburgerMenu size={28}/>
                 </button>
 
                 {/* menu */}
                 {menuOpen&&
-                <div className="flex flex-col border border-black w-40 h-16">
-                    <div className="flex flex-row ml-2 mt-2">
-                        {icon.book}
-                        <h1 className="ml-2 text-sm tracking-wide">
-                            Journal Entry
-                        </h1>
-                    </div>
-                    <div className="flex flex-row ml-2 mt-1">
-                        {icon.graph}
-                        <h1 className="ml-2 text-sm tracking-wide">
-                            Mood Graph
-                        </h1>
+                <div className="relative">
+                   <div ref={divRef} className="flex flex-col border border-b-2 border-black bg-slate-50 w-40 h-20 absolute left-5 top-[-15px] z-0">
+                        <div
+                            onClick={()=>{setThePage("entry")}} 
+                            className="flex flex-row ml-2 mt-3 cursor-pointer hover:underline">
+                            {icon.book}
+                            <h1 className="ml-2 text-sm tracking-wide">
+                                Journal Entry
+                            </h1>
+                        </div>
+                        <div className="flex flex-row ml-2 mt-3 cursor-pointer hover:underline">
+                            {icon.graph}
+                            <h1 className="ml-2 text-sm tracking-wide">
+                                Mood Graph
+                            </h1>
+                        </div>
                     </div>
                 </div>
                 }
@@ -101,6 +126,7 @@ const Checkin = () => {
                                 Mood={moodElement}
                                 onSelect={handleMoodSelect}
                                 isActive={selectedMood === title}
+                                selectedMood={selectedMood}
                             />
                         );
                     }
@@ -117,4 +143,8 @@ const Checkin = () => {
         </div>
     </div>)
 }
+
+// Checkin.propTypes = {
+//     thePage: PropTypes.string.isRequired
+// }
 export default Checkin

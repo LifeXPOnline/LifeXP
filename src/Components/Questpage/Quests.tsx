@@ -8,7 +8,7 @@ const Quests = () =>{
     const [changePage, setChangePage] = useState(false)
 
     const button = {
-        "styling": "border-[1.5px] shadow-sharp-sm icon-hover hover:shadow-sharp-md p-2 border-black bg-white rounded-md fixed bottom-10 left-8 z-0"
+        "styling": "border-[1.5px] shadow-sharp-sm icon-hover hover:shadow-sharp-sm p-2 border-black bg-white rounded-md fixed bottom-10 left-8 z-0"
     }
     return (<div>
         {changePage?
