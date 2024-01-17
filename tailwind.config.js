@@ -37,7 +37,9 @@ export default {
         'quest-gray1': '#D9D9D9',
         'quest-gray2': '#393939',
         'quest-gray3': '#8C8C8C',
-        'quest-gray4': '#757575'
+        'quest-gray4': '#757575',
+        'levelup-gray1': '#545454',
+        'levelup-gray2': '#737373',
       },
     },
   },

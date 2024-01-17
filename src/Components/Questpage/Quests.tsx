@@ -12,12 +12,10 @@ const Quests = () =>{
     }
     return (<div>
         {changePage?
-        <div>
-            <AcceptedQuests />
-        </div>:
-        <div>
-            <MyQuests />
-        </div>}
+        <AcceptedQuests />
+        :
+        <MyQuests />
+        }
         
         {changePage?
         <button  
