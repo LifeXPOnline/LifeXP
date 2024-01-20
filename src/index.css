@@ -55,6 +55,13 @@ li div {
   transition: all 3s ease;
 }
 
+.levelStatistics {
+  display: none;
+}
+
+.meterContainer:hover + .levelStatistics {
+  display: block;
+}
 
 .custom-checkbox {
   cursor: pointer;
