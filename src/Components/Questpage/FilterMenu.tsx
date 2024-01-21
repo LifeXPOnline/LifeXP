@@ -1,7 +1,11 @@
 import { FaFilter } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import useOutsideClick from "../../logic/useOutsideClick";
 const FilterMenu = () => {
     const[filterOpen, setFilterOpen] = useState<boolean>(false)
+    const filterRef:React.MutableRefObject<null> = useRef(null)
+    useOutsideClick({ ref: filterRef, callback: () => { setFilterOpen(false) }});
+    
     return(
     <div>
         
@@ -16,7 +20,7 @@ const FilterMenu = () => {
          </div>
         {/* filter menu */}
         {filterOpen&&
-        <div className="absolute right-10 top-8 z-50">
+        <div ref={filterRef} className="absolute right-10 top-8 z-50">
             <div className=" border border-black border-b-2 bg-slate-50 w-44 h-32 z-50">
                 <div className="text-sm">
                     <div className="flex flex-row space-x-1">

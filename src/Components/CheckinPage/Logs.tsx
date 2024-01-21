@@ -36,25 +36,29 @@ const Logs: React.FC<LogsProps> = ({setThePage}) => {
                     <h1 className="justify-center mb-10 mt-3 flex">Your Journal Entries</h1>
                     {/* Date settings for journal entries - i.e october 2023 */}
                     <div className="mb-5 flex justify-center space-x-3"> 
-                    <Tippy
-                        delay={1000}
-                        placement="left"
-                        content="prev"
-                        >
-                        <button className={styles.arrowButton}>
-                            <IoIosArrowRoundBack /> 
-                        </button>
-                    </Tippy>
-                        <h1> October 2023 </h1>
-                    <Tippy
-                        delay={1000}
-                        placement="right"
-                        content="next"
-                        >
-                        <button className={styles.arrowButton}>
-                            <IoIosArrowRoundForward /> 
-                        </button>
-                    </Tippy>
+                        {/* prev button */}
+                        <Tippy
+                            delay={1000}
+                            placement="left"
+                            content="prev"
+                            >
+                            <button className={styles.arrowButton}>
+                                <IoIosArrowRoundBack /> 
+                            </button>
+                        </Tippy>
+                            {/* dates will be placed here */}
+                            <h1> October 2023 </h1>
+
+                            {/* next button */}
+                        <Tippy
+                            delay={1000}
+                            placement="right"
+                            content="next"
+                            >
+                            <button className={styles.arrowButton}>
+                                <IoIosArrowRoundForward /> 
+                            </button>
+                        </Tippy>
                     </div>
                     
                     <div className="space-y-3 md:w-[500px]">

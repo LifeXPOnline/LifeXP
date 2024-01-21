@@ -1,12 +1,13 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import { MdHome } from "react-icons/md";
 import { GiScrollUnfurled,GiAchievement } from "react-icons/gi";
-import { FaTree } from "react-icons/fa";
+import { FaTree, FaDoorOpen  } from "react-icons/fa";
 import { PiSmileyFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";
-import { FaDoorOpen } from "react-icons/fa";
 import { NavLink } from "react-router-dom"
+import useOutsideClick from '../logic/useOutsideClick';
+// import { CiUser } from "react-icons/ci";
 // import { GrAchievement } from "react-icons/gr";
 // import { MdGamepad } from "react-icons/md";
 // import { BsFillDpadFill } from "react-icons/bs";
@@ -14,6 +15,8 @@ import { NavLink } from "react-router-dom"
 const Navbar = () =>{
     const [hamburgerOption, setHamburgerOption] = useState<boolean>(false)
     const [openProfileOptions, setOpenProfileOptions] = useState<boolean>(false)
+    const ProfileOptionsRef:React.MutableRefObject<null> = useRef(null)
+    useOutsideClick({ ref: ProfileOptionsRef, callback: () => { setOpenProfileOptions(false) }});
 
     const gameIcon = () => {
         return <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,17 +103,18 @@ const Navbar = () =>{
                 </ul>
             </nav>
 
-            {/* profile circle icon */}
+           {/* profile circle icon  and its menu*/}
             <div className='hidden md:flex relative'>
+                 {/* profile circle icon */}
                 <div
                     onClick={()=>{setOpenProfileOptions(!openProfileOptions)}} 
                     className='hidden md:flex border border-black rounded-full w-[40px] h-[40px] mr-4 cursor-pointer'>
             
                 </div>
 
-                {/* options */}
+                {/* menu */}
                 {openProfileOptions&&
-                <div className='absolute right-3 top-11 hidden md:block'>
+                <div ref={ProfileOptionsRef} className='absolute right-3 top-11 hidden md:block'>
                     <div className='flex flex-col   w-36 h-32 border border-b-2 border-black bg-slate-50'>
                         <div className='flex items-center space-x-1 flex-row ml-2 mt-2 hover:underline cursor-pointer'>
                             <IoMdSettings size={24} />

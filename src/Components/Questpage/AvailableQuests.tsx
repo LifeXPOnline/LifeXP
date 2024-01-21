@@ -49,7 +49,6 @@ const AvailableQuests = ()=> {
                         <FilterMenu />
                     </div>
                     {/* quest cards */}
-                    
                     <div className="flex flex-col justify-center md:flex-row">
                         {Object.entries(quests).map(([QuestType, { Icon, Description, Reward }]) => (
                             <Questcard 
@@ -61,12 +60,6 @@ const AvailableQuests = ()=> {
                             />
                         ))}
                     </div>
-
-                        {/* <Questcard Title="Daily Quest" Reward="300 XP"/>
-                        <Questcard Title="Fitness" Reward="500 XP" />
-                        <Questcard Title="Work" Reward="200 XP" />
-                        <Questcard Title="Personal" Reward="180 XP"/>                    */}
-                    
                 </div>
             
             </div>
