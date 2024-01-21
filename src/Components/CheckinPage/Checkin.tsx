@@ -4,13 +4,15 @@ import Moodcard from "./Moodcard"
 import { Dispatch, SetStateAction, useEffect, useState, useRef } from 'react'
 import Entry from "./Entry";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'; // optional for styling
+import PropTypes from 'prop-types';
 
 interface CheckinProps{
-    thePage:string
     setThePage: Dispatch<SetStateAction<string>>
 }
 
-const Checkin: React.FC<CheckinProps> = ({thePage,setThePage}) => {
+const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
 
     const[isVisible, setIsVisible] = useState(true)
     const divRef = useRef()
@@ -38,7 +40,7 @@ const Checkin: React.FC<CheckinProps> = ({thePage,setThePage}) => {
     }, [divRef]);
     
     //face object with corresponding svgs, title as values and svg as keys
-    const face: Record<string, React.ReactElement> = {
+    const moodFace: Record<string, React.ReactElement> = {
         
         "Happy" : <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M31 0C13.875 0 0 13.875 0 31C0 48.125 13.875 62 31 62C48.125 62 62 48.125 62 31C62 13.875 48.125 0 31 0ZM41 21C43.2125 21 45 22.7875 45 25C45 27.2125 43.2125 29 41 29C38.7875 29 37 27.2125 37 25C37 22.7875 38.7875 21 41 21ZM21 21C23.2125 21 25 22.7875 25 25C25 27.2125 23.2125 29 21 29C18.7875 29 17 27.2125 17 25C17 22.7875 18.7875 21 21 21ZM45.35 42.275C41.7875 46.55 36.5625 49 31 49C25.4375 49 20.2125 46.55 16.65 42.275C14.95 40.2375 18.025 37.6875 19.725 39.7125C22.525 43.075 26.625 44.9875 31 44.9875C35.375 44.9875 39.475 43.0625 42.275 39.7125C43.95 37.6875 47.0375 40.2375 45.35 42.275Z" fill="black"/>
@@ -65,7 +67,7 @@ const Checkin: React.FC<CheckinProps> = ({thePage,setThePage}) => {
                         </svg>
         
     }
-    const icon: Record<string, React.ReactElement> = {
+    const menuIcons: Record<string, React.ReactElement> = {
         "book": <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 18.5C0 18.8978 0.158035 19.2794 0.43934 19.5607C0.720644 19.842 1.10218 20 1.5 20H3V0H1.5C1.10218 0 0.720644 0.158035 0.43934 0.43934C0.158035 0.720644 0 1.10218 0 1.5V18.5ZM4 0V20H14C14.5304 20 15.0391 19.7893 15.4142 19.4142C15.7893 19.0391 16 18.5304 16 18V2C16 1.46957 15.7893 0.960859 15.4142 0.585786C15.0391 0.210714 14.5304 0 14 0L4 0ZM11 8H6V7H11V8ZM14 6H6V5H14V6Z" fill="black"/>
                     </svg>,
@@ -89,34 +91,38 @@ const Checkin: React.FC<CheckinProps> = ({thePage,setThePage}) => {
                 {/* menu */}
                 {menuOpen&&
                 <div className="relative">
-                   <div ref={divRef} className="flex flex-col border border-b-2 border-black bg-slate-50 w-40 h-20 absolute left-5 top-[-15px] z-0">
+                   <div  className="flex flex-col border border-b-2 border-black bg-slate-50 w-40 h-20 absolute left-5 top-[-15px] z-0">
                         <div
-                            onClick={()=>{setThePage("entry")}} 
+                            onClick={()=>{setThePage("logs")}} 
                             className="flex flex-row ml-2 mt-3 cursor-pointer hover:underline">
-                            {icon.book}
+                            {menuIcons.book}
                             <h1 className="ml-2 text-sm tracking-wide">
                                 Journal Entry
                             </h1>
                         </div>
-                        <div className="flex flex-row ml-2 mt-3 cursor-pointer hover:underline">
-                            {icon.graph}
-                            <h1 className="ml-2 text-sm tracking-wide">
-                                Mood Graph
-                            </h1>
-                        </div>
+                        <Tippy
+                            placement="right"
+                            content="in progress">
+                            <div className="flex flex-row ml-2 mt-3 cursor-pointer hover:underline">
+                                {menuIcons.graph}
+                                <h1 className="ml-2 text-sm tracking-wide">
+                                    Mood Graph
+                                </h1>
+                            </div>
+                        </Tippy>
                     </div>
                 </div>
                 }
             </div>
             <div className="flex flex-col items-center">
                 <h1 className="mb-4">
-                    Hows your mood today?
+                    How&#39;s your mood today?
                 </h1>
               
          
             
                 <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12 mt-4">
-                {Object.entries(face).map(([title, moodElement]) => {
+                {Object.entries(moodFace).map(([title, moodElement]) => {
                     // Render the card only if no mood is selected or the current card is the selected one
                     if (!selectedMood || selectedMood === title) {
                         return (
@@ -144,7 +150,7 @@ const Checkin: React.FC<CheckinProps> = ({thePage,setThePage}) => {
     </div>)
 }
 
-// Checkin.propTypes = {
-//     thePage: PropTypes.string.isRequired
-// }
+Checkin.propTypes = {
+    setThePage: PropTypes.func.isRequired,
+}
 export default Checkin

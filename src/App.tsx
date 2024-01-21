@@ -6,6 +6,7 @@ import Welcomepage from "./Components/SkillTree/Welcomepage"
 import {Route, Routes} from "react-router-dom"
 import CheckinParent from "./Components/CheckinPage/CheckinParent"
 
+
 const App = ()=> {
 
   return (

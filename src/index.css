@@ -62,6 +62,20 @@ li div {
 .meterContainer:hover + .levelStatistics {
   display: block;
 }
+/* tooltips css */
+.tippy-box {
+  background-color: rgb(44, 44, 44);
+  color: white;
+  font-size: 12px;
+  font-family: Source Code Pro;
+  height: 28px;
+
+}
+
+.tippy-arrow {
+  background-color: rgb(44, 44, 44);
+  
+}
 
 .custom-checkbox {
   cursor: pointer;

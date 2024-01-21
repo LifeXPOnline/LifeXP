@@ -1,7 +1,8 @@
 import { WiStars } from "react-icons/wi";
 import { CiSquarePlus } from "react-icons/ci";
 import { IoIosCheckbox } from "react-icons/io";
-
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'; // optional for styling
 
 
 const Tasks = () => {
@@ -27,9 +28,13 @@ const Tasks = () => {
             <div className=" ">
                 <div className="flex justify-between">
                     <h1 className="text-normal mb-2">Fitness</h1> 
-                    <button>
-                        <CiSquarePlus size={25} className="icon-hover"/>
-                    </button>
+                    <Tippy 
+                        delay={800}
+                        content="add a task">
+                        <button>
+                            <CiSquarePlus size={25} className="icon-hover"/>
+                        </button>
+                    </Tippy>
                 </div>
                 <div className="flex justify-between w-96 md:w-[828px] h-32 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer" >
                     <div className="ml-6 mt-4 space-y-4">
@@ -57,9 +62,13 @@ const Tasks = () => {
             <div>   
                 <div className="flex justify-between">
                     <h1 className="text-normal mb-2">Work</h1> 
-                    <button>
-                        <CiSquarePlus size={25} className="icon-hover"/>
-                    </button>
+                    <Tippy 
+                        delay={800}
+                        content="add a task">
+                        <button>
+                            <CiSquarePlus size={25} className="icon-hover"/>
+                        </button>
+                    </Tippy>
                 </div>
                 <div className="w-96 md:w-[828px] h-24 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer">
                     <div className="ml-6 mt-4 space-y-4">
@@ -80,9 +89,13 @@ const Tasks = () => {
             <div>
                 <div className="flex justify-between">
                     <h1 className="text-normal mb-2">Personal</h1> 
-                    <button>
-                        <CiSquarePlus size={25} className="icon-hover"/>
-                    </button>
+                    <Tippy 
+                        delay={800}
+                        content="add a task">
+                        <button>
+                            <CiSquarePlus size={25} className="icon-hover"/>
+                        </button>
+                    </Tippy>
                 </div>
                 <div className="w-96 md:w-[828px] h-32 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer">
                     <div className="ml-6 mt-4 space-y-4">

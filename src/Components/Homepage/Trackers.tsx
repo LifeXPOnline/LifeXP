@@ -11,7 +11,7 @@ const Trackers = () => {
         <div className="hidden md:flex flex-col w-96 border-t border-r border-black">
             <div className="flex flex-col h-full justify-between items-center mt-5 ">
                 <div className="space-y-8">
-                    {/* Daily tracker */}
+                    {/* Daily streak tracker */}
                     <div className="flex flex-col items-center text-sm">
                         <h1>A 3 day streak!</h1>
                         <div className="w-56 h-44 border border-black"></div>
@@ -31,7 +31,7 @@ const Trackers = () => {
                     </div>
                 </div>
                 {/* level up meter */}
-                <div className="flex flex-col items-center text-sm ">
+                <div className="flex flex-col items-center text-sm relative ">
                     {/* level and xp */}
                     <div className="mb-4 cursor-default">
                         <h1>Level: 5</h1>

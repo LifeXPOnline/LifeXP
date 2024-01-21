@@ -1,5 +1,7 @@
 import AcceptedQuests from "./AcceptedQuests"
-import MyQuests from "./MyQuests"
+import AvailableQuests from "./AvailableQuests"
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'; // optional for styling
 import { GiScrollQuill } from "react-icons/gi";
 import { useState } from 'react'
 import { TbCards } from "react-icons/tb";
@@ -14,21 +16,32 @@ const Quests = () =>{
         {changePage?
         <AcceptedQuests />
         :
-        <MyQuests />
+        <AvailableQuests />
         }
         
         {changePage?
-        <button  
-            onClick={()=>{setChangePage(!changePage)}} 
-            className={button.styling}>
-            <TbCards size={28}/>
+        <Tippy
+            delay={800}
+            placement="right"
+            content="Available">
+            <button  
+                onClick={()=>{setChangePage(!changePage)}} 
+                className={button.styling}>
+                <TbCards size={28}/>
 
-        </button>:
-        <button 
-            onClick={()=>{setChangePage(!changePage)}} 
-            className={button.styling}>
-            <GiScrollQuill  size={28} />
-        </button>}
+            </button>
+        </Tippy>:
+        <Tippy 
+            delay={800}
+            placement="right"
+            content="Accepted">
+            <button  
+                onClick={()=>{setChangePage(!changePage)}} 
+                className={button.styling}>
+                <GiScrollQuill  size={28} />
+            </button>
+        </Tippy>}
+       
     </div>
            
     )

@@ -5,7 +5,7 @@ interface MoodcardProps  {
     Title: string
     isActive: boolean
     onSelect: (moodTitle: string) => void //funct with string parameter
-    selectedMood: string
+    selectedMood: string | null
 }
 const Moodcard: React.FC<MoodcardProps> = ({ Mood, Title, onSelect, isActive, selectedMood }) => {
     const hoverClass = isActive ? "" : "hover-reveal"; // Apply hover class only when not active

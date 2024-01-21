@@ -11,8 +11,8 @@ const CheckinParent: React.FC<pageProps> = ()=> {
     const [thePage,setThePage] = useState("checkin")
 
     return(<div>
-        {thePage === "logs"&& <Logs />}
-        {thePage === "checkin"&& <Checkin thePage={thePage} setThePage={setThePage} />}
+        {thePage === "logs"&& <Logs setThePage={setThePage}/>}
+        {thePage === "checkin"&& <Checkin setThePage={setThePage} />}
     </div>)
 
 }

@@ -11,14 +11,14 @@ const Welcomepage = () =>{
 
     return(<div className="flex flex-col h-screen">
         <div className="md:border-t md:border-black md:mt-20">
-            <div className="mt-14 md:mb-10 flex justify-center md:justify-start md:ml-10">
+            <div className="mt-20 md:mt-14 md:mb-10 flex justify-center md:justify-start md:ml-10">
                 <div className="flex items-center border-b border-black w-64">
                     <BsCompass size={20}/>
                     <h1 className="ml-2"> Your choices, your path </h1>
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center">
-
+                {/* choices for skill tree */}
                 <div className="flex flex-col md:flex-row md:space-x-20">
                     <div className={css.pathdiv}>
                         <h1 className="mt-3">Fitness</h1>

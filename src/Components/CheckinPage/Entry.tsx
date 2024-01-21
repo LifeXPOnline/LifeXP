@@ -5,10 +5,8 @@ interface EntryProps {
     selectedMood: string | null;
 }
 
-const Entry: React.FC<EntryProps> = ({selectedMood}) => {
-    const numb = () =>{
-        return <p>{`Selected Mood in: , ${selectedMood})`}</p>
-    }
+const Entry: React.FC<EntryProps> = () => {
+ 
     return (
         // <div>
             <div className="space-y-5 mt-8 w-full flex items-center flex-col journal-entry ">
@@ -28,7 +26,7 @@ const Entry: React.FC<EntryProps> = ({selectedMood}) => {
                             Submit
                         </button>
                     </div>
-                    {numb()}
+              
                 </div> 
         // </div>
     )
@@ -36,6 +34,6 @@ const Entry: React.FC<EntryProps> = ({selectedMood}) => {
 
 Entry.propTypes = {
     selectedMood: PropTypes.string,
-};
+}
 
 export default Entry
