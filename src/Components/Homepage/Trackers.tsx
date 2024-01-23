@@ -8,7 +8,7 @@ const Trackers = () => {
     }
     return (
         
-        <div className="hidden md:flex flex-col w-96 border-t border-r border-black">
+        <div className="hidden md:flex flex-col w-96 border-t border-r border-black rounded-r-md">
             <div className="flex flex-col h-full justify-between items-center mt-5 ">
                 <div className="space-y-8">
                     {/* Daily streak tracker */}

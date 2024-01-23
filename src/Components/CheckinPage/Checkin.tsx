@@ -70,7 +70,7 @@ const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
         "grid" : "grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-10 mt-4"
     }
     return(
-    <div className="flex  flex-col h-screen md:w-full">
+    <div className="flex flex-col h-screen md:w-full">
        
        <div className=" mt-10 md:mt-20 border-t border-black">
             

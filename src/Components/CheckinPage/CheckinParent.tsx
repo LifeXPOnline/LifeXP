@@ -7,7 +7,7 @@ import { useState } from "react"
 const CheckinParent = ()=> {
     const [thePage,setThePage] = useState<string>("checkin")
 
-    return(<div>s
+    return(<div>
         {thePage === "logs"&& <Logs setThePage={setThePage}/>}
         {thePage === "checkin"&& <Checkin setThePage={setThePage} />}
     </div>)
