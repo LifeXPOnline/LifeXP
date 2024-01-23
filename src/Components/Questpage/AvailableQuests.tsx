@@ -49,7 +49,7 @@ const AvailableQuests = ()=> {
                         <FilterMenu />
                     </div>
                     {/* quest cards */}
-                    <div className="flex flex-col justify-center md:flex-row">
+                    <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-1">
                         {Object.entries(quests).map(([QuestType, { Icon, Description, Reward }]) => (
                             <Questcard 
                                 key={QuestType} 

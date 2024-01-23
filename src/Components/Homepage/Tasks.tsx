@@ -36,7 +36,7 @@ const Tasks = () => {
                         </button>
                     </Tippy>
                 </div>
-                <div className="flex justify-between w-96 md:w-[828px] h-32 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer" >
+                <div className="flex justify-between md:w-[828px] h-32 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer" >
                     <div className="ml-6 mt-4 space-y-4">
                         <form className="flex items-center">
                             <input type="checkbox" name="category" id="fitness" className="custom-checkbox form-radio h-5 w-5 rounded-none text-gray-600" />
