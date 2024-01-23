@@ -1,16 +1,13 @@
 // import Logs from "./Logs"
 import Checkin from "./Checkin"
 import Logs from "./Logs"
-import { Dispatch, SetStateAction, useState } from "react"
+import { useState } from "react"
 
-interface pageProps {
-    thePage:string
-    setThePage: Dispatch<SetStateAction<string>>
-}
-const CheckinParent: React.FC<pageProps> = ()=> {
-    const [thePage,setThePage] = useState("checkin")
 
-    return(<div>
+const CheckinParent = ()=> {
+    const [thePage,setThePage] = useState<string>("checkin")
+
+    return(<div>s
         {thePage === "logs"&& <Logs setThePage={setThePage}/>}
         {thePage === "checkin"&& <Checkin setThePage={setThePage} />}
     </div>)

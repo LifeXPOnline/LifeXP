@@ -1,3 +1,9 @@
-import React, { SVGProps } from 'react';
+// import React, { SVGProps } from 'react';
 
-export const ScrollIcon = ()
+// export const ScrollIcon = ()
+const icons = () => {
+    return(<div>
+
+    </div>)
+}
+export default icons
