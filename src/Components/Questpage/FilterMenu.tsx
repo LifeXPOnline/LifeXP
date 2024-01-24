@@ -1,6 +1,7 @@
 import { FaFilter } from "react-icons/fa";
 import { useState, useRef } from "react";
 import useOutsideClick from "../../logic/useOutsideClick";
+import { IoIosCheckbox } from "react-icons/io";
 const FilterMenu = () => {
     const[filterOpen, setFilterOpen] = useState<boolean>(false)
     const filterRef:React.MutableRefObject<null> = useRef(null)
@@ -22,23 +23,34 @@ const FilterMenu = () => {
         {filterOpen&&
         <div ref={filterRef} className="absolute right-10 top-8 z-50">
             <div className=" border border-black border-b-2 bg-slate-50 w-44 h-32 z-50">
-                <div className="text-sm">
+                <div className="text-sm ml-1">
                     <div className="flex flex-row space-x-1">
-                        <input type="checkbox" id="daily-quest"/>
-                        <label htmlFor="daily-quest"><h1>Daily Quest</h1></label>
+                        <input type="checkbox" id="daily-quest" className="custom-checkbox2"/>
+                        <label htmlFor="daily-quest">
+                            <h1>Daily Quest</h1>
+                        </label>
                     </div>
                     <div className="flex flex-row space-x-1">
-                        <input type="checkbox" id="personal"/>
-                        <label htmlFor="daily-quest"><h1>Personal</h1></label>
+                        <input type="checkbox" id="personal" className="custom-checkbox2"/>
+                        <label htmlFor="daily-quest">
+                            <h1>Personal</h1>
+                        </label>
                     </div>
                     <div className="flex flex-row space-x-1">
-                        <input type="checkbox" id="work"/>
-                        <label htmlFor="daily-quest"><h1>Work</h1></label>
+                        <input type="checkbox" id="work" className="custom-checkbox2"/>
+                        <label htmlFor="daily-quest">
+                            <h1>Work</h1>
+                        </label>
                     </div>
                     <div className="flex flex-row space-x-1">
-                        <input type="checkbox" id="fitness"/>
-                        <label htmlFor="daily-quest"><h1>Fitness</h1></label>
+                        <input type="checkbox" id="fitness" className="custom-checkbox2"/>
+                        <label htmlFor="daily-quest">
+                            <h1>Fitness</h1>
+                        </label>
                     </div>
+                </div>
+                <div className=" flex justify-end ">
+                        <IoIosCheckbox className="hover:text-gray-700 cursor-pointer mt-4"  size = {28}/>
                 </div>
             </div>
         </div>}

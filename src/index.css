@@ -84,6 +84,13 @@ li div {
   border-color: black;
   accent-color: #3a3a3a; 
 }
+.custom-checkbox2 {
+  cursor: pointer;
+  border-radius: 0; 
+  border-width: 1px; 
+  border-color: black;
+  accent-color: #3a3a3a; 
+}
 
 .color{
   background-color: #737373;

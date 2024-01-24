@@ -6,6 +6,17 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '480px',  
+        'sm': '640px', 
+        'md': '768px',     
+        'md2':'900px',
+        'lmd': '990px',
+        'lg': '1024px', 
+        'lg2': '1100px',    
+        'xl': '1280px',     
+        '2xl': '1536px',    
+      },
       fontFamily: {
         'source-code-pro': ['Source Code Pro', 'Inter', 'sans-serif']
       },

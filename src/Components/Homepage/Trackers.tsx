@@ -1,4 +1,12 @@
-const Trackers = () => {
+import { Dispatch, SetStateAction } from "react"
+import PropTypes from 'prop-types'
+
+
+interface TrackersProps {
+    setThePage : Dispatch<SetStateAction<string>>
+}
+
+const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
     const styles = {
         "quests" : "space-y-3 text-sm flex flex-col items-center",
         "hoverBase":"relative bottom-14 left-0 border-2 bg-slate-50 border-black w-80 h-24 rounded-md text-xs space-y-3 flex flex-col justify-center",
@@ -6,15 +14,19 @@ const Trackers = () => {
         "hover2" : "bg-levelup-gray1 hover:bg-levelup-gray2 h-3 ml-[2px] mt-[1.2px] border border-black rounded-2xl",
 
     }
+
     return (
         
-        <div className="hidden md:flex flex-col w-96 border-t border-r border-black rounded-r-md">
+        <div className="hidden md2:flex flex-col w-96 border-t border-r border-black rounded-r-md">
             <div className="flex flex-col h-full justify-between items-center mt-5 ">
                 <div className="space-y-8">
+                    <div onClick={()=>{setThePage("Tasks")}}></div>
                     {/* Daily streak tracker */}
                     <div className="flex flex-col items-center text-sm">
                         <h1>A 3 day streak!</h1>
-                        <div className="w-56 h-44 border border-black"></div>
+                        <div className="w-56 h-44 border border-black">
+
+                        </div>
                     </div>
                     {/* Task tracker */}
                     <div className={styles.quests}>
@@ -81,4 +93,9 @@ const Trackers = () => {
         </div>
     )
 }
+
+Trackers.propTypes = {
+    setThePage : PropTypes.func.isRequired
+}
+
 export default Trackers
