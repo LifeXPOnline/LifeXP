@@ -6,27 +6,30 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 
 
 const Tasks = () => {
+    const css = {
+        "xpdiv":"md:hidden ml-0 flex items-center justify-center h-11 w-11 border-1"+ 
+                "bg-slate-50 border-black shadow-sharp-sm cursor-pointer icon-hover4"+ 
+                "transition-transform duration-200 hover:shadow-sharp-md"
+    }
     return (
         <div className="flex flex-col md:border-l md:border-t rounded-l-md md:border-black md:w-5/6 items-center space-y-6">
             
-            <div className="flex flex-row mt-20 md:mt-14 items-center justify-between w-96">
-                <div className="ml-0 md:hidden flex items-center justify-center h-11 w-11 border-1 
-                                bg-slate-100 border-black shadow-sharp-sm cursor-pointer 
-                                icon-hover4 transition-transform duration-200 hover:shadow-sharp-md">
-                    <h1 className="tracking-wide ">XP</h1>
+            <div className="flex flex-row mt-20 md:mt-14 items-center  w-10/12">
+                <div className={css.xpdiv}>
+                    <h1 className="tracking-wide">
+                        XP
+                    </h1>
                 </div>
-                <div className="flex items-center mr-20">
+                <div className="flex items-center ml-6 md:ml-0 lg:ml-16">
                     <WiStars size = {30}/>
-                    <h1 className="text-lg underline mb-1 md:mb-4">Your Tasks</h1>
+                    <h1 className="text-lg underline mb-1 ">Your Tasks</h1>
                 </div>
-                <div>
-                    
-                </div>
+                
             </div>
             
             {/* Fitness */}
-            <div className=" ">
-                <div className="flex justify-between">
+            <div className="w-10/12 lg:ml-28">
+                <div className="flex justify-between lg:w-10/12">
                     <h1 className="text-normal mb-2">Fitness</h1> 
                     <Tippy 
                         delay={800}
@@ -36,7 +39,7 @@ const Tasks = () => {
                         </button>
                     </Tippy>
                 </div>
-                <div className="flex justify-between md:w-[828px] h-32 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer" >
+                <div className="lg:w-10/12 flex justify-between h-32 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer" >
                     <div className="ml-6 mt-4 space-y-4">
                         <form className="flex items-center">
                             <input type="checkbox" name="category" id="fitness" className="custom-checkbox form-radio h-5 w-5 rounded-none text-gray-600" />
@@ -59,8 +62,8 @@ const Tasks = () => {
             </div>
 
             {/* Work */}
-            <div>   
-                <div className="flex justify-between">
+            <div className="w-10/12 lg:ml-28">   
+                <div className="flex justify-between lg:w-10/12">
                     <h1 className="text-normal mb-2">Work</h1> 
                     <Tippy 
                         delay={800}
@@ -70,7 +73,7 @@ const Tasks = () => {
                         </button>
                     </Tippy>
                 </div>
-                <div className="w-96 md:w-[828px] h-24 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer">
+                <div className="lg:w-10/12 h-24 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer">
                     <div className="ml-6 mt-4 space-y-4">
                         <form className="flex items-center">
                             <input type="checkbox" name="category" id="fitness" className="custom-checkbox form-radio h-5 w-5 text-gray-600" />
@@ -86,8 +89,8 @@ const Tasks = () => {
             </div>
 
             {/* Personal */}
-            <div>
-                <div className="flex justify-between">
+            <div className="w-10/12 lg:ml-28">
+                <div className="flex justify-between lg:w-10/12">
                     <h1 className="text-normal mb-2">Personal</h1> 
                     <Tippy 
                         delay={800}
@@ -97,7 +100,7 @@ const Tasks = () => {
                         </button>
                     </Tippy>
                 </div>
-                <div className="w-96 md:w-[828px] h-32 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer">
+                <div className="lg:w-10/12 h-32 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 transition-transform duration-200 cursor-pointer">
                     <div className="ml-6 mt-4 space-y-4">
                         <form className="flex items-center">
                             <input type="checkbox" name="category" id="fitness" className="custom-checkbox form-radio h-5 w-5 text-gray-600" />

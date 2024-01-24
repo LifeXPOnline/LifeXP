@@ -61,7 +61,7 @@ const Logs: React.FC<LogsProps> = ({setThePage}) => {
                         </Tippy>
                     </div>
                     
-                    <div className="space-y-3 md:w-[500px]">
+                    <div className="space-y-3 md:w-5/12">
                         <div className="flex justify-center mb-5 icon-hover3">
                             {/* search bar for journal entries */}
                             <div className="flex">
