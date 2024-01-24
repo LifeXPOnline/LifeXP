@@ -12,7 +12,7 @@ interface TasksProps {
 
 const Tasks: React.FC<TasksProps> = ({ setThePage }) => {
     const css = {
-        "xpdiv":"md2:hidden ml-0 flex items-center justify-center h-11 w-11 border-1"+ 
+        "xpdiv":"lg1:hidden ml-0 flex items-center justify-center h-11 w-11 border-1"+ 
                 "bg-slate-50 border-black shadow-sharp-sm cursor-pointer icon-hover4"+ 
                 "transition-transform duration-200 hover:shadow-sharp-md"
     }
@@ -20,13 +20,17 @@ const Tasks: React.FC<TasksProps> = ({ setThePage }) => {
         <div className="flex flex-col md:border-l md:border-t rounded-l-md md:border-black md:w-5/6 items-center space-y-6">
             
             <div className="flex flex-row mt-20 md:mt-14 items-center w-10/12">
-                <div 
-                    onClick={()=>{()=>{setThePage("Trackers")}}}
-                    className={css.xpdiv}>
-                    <h1 className="tracking-wide">
-                        XP
-                    </h1>
-                </div>
+                <Tippy
+                    content="XP Tracker"
+                    delay={700}>
+                    <div 
+                        onClick={()=>{setThePage("Trackers")}}
+                        className={css.xpdiv}>
+                        <h1 className="tracking-wide">
+                            XP
+                        </h1>
+                    </div>
+                </Tippy>
                 <div className="flex items-center ml-6 lg:ml-16">
                     <WiStars size = {30}/>
                     <h1 className="text-lg underline mb-1 ">Your Tasks</h1>
