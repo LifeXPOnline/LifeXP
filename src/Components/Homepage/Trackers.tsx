@@ -14,14 +14,14 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
         "hoverBase":"relative bottom-14 left-0 border-2 bg-slate-50 border-black w-80 h-24 rounded-md text-xs space-y-3 flex flex-col justify-center",
         "hover1" : "w-44 h-4 border border-black mr-3 rounded-lg ml-2",
         "hover2" : "bg-levelup-gray1 hover:bg-levelup-gray2 h-3 ml-[2px] mt-[1.2px] border border-black rounded-2xl",
-        "pageButton" : "absolute left-1 top-14 md:top-36 md:left-14 ml-0 bg-slate-50 flex items-center justify-center lg1:hidden h-11 w-11 border-1"+ 
+        "pageButton" : "absolute left-5 top-20 md:top-36 md:left-14 ml-0 bg-slate-50 flex items-center justify-center lg1:hidden h-11 w-11 border-1"+ 
         "bg-slate-50 border-black shadow-sharp-sm cursor-pointer icon-hover4"+ 
         "transition-transform duration-200 hover:shadow-sharp-md"
 }
     
     return (
         
-        <div className=" md2:flex flex-col top lg1:w-96 w-[90%] border-t lg1:border-r border-black lg1:rounded-t-md">
+        <div className="w-full border-t border-black flex-col md2:flex lg1:w-96 lg1:border-r lg1:rounded-t-md ">
             <div className="flex flex-col  justify-between items-center mt-5 ">
                 <div className="space-y-8 ">
                     {/* change page button */}

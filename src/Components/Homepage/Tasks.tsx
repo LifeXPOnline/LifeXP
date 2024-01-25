@@ -17,7 +17,7 @@ const Tasks: React.FC<TasksProps> = ({ setThePage }) => {
                 "transition-transform duration-200 hover:shadow-sharp-md"
     }
     return (
-        <div className="flex flex-col md:border-l md:border-t rounded-l-md md:border-black md:w-5/6 items-center space-y-6">
+        <div className="flex flex-col md:border-l md:border-t rounded-l-md md:border-black w-full lg2:w-9/12 items-center space-y-6">
             
             <div className="flex flex-row mt-20 md:mt-14 items-center w-10/12">
                 <Tippy
