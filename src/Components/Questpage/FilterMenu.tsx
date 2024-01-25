@@ -25,25 +25,25 @@ const FilterMenu = () => {
             <div className=" border border-black border-b-2 bg-slate-50 w-44 h-32 z-50">
                 <div className="text-sm ml-1">
                     <div className="flex flex-row space-x-1">
-                        <input type="checkbox" id="daily-quest" className="custom-checkbox2"/>
+                        <input type="checkbox" id="daily-quest" className="custom-checkbox2 h-4 w-3.5"/>
                         <label htmlFor="daily-quest">
                             <h1>Daily Quest</h1>
                         </label>
                     </div>
                     <div className="flex flex-row space-x-1">
-                        <input type="checkbox" id="personal" className="custom-checkbox2"/>
+                        <input type="checkbox" id="personal" className="custom-checkbox2 h-5 w-3.5"/>
                         <label htmlFor="daily-quest">
                             <h1>Personal</h1>
                         </label>
                     </div>
                     <div className="flex flex-row space-x-1">
-                        <input type="checkbox" id="work" className="custom-checkbox2"/>
+                        <input type="checkbox" id="work" className="custom-checkbox2 h-5 w-3.5"/>
                         <label htmlFor="daily-quest">
                             <h1>Work</h1>
                         </label>
                     </div>
                     <div className="flex flex-row space-x-1">
-                        <input type="checkbox" id="fitness" className="custom-checkbox2"/>
+                        <input type="checkbox" id="fitness" className="custom-checkbox2 h-5 w-3.5"/>
                         <label htmlFor="daily-quest">
                             <h1>Fitness</h1>
                         </label>

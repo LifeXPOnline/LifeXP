@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useIsLargeScreen = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1023); // 1024px as an example breakpoint
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1024); // 1024px as an example breakpoint
 
   useEffect(() => {
     const checkScreenSize = () => {
