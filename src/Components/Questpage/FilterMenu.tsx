@@ -1,6 +1,6 @@
 import { FaFilter } from "react-icons/fa";
 import { useState, useRef } from "react";
-import useOutsideClick from "../../logic/useOutsideClick";
+import useOutsideClick from "../../Hooks/useOutsideClick";
 import { IoIosCheckbox } from "react-icons/io";
 const FilterMenu = () => {
     const[filterOpen, setFilterOpen] = useState<boolean>(false)
@@ -23,7 +23,7 @@ const FilterMenu = () => {
         {filterOpen&&
         <div ref={filterRef} className="absolute right-10 top-8 z-50">
             <div className=" border border-black border-b-2 bg-slate-50 w-44 h-33 z-50">
-                <div className="flex flex-col items-center text-sm ml-1 mt-3 space-y-1">
+                <div className="flex flex-col items-center text-sm mt-3 space-y-1">
                     <div className="flex flex-row space-x-2">
                         <label htmlFor="daily-quest">
                             <h1>Daily Quest</h1>

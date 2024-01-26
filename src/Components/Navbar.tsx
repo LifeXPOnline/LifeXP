@@ -6,7 +6,7 @@ import { FaTree, FaDoorOpen  } from "react-icons/fa";
 import { PiSmileyFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";
 import { NavLink } from "react-router-dom"
-import useOutsideClick from '../logic/useOutsideClick';
+import useOutsideClick from '../Hooks/useOutsideClick';
 // import { CiUser } from "react-icons/ci";
 // import { GrAchievement } from "react-icons/gr";
 // import { MdGamepad } from "react-icons/md";

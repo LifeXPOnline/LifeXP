@@ -8,7 +8,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional for styling
 import PropTypes from 'prop-types';
-import useOutsideClick from "../../logic/useOutsideClick";
+import useOutsideClick from "../../Hooks/useOutsideClick";
 
 interface CheckinProps{
     setThePage: Dispatch<SetStateAction<string>>
@@ -46,7 +46,7 @@ const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
     //card classnames - will switch based on selections
     const cardClass: Record<string, string> = {
         "center" : "flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-12 mt-4",
-        "grid" : "grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-10 mt-4"
+        "grid" : "grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-10 lg:gap-11 mt-4"
     }
     return(
     <div className="flex flex-col h-screen md:w-full">
