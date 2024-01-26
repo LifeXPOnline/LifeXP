@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.icon-hover:hover {
+  transform: scale(1.2); 
+  transition: all 0.15s ease;
+}
+.icon-hover2:hover {
+  transform: scale(1.09); 
+  /* text-decoration: underline; */
+  transition: all 0.15s ease;
+}
+.icon-hover3:hover {
+  transform: scale(1.05);
+  transition: all 0.15s ease;
+}
+.icon-hover4:hover {
+  transform: scale(1.02);
+  transition: all 0.18s ease;
+  
+}
+.shadow-transition {
+  transition: box-shadow 0.4s ease;
+}
+
+
+
+/* Base state for all NavLink divs */
+li div {
+  border-width: 1px;
+  padding: 0.25rem 0.50rem;
+  border-color: transparent; /* Default border color */
+  border-radius: 1.5rem;
+  transition: border-color 0.2s ease, padding 0.3s ease;
+}
+
+/* Transition applied when NavLink becomes active */
+.active-link div {
+  border-color: rgb(0,0,0); /* Active state border color */
+  transition: border-color 0.5s ease, padding 0.3s ease;
+}
+.active-link div:hover{
+  transform: scale(1); /*to remove the hover effect*/
+}
+.active-link2 div{
+  text-decoration: underline;
+}
+
+.hover-reveal:hover .select-button {
+  display: block;
+}
+.journal-entry {
+  transition: all 3s ease;
+}
+
+.levelStatistics {
+  display: none;
+}
+
+.meterContainer:hover + .levelStatistics {
+  display: block;
+}
+/* tooltips css */
+.tippy-box {
+  background-color: rgb(44, 44, 44);
+  color: white;
+  font-size: 12px;
+  font-family: Source Code Pro;
+  height: 28px;
+
+}
+
+.tippy-arrow {
+  background-color: rgb(44, 44, 44);
+  
+}
+
+.custom-checkbox {
+  cursor: pointer;
+  border-radius: 0; 
+  border-width: 2px; 
+  border-color: black;
+  accent-color: #3a3a3a; 
+}
+.custom-checkbox2 {
+  cursor: pointer;
+  border-radius: 0; 
+  border-width: 1px; 
+  border-color: black;
+  accent-color: #3a3a3a; 
+}
+
+.color{
+  background-color: #737373;
+}
+
+
+
+/**
+ * ----------------------------------------
+ * animation slide-right
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+
+
+.slide-right {
+	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* 
+.hover-lift {
+    position: relative;
+    transition: transform 0.2s;
+  }
+  
+  .hover-lift::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.2s;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+  }
+  
+  .hover-lift:hover::before {
+    opacity: 0; 
+  }
+   */
+
+   /* For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px;  /* Width of the vertical scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #757575;  /* Color of the scroll thumb */
+  border-radius: 10px;
+  border: 1.5px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5c5c5c;  /* Color of the scroll thumb on hover */
+  border-radius: 10px;
+  border: 1.5px solid black;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
