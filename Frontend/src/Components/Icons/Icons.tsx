@@ -2,29 +2,10 @@
 // App icon
 export const GameIcon: React.FC = () => {
      return (<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <mask id="mask0_622_6"  maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
-     <path d="M8.8 6.05L11 8.25L13.2 6.05V0H8.8V6.05ZM8.8 15.95L11 13.75L13.2 15.95V22H8.8V15.95ZM15.95 13.2L13.75 11L15.95 8.8H22V13.2H15.95ZM6.05 8.8L8.25 11L6.05 13.2H0V8.8H6.05Z" fill="white"/>
-     </mask>
-     <g mask="url(#mask0_622_6)">
-     <path d="M-2.19971 -2.20001H24.2003V24.2H-2.19971V-2.20001Z" fill="black"/>
-     </g>
-     </svg>
+     <path d="M8.8 6.05L11 8.25L13.2 6.05V0H8.8V6.05ZM8.8 15.95L11 13.75L13.2 15.95V22H8.8V15.95ZM15.95 13.2L13.75 11L15.95 8.8H22V13.2H15.95ZM6.05 8.8L8.25 11L6.05 13.2H0V8.8H6.05Z" fill="black"/>
+ </svg>
       )
 }
-
-export const GameIcon2: React.FC = () => {
-    return (<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="mask0_622_7"  maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
-    <path d="M8.8 6.05L11 8.25L13.2 6.05V0H8.8V6.05ZM8.8 15.95L11 13.75L13.2 15.95V22H8.8V15.95ZM15.95 13.2L13.75 11L15.95 8.8H22V13.2H15.95ZM6.05 8.8L8.25 11L6.05 13.2H0V8.8H6.05Z" fill="white"/>
-    </mask>
-    <g mask="url(#mask0_622_7)">
-    <path d="M-2.19971 -2.20001H24.2003V24.2H-2.19971V-2.20001Z" fill="black"/>
-    </g>
-    </svg>
-     )
-}
-
-
 
 // Landing page - login CTA icon
 export const Enter: React.FC = () =>{

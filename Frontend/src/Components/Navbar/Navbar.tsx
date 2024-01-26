@@ -7,7 +7,7 @@ import { PiSmileyFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";
 import { NavLink } from "react-router-dom"
 import useOutsideClick from '../../Hooks/useOutsideClick';
-import { GameIcon2 } from "../Icons/Icons"
+import { GameIcon } from "../Icons/Icons"
 
 
 const Navbar = () =>{
@@ -22,7 +22,7 @@ const Navbar = () =>{
         {/* hamburger not opened */}
         <div className='flex flex-row justify-between py-3 md:border-b md:border-black w-full' >
             <div className='flex flex-row cursor-pointer justify-center items-center ml-6'> 
-                <GameIcon2 />
+                <GameIcon />
                 <h1 className='text-lg ml-2' >
                     Life XP
                 </h1>

@@ -18,7 +18,7 @@ const App = ()=> {
       </div>
 
       {/* Main content */}
-      <div className=" block bg-slate-50 font-source-code-pro tracking-tight">
+      <div className="  bg-slate-50 font-source-code-pro tracking-tight">
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />

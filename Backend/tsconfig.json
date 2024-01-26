@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../dist/Backend",
+    "baseUrl": "./",
+    "noEmit": false,
+    "composite": true,
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
