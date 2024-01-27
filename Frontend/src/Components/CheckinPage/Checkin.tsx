@@ -1,12 +1,10 @@
-// import { HiEmojiHappy } from "react-icons/hi";
-// import { IoIosArrowForward } from "react-icons/io"
 import {Happy, Ok, Angry, Sad, ReallySad, Depressed, Book, Graph} from "../Icons/Icons"
 import Moodcard from "./Moodcard"
 import { Dispatch, SetStateAction, useState, useRef } from 'react'
 import Entry from "./Entry";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; // optional for styling
+import 'tippy.js/dist/tippy.css'; 
 import PropTypes from 'prop-types';
 import useOutsideClick from "../../Hooks/useOutsideClick";
 
@@ -17,7 +15,7 @@ interface CheckinProps{
 const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
 
 
-    const [selectedMood, setSelectedMood] = useState<string | null>(null)
+    const [selectedMood, setSelectedMood] = useState<string >("")
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
     const menuRef:React.MutableRefObject<null> = useRef(null)
 
@@ -54,6 +52,7 @@ const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
        <div className=" mt-10 md:mt-20 border-t border-black">
             
             <div>
+                {/* menu button */}
                 <button 
                     onClick={()=>{setMenuOpen(!menuOpen)}}
                     className="rounded-sm mt-8 mb-4 ml-5">
@@ -87,13 +86,14 @@ const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
                 }
             </div>
             <div className="flex flex-col items-center">
+                 {/* mood cards */}
                 <h1 className="mb-4">
                     How&#39;s your mood today?
                 </h1>
-            
+               
                 <div className={selectedMood != null? cardClass.center : cardClass.grid}>
                     {Object.entries(moodFace).map(([title, moodElement]) => {
-                        // Render the card only if no mood is selected or the current card is the selected one
+                        // Render the cards only if no mood is selected or the current card is the selected one
                         if (!selectedMood || selectedMood === title) {
                             return (
                                 <Moodcard
