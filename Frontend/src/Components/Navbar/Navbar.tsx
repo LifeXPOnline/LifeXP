@@ -104,22 +104,22 @@ const Navbar = () =>{
                 {/* menu */}
                 {openProfileOptions&&
                 <div ref={ProfileOptionsRef} className='absolute right-3 top-11 hidden md:block'>
-                    <div className='flex flex-col   w-36 h-32 border border-b-2 border-black bg-slate-50'>
+                    <div className='flex flex-col items  w-32 h-32 border border-b-2 border-black bg-slate-50'>
                         <div className='flex items-center space-x-1 flex-row ml-2 mt-2 hover:underline cursor-pointer'>
-                            <IoMdSettings size={24} />
+                           
                             <h1 className='text-sm '>
                                 Settings
                             </h1>
                         </div>
                         
-                        <div className='flex items-center flex-row ml-1 mt-3 hover:underline cursor-pointer'>
-                            <GiAchievement size={28}/>
+                        <div className='flex items-center flex-row ml-2 mt-3 hover:underline cursor-pointer'>
+                           
                             <h1 className='text-sm '>
                                 Achievements
                             </h1> 
                         </div>
                         <div className='flex items-center space-x-1 flex-row ml-2 mt-3 hover:underline cursor-pointer'>
-                            <FaDoorOpen size={21}/>
+                            
                             <h1 className='text-sm '>
                                 Logout
                             </h1> 

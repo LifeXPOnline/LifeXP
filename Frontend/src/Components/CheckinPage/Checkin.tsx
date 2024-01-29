@@ -49,7 +49,7 @@ const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
     return(
     <div className="flex flex-col h-screen md:w-full">
        
-       <div className=" mt-10 md:mt-20 border-t border-black">
+       <div className="mt-10 md:mt-20 border-t border-black">
             
             <div>
                 {/* menu button */}
