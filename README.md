@@ -10,3 +10,15 @@ First clone or download the file
 2. cd frontend
 3. npm install just to make sure everything is installed
 3. npm run dev
+
+## Technologies
+Frontend
+1. Vite js
+2. React js
+3. Typescript
+4. Tailwindcss
+
+Backend
+1. Node
+2. Express
+3. PostgreSQL
