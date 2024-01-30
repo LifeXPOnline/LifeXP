@@ -22,3 +22,4 @@ Backend
 1. Node
 2. Express
 3. PostgreSQL
+4. Passport js
