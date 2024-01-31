@@ -17,7 +17,7 @@
     "allowSyntheticDefaultImports": true
   },
   "references": [
-    { "path": "./Frontend" },
-    { "path": "./Backend" }
+    { "path": "./Backend/tsconfig.json" },
+    { "path": "./Frontend/tsconfig.json" }
   ]
 }

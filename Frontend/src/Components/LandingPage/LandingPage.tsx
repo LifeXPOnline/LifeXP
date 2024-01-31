@@ -1,4 +1,6 @@
 import { GameIcon, Enter } from "../Icons/Icons"
+const backendUrl = "http://localhost:5000";
+
 const LandingPage = () => {
     return(
         <div className="flex flex-row items-center justify-between h-14">
@@ -8,9 +10,11 @@ const LandingPage = () => {
                         Life XP
                     </h1>
             </div>
-            <button className=" flex flex-row items-center justify-center h-[60%]  w-32 mr-6 mt-1 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4  cursor-pointer">
-                <h1 className="mr-2">Login</h1><Enter />
-            </button>
+            <a href={`${backendUrl}/auth/google`} 
+               className="flex flex-row items-center justify-center h-[60%] w-32 mr-6 mt-1 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 cursor-pointer">
+                <h1 className="mr-2">Login</h1>
+                <Enter />
+            </a>
         </div>
        
    )
