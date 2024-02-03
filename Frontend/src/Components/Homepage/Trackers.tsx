@@ -11,10 +11,10 @@ interface TrackersProps {
 const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
     const styles = {
         "quests" : "space-y-3 text-sm flex flex-col items-center",
-        "hoverBase":"relative bottom-14 left-0 border-2 bg-slate-50 border-black w-80 h-24 rounded-md text-xs space-y-3 flex flex-col justify-center",
+        "hoverBase":"relative bottom-14 left-0 border-2 bg-white border-black w-80 h-24 rounded-md text-xs space-y-3 flex flex-col justify-center",
         "hover1" : "w-44 h-4 border border-black mr-3 rounded-lg ml-2",
         "hover2" : "bg-levelup-gray1 hover:bg-levelup-gray2 h-3 ml-[2px] mt-[1.2px] border border-black rounded-2xl",
-        "pageButton" : "absolute left-5 top-20 md:top-36 md:left-14 ml-0 bg-slate-50 flex items-center justify-center lg1:hidden h-11 w-11 border-1"+ 
+        "pageButton" : "absolute left-5 top-20 md:top-36 md:left-14 ml-0 bg-white flex items-center justify-center lg1:hidden h-11 w-11 border-1"+ 
         "bg-slate-50 border-black shadow-sharp-sm cursor-pointer icon-hover4"+ 
         "transition-transform duration-200 hover:shadow-sharp-md"
 }
@@ -63,14 +63,14 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
                         <h1>Level: 5</h1>
                         <h1>XP: 400/500</h1>
                     </div>
-                    {/* meter */}
+                    {/* meter div */}
                     <div className="meterContainer w-72 h-9 mb-10 border border-black rounded-2xl cursor-pointer">
                         <div className="bg-levelup-gray1 hover:bg-levelup-gray2 w-48 h-7 mb-10 ml-[3px] mt-[3px] border border-black rounded-2xl">
 
                         </div>
                     </div>
                    
-                   {/* hover, level statistics */}
+                   {/* hover, level statistics div */}
                     <div className="absolute levelStatistics"> 
                         <div className={`${styles.hoverBase} `}>
 

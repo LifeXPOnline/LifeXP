@@ -18,7 +18,7 @@ const Navbar = () =>{
 
   
     return(
-    <div className='md:flex md:justify-center w-full bg-slate-50 fixed z-50'>
+    <div className='md:flex md:justify-center w-full bg-white fixed z-50'>
         {/* hamburger not opened */}
         <div className='flex flex-row justify-between py-3 md:border-b md:border-black w-full' >
             <div className='flex flex-row cursor-pointer justify-center items-center ml-6'> 
