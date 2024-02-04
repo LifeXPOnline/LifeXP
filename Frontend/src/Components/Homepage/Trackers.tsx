@@ -1,8 +1,11 @@
 import { Dispatch, SetStateAction } from "react"
+
 import PropTypes from 'prop-types'
-import { BsListTask } from "react-icons/bs";
+
+import { BsListTask } from 'react-icons/bs';
 import Tippy from "@tippyjs/react";
 
+// import Streakcalendar from '../../assets/Streakcalendar.png'
 
 interface TrackersProps {
     setThePage : Dispatch<SetStateAction<string>>
@@ -39,6 +42,7 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
                         <div className="w-56 h-44 border border-black">
 
                         </div>
+                        {/* <img src={Streakcalendar} width={250} /> */}
                     </div>
                     {/* Task tracker */}
                     <div className={styles.quests}>

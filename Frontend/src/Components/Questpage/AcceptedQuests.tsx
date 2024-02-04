@@ -10,9 +10,10 @@ const AcceptedQuests = () => {
     </div>
     }
 
-    return(<div className=" md:flex md:justify-center h-screen">
-    <div className=" md:w-full md:border-t-[1.2px] md:border-black md:mt-20 ">
-        <div className="flex flex-col items-center">
+    return(
+    <div className=" md:flex md:justify-center h-screen">
+        <div className=" md:w-full md:border-t-[1.2px] md:border-black md:mt-20 ">
+            <div className="flex flex-col items-center">
                 {/* header and options */}
                 <div className="relative w-full flex flex-row justify-between mt-14">
                     <div className="mb-12 ml-8 border border-b-2 w-32 border-black">
@@ -30,7 +31,8 @@ const AcceptedQuests = () => {
                 
             </div>
         </div>
-    </div>)
+    </div>
+    )
 }
 
 export default AcceptedQuests

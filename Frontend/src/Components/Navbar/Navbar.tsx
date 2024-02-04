@@ -1,18 +1,25 @@
 import {useState, useRef} from 'react'
+
 import {RxHamburgerMenu} from 'react-icons/rx'
 import { MdHome } from "react-icons/md";
 import { GiScrollUnfurled,GiAchievement } from "react-icons/gi";
 import { FaTree, FaDoorOpen  } from "react-icons/fa";
 import { PiSmileyFill } from "react-icons/pi";
-import { IoMdSettings } from "react-icons/io";
-import { NavLink } from "react-router-dom"
-import useOutsideClick from '../../Hooks/useOutsideClick';
+
 import { GameIcon } from "../Icons/Icons"
+
+import { NavLink } from "react-router-dom"
+
+import SmallScreenNav from './SmallScreenNav';
+
+import useOutsideClick from '../../Hooks/useOutsideClick';
+
 
 
 const Navbar = () =>{
     const [hamburgerOption, setHamburgerOption] = useState<boolean>(false)
     const [openProfileOptions, setOpenProfileOptions] = useState<boolean>(false)
+    
     const ProfileOptionsRef:React.MutableRefObject<null> = useRef(null)
     useOutsideClick({ ref: ProfileOptionsRef, callback: () => { setOpenProfileOptions(false) }});
 
@@ -104,7 +111,7 @@ const Navbar = () =>{
                 {/* menu */}
                 {openProfileOptions&&
                 <div ref={ProfileOptionsRef} className='absolute right-3 top-11 hidden md:block'>
-                    <div className='flex flex-col items  w-32 h-32 border border-b-2 border-black bg-slate-50'>
+                    <div className='flex flex-col items  w-32 h-32 border border-b-2 border-black bg-white'>
                         <div className='flex items-center space-x-1 flex-row ml-2 mt-2 hover:underline cursor-pointer'>
                            
                             <h1 className='text-sm '>
@@ -132,103 +139,15 @@ const Navbar = () =>{
         </div>
 
         {/* navbar hamburger opened - small screens */}
-        <div className={`${hamburgerOption?'block':'hidden'} md:hidden flex flex-col items-center justify-center fixed inset-0 bg-slate-50 z-50`}>
-            
-            <div className='absolute top-[11.8px] right-[24.9px]'>
-                <RxHamburgerMenu 
-                    size={25}
-                    className='cursor-pointer icon-hover2' 
-                    onClick={()=>{setHamburgerOption(!hamburgerOption)}}
-                />
-            </div>
+        <SmallScreenNav 
+            hamburgerOption={hamburgerOption} 
+            setHamburgerOption={setHamburgerOption}
+        />
 
-            {/* profile circle icon */}
-            <div className='border border-black rounded-full w-[70px] h-[70px] cursor-pointer mb-16'>
-        
-            </div>
-            
-            {/* navbar options */}
-            <nav>
-                <ul className='flex flex-col items-start space-y-12'>
-                    <li >
-                        <NavLink 
-                            to="/"
-                            className={({ isActive }) => isActive ? 'active-link2' : ''}
-                        >
-                            
-                            <div 
-                                className='flex items-center space-x-2 icon-hover2 cursor-pointer hover:underline'
-                                onClick={()=>{setHamburgerOption(!hamburgerOption)}}
-                                >
-                                <MdHome size = {30}/>
-                                <span className='tracking-wide hover:underline'>
-                                    Home
-                                </span>
-                            </div>
-                        </NavLink>
-                    </li>
-                    <li >
-                        <NavLink 
-                            to="/quests"
-                            className={({ isActive }) => isActive ? 'active-link2' : ''}>
-                            <div 
-                                className='flex items-center space-x-3 icon-hover2 cursor-pointer hover:underline'
-                                onClick={()=>{setHamburgerOption(!hamburgerOption)}}
-                                >
-                                <GiScrollUnfurled size = {24}/>
-                                <span className='hover:underline'>
-                                    Quests
-                                </span>
-                            </div>
-                        </NavLink>
-                    </li>
-                    <li >
-                        <NavLink 
-                            to="/skilltree"
-                            className={({ isActive }) => isActive ? 'active-link2' : ''}>
-                            <div 
-                                className='flex items-center space-x-2 icon-hover2 cursor-pointer hover:underline'
-                                onClick={()=>{setHamburgerOption(!hamburgerOption)}}
-                                >
-                                
-                                <FaTree size = {26}/>
-                                <span>
-                                    Skill Tree
-                                </span>
-                            </div>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink 
-                            to="/checkin"
-                            className={({ isActive }) => isActive ? 'active-link2' : ''}>
-                            <div 
-                                className='flex items-center space-x-2 icon-hover2 cursor-pointer hover:underline'
-                                onClick={()=>{setHamburgerOption(!hamburgerOption)}}
-                                >
-                                <PiSmileyFill size = {27}/>
-                                <span className='hover:underline'>
-                                    Check-in
-                                </span>
-                            </div>
-                        </NavLink>
-                    </li>
-                    
-                </ul>
-            </nav>
-
-            {/* settings */}
-            <div className='text-sm absolute bottom-4 left-4 flex flex-row items-center space-x-2 cursor-pointer'>
-              <IoMdSettings size = {23} /> <h1>Settings</h1>
-            </div>
-
-            <div className='text-sm absolute bottom-4 right-4 flex flex-row items-center space-x-2 cursor-pointer'>
-               <h1>Logout</h1> <FaDoorOpen size={23}/>
-            </div>
-        </div>
         <div className='flex justify-center items-center'>
         
         </div>
+
     </div>
     )
 }
