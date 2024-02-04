@@ -17,12 +17,12 @@ const App = ()=> {
   return (
     <div>
       {/* Landing page */}
-      <div className="hidden bg-white font-source-code-pro">
+      <div className="block bg-white font-source-code-pro">
           <LandingPage />
       </div>
 
       {/* Main content */}
-      <div className=" block bg-white font-source-code-pro tracking-tight">
+      <div className="hidden bg-white font-source-code-pro tracking-tight">
         <Navbar />
         <Routes>
             {/* Webapp nav links */}

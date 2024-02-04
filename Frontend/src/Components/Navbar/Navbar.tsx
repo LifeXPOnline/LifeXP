@@ -29,7 +29,7 @@ const Navbar = () =>{
         {/* hamburger not opened */}
         <div className='flex flex-row justify-between py-3 md:border-b md:border-black w-full' >
             <div className='flex flex-row cursor-pointer justify-center items-center ml-6'> 
-                <GameIcon />
+                <GameIcon width={"22"} height={"22"}/>
                 <h1 className='text-lg ml-2' >
                     Life XP
                 </h1>
