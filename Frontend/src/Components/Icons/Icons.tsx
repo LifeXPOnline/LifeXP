@@ -10,12 +10,7 @@ export const GameIcon: React.FC<IconsProps> = ({width, height}) => {
  </svg>
       )
 }
-export const GameIcon2: React.FC = () => {
-    return (<svg width="26" height="26" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8.8 6.05L11 8.25L13.2 6.05V0H8.8V6.05ZM8.8 15.95L11 13.75L13.2 15.95V22H8.8V15.95ZM15.95 13.2L13.75 11L15.95 8.8H22V13.2H15.95ZM6.05 8.8L8.25 11L6.05 13.2H0V8.8H6.05Z" fill="black"/>
-</svg>
-     )
-}
+
 
 // Landing page - login CTA icon
 export const Enter: React.FC = () =>{
