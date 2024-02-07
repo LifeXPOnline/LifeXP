@@ -1,6 +1,7 @@
 import { GameIcon, Enter } from "../Icons/Icons"
 import taskImg from "../../assets/Tasks.png"
 import levelImg from "../../assets/levelmeter.png"
+import questing from "../../assets/Questing.png"
 
 const backendUrl = "http://localhost:5000";
 
@@ -25,9 +26,9 @@ const LandingPage = () => {
             {/* main content */}
             {/* Tasks section */}
             <div>
-                <div className="flex items-center mt-10 space-x-4 ml-8 ">
-                        <GameIcon width={"40"} height={"40"}/>
-                        <h1 className="text-[44px] tracking-wider text-gray-900">
+                    <div className="flex items-center mt-10 space-x-4 ml-20 ">
+                        <GameIcon width={"37"} height={"37"}/>
+                        <h1 className="text-[40px] tracking-wider text-gray-900">
                             Your Life Into XP!
                         </h1> 
                         
@@ -40,7 +41,7 @@ const LandingPage = () => {
                                 <h1 className="text-3xl mb-5">
                                     Get xp from tasks!
                                 </h1>
-                                <h2 className="text-xl mb-10">
+                                <h2 className="text-xl mb-10 w-[450px]">
                                     Gain experience points from your day to day tasks!
                                 </h2>
                                 
@@ -57,22 +58,42 @@ const LandingPage = () => {
 
             {/* levelup  section*/}
             <div className="flex flex-col justify-center items-center h-[620px]">
-                <div className="grid grid-cols-2 w-[80%] ">
+                <div className="grid grid-cols-2 w-[85%] ">
                     <img src={levelImg} width={400}/>
-                    <div className=" flex flex-col justify-center ">
+                    <div className=" flex flex-col items justify-center">
                             
                             <h1 className="text-3xl mb-5">
-                                Get xp from tasks!
+                                Gain Levels!
                             </h1>
-                            <h2 className="text-xl mb-10">
+                            <h2 className="text-xl mb-10 w-[500px]">
                                 Gain levels from your day to day tasks from work, fitness, to personal!
                             </h2>
                             
-                            <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40 mr-6 mt-1 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 cursor-pointer">
+                            <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  mt-1 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 cursor-pointer">
                                 <span>Level Up</span>
                                 <GameIcon width={"14"} height={"14"}/>
                             </button>
+                    </div>
+                </div>
+            </div>
+            {/* Questing section */}
+            <div className="flex justify-center items-center h-[620px]">
+                <div className="grid grid-cols-2 w-[85%]">
+                    <div className=" flex flex-col items justify-center">
+                                
+                        <h1 className="text-3xl mb-5">
+                           Complete Quests!
+                        </h1>
+                        <h2 className="text-xl mb-10 w-[500px]">
+                            Gain levels from your day to day tasks from work, fitness, to personal!
+                        </h2>
+                        
+                        <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  mt-1 border custom-gray border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 cursor-pointer">
+                            <span>Level Up</span>
+                            <GameIcon width={"14"} height={"14"}/>
+                        </button>
                         </div>
+                    <img src={questing} width={500}/>
                 </div>
             </div>
         </div>
