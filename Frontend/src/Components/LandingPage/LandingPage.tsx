@@ -57,7 +57,7 @@ const LandingPage = () => {
             </div>
 
             {/* levelup  section*/}
-            <div className="flex flex-col justify-center items-center h-[580px]">
+            <div className="flex flex-col justify-center items-center h-[580px] ml-10">
                 <div className="grid grid-cols-2 w-[85%] ">
                     <img src={levelImg} width={400}/>
                     <div className=" flex flex-col items justify-center">
@@ -77,7 +77,7 @@ const LandingPage = () => {
                 </div>
             </div>
             {/* Questing section */}
-            <div className="flex justify-center items-center h-[620px]">
+            <div className="flex justify-center items-center h-[620px] ml-10">
                 <div className="grid grid-cols-2 w-[85%]">
                     <div className=" flex flex-col items justify-center">
                                 
