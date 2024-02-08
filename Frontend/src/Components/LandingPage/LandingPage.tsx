@@ -25,7 +25,7 @@ const LandingPage = () => {
             </div>
             {/* main content */}
             {/* Tasks section */}
-            <div>
+            <div className="ml-10">
                     <div className="flex items-center mt-10 space-x-4 ml-20 ">
                         <GameIcon width={"37"} height={"37"}/>
                         <h1 className="text-[40px] tracking-wider text-gray-900">
@@ -57,7 +57,7 @@ const LandingPage = () => {
             </div>
 
             {/* levelup  section*/}
-            <div className="flex flex-col justify-center items-center h-[620px]">
+            <div className="flex flex-col justify-center items-center h-[580px]">
                 <div className="grid grid-cols-2 w-[85%] ">
                     <img src={levelImg} width={400}/>
                     <div className=" flex flex-col items justify-center">
