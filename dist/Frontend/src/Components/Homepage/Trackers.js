@@ -1,14 +1,14 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import PropTypes from 'prop-types';
-import { BsListTask } from "react-icons/bs";
+import { BsListTask } from 'react-icons/bs';
 import Tippy from "@tippyjs/react";
 const Trackers = ({ setThePage }) => {
     const styles = {
         "quests": "space-y-3 text-sm flex flex-col items-center",
-        "hoverBase": "relative bottom-14 left-0 border-2 bg-slate-50 border-black w-80 h-24 rounded-md text-xs space-y-3 flex flex-col justify-center",
+        "hoverBase": "relative bottom-14 left-0 border-2 bg-white border-black w-80 h-24 rounded-md text-xs space-y-3 flex flex-col justify-center",
         "hover1": "w-44 h-4 border border-black mr-3 rounded-lg ml-2",
         "hover2": "bg-levelup-gray1 hover:bg-levelup-gray2 h-3 ml-[2px] mt-[1.2px] border border-black rounded-2xl",
-        "pageButton": "absolute left-5 top-20 md:top-36 md:left-14 ml-0 bg-slate-50 flex items-center justify-center lg1:hidden h-11 w-11 border-1" +
+        "pageButton": "absolute left-5 top-20 md:top-36 md:left-14 ml-0 bg-white flex items-center justify-center lg1:hidden h-11 w-11 border-1" +
             "bg-slate-50 border-black shadow-sharp-sm cursor-pointer icon-hover4" +
             "transition-transform duration-200 hover:shadow-sharp-md"
     };

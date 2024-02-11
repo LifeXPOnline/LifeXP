@@ -75,7 +75,7 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
                     </div>
                    
                    {/* hover, level statistics div */}
-                    <div className="absolute levelStatistics"> 
+                    <div className="absolute levelStatistics tracking-tight"> 
                         <div className={`${styles.hoverBase} `}>
 
                             <div className="flex flex-row">

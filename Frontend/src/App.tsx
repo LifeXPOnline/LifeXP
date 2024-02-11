@@ -1,11 +1,13 @@
-import Navbar from "./Components/Navbar/Navbar"
-import Home from "./Components/Homepage/Home"
-import Quests from "./Components/Questpage/Quests"
-import './index.css'
-import Welcomepage from "./Components/SkillTree/Welcomepage"
-import {Route, Routes, Navigate} from "react-router-dom"
-import CheckinParent from "./Components/CheckinPage/CheckinParent"
+import Navbar from "./Components/DashboardPage/Navbar/Navbar"
+import Home from "./Components/DashboardPage/Homepage/Home"
+import Quests from "./Components/DashboardPage/Questpage/Quests"
+import CheckinParent from "./Components/DashboardPage/CheckinPage/CheckinParent"
 import LandingPage from "./Components/LandingPage/LandingPage"
+import Welcomepage from "./Components/DashboardPage/SkillTree/Welcomepage"
+
+import './index.css'
+
+import {Route, Routes, } from "react-router-dom"
 
 
 const App = ()=> {
@@ -13,28 +15,31 @@ const App = ()=> {
   // const handleLoginSuccess = () => {
   //   return <Navigate to="/" />;
   // }
-
   return (
-    <div>
-      {/* Landing page */}
-      <div className="block bg-white font-source-code-pro">
-          <LandingPage />
-      </div>
+      <div >
+        <div className=" bg-white font-source-code-pro tracking-tight">
 
-      {/* Main content */}
-      <div className="hidden bg-white font-source-code-pro tracking-tight">
-        <Navbar />
-        <Routes>
-            {/* Webapp nav links */}
-            <Route path="/" element={<Home />} />
-            <Route path="/quests" element={<Quests />} />
-            <Route path="/checkin" element={<CheckinParent />} />
-            <Route path="/skilltree" element={<Welcomepage />} /> 
-            {/* Link for authentication */}
-            {/* <Route path="/login/success" element={handleLoginSuccess()} />    */}
-        </ Routes>
+          <Routes>
+                <Route path="/landing" element={<LandingPage />}/>
+          </Routes>
+        </div>
+        
+        <div className=" bg-white font-source-code-pro">
+        
+          <Navbar />
+
+          <Routes>
+              {/* Webapp nav links */}
+              <Route path="/" element={<Home />} />
+              <Route path="/quests" element={<Quests />} />
+              <Route path="/checkin" element={<CheckinParent />} />
+              <Route path="/skilltree" element={<Welcomepage />} /> 
+              {/* Link for authentication */}
+              {/* <Route path="/login/success" element={handleLoginSuccess()} />    */}
+          </ Routes>
+          
+        </div>
       </div>
-    </div>
   )
 }
 

@@ -1,5 +1,9 @@
 /// <reference types="react" />
-export declare const GameIcon: React.FC;
+interface IconsProps {
+    width: string;
+    height: string;
+}
+export declare const GameIcon: React.FC<IconsProps>;
 export declare const Enter: React.FC;
 export declare const Happy: React.FC;
 export declare const Ok: React.FC;
@@ -13,3 +17,4 @@ export declare const Fitness: React.FC;
 export declare const Work: React.FC;
 export declare const Personal: React.FC;
 export declare const Scroll: React.FC;
+export {};

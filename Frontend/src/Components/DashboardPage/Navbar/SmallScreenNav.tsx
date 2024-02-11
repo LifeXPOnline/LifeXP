@@ -1,6 +1,6 @@
 import {RxHamburgerMenu} from 'react-icons/rx'
 import { MdHome } from "react-icons/md";
-import { GiScrollUnfurled,GiAchievement } from "react-icons/gi";
+import { GiScrollUnfurled, } from "react-icons/gi";
 import { FaTree, FaDoorOpen  } from "react-icons/fa";
 import { PiSmileyFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";

@@ -2,17 +2,17 @@ import {useState, useRef} from 'react'
 
 import {RxHamburgerMenu} from 'react-icons/rx'
 import { MdHome } from "react-icons/md";
-import { GiScrollUnfurled,GiAchievement } from "react-icons/gi";
-import { FaTree, FaDoorOpen  } from "react-icons/fa";
+import { GiScrollUnfurled} from "react-icons/gi";
+import { FaTree} from "react-icons/fa";
 import { PiSmileyFill } from "react-icons/pi";
 
-import { GameIcon } from "../Icons/Icons"
+import { GameIcon } from "../../Icons/Icons"
 
 import { NavLink } from "react-router-dom"
 
 import SmallScreenNav from './SmallScreenNav';
 
-import useOutsideClick from '../../Hooks/useOutsideClick';
+import useOutsideClick from '../../../Hooks/useOutsideClick';
 
 
 
@@ -125,13 +125,13 @@ const Navbar = () =>{
                                 Achievements
                             </h1> 
                         </div>
-                        <div className='flex items-center space-x-1 flex-row ml-2 mt-3 hover:underline cursor-pointer'>
-                            
-                            <h1 className='text-sm '>
-                                Logout
-                            </h1> 
-                            
-                        </div>
+                        <NavLink to={"/landing"}>
+                            <div className='flex items-center space-x-1 flex-row ml-2 mt-3 hover:underline cursor-pointer'>
+                                    <h1 className='text-sm '>
+                                        Logout
+                                    </h1> 
+                            </div>
+                        </NavLink>
                     </div>
                 </div>
                 }

@@ -3,8 +3,9 @@ import taskImg from "../../assets/Tasks.png"
 import levelImg from "../../assets/levelmeter.png"
 import questingImg from "../../assets/Questing.png"
 import emcheckinImg from "../../assets/Emcheckin.png"
+import { NavLink } from "react-router-dom"
 
-const backendUrl = "http://localhost:5000";
+// const backendUrl = "http://localhost:5000";
 
 const LandingPage = () => {
     return(
@@ -17,26 +18,34 @@ const LandingPage = () => {
                             Life XP
                         </h1>
                 </div>
-                <a href={`${backendUrl}/auth/google`} 
-                    className="flex flex-row items-center justify-center h-9 w-32 mr-6 mt-1 border custom-gray 
-                            border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 
-                            cursor-pointer">
-                    <h1 className="mr-2">Login</h1>
-                    <Enter />
-                </a>
+               
+               <NavLink to={"/"}>
+                    <button
+                       
+                        className="flex flex-row items-center justify-center h-9 w-32 mr-6 mt-1 border custom-gray 
+                                border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 
+                                cursor-pointer">
+                        <h1 className="mr-2">Login</h1>
+                        <Enter />
+                    </button>
+                </NavLink>
+                
+              
                 
             </div>
+            {/* {toHomeScreen && <Navigate to="/"/>} */}
             {/* main content */}
             {/* Tasks section */}
-            <div className="lg:ml-10 ">
-                    <div className="hidden lg:flex items-center mt-10 space-x-4 lg:ml-20 ">
+            <div className="lg:ml-10 mb-5 mt-10">
+                    <div className="hidden lg:flex items-center space-x-4 lg:ml-20 ">
                         <GameIcon width={"37"} height={"37"}/>
                         <h1 className="text-[40px] tracking-wider text-gray-900">
                             Your Life Into XP!
                         </h1> 
                         
                     </div>
-                    <div className="flex flex-col justify-center items-center mt-12 md:mt-0">
+
+                    <div className="flex flex-col justify-center items-center  md:mt-0">
                     
                         <div className="grid lg:grid-cols-2 w-[85%]">
                             <div className=" flex flex-col justify-center ml-4 lg:ml-0">
@@ -138,7 +147,7 @@ const LandingPage = () => {
             {/* What is LifeXP */}
             <div className="h-[620px] flex flex-col justify-center items-center space-y-16">
                 <h1 className="text-3xl">What exactly is LifeXP?</h1>
-                <p className="w-[60%] text-xl leading-10">
+                <p className="w-[60%] text-xl leading-10 tracking-normal">
                     Life XP is a gamified productivity app designed to cater to a broader range of needs beyond task management. 
                     Life XP integrates features that focus on emotional well-being, personal development, and highly customizable 
                     user engagement models. Life XP aims to be a holistic tool for life management. This innovative blend makes Life XP 

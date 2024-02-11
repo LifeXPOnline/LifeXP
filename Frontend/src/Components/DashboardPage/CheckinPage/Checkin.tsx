@@ -1,4 +1,4 @@
-import {Happy, Ok, Angry, Sad, ReallySad, Depressed, Book, Graph} from "../Icons/Icons"
+import {Happy, Ok, Angry, Sad, ReallySad, Depressed, Book, Graph} from "../../Icons/Icons"
 import Moodcard from "./Moodcard"
 import { Dispatch, SetStateAction, useState, useRef } from 'react'
 import Entry from "./Entry";
@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; 
 import PropTypes from 'prop-types';
-import useOutsideClick from "../../Hooks/useOutsideClick";
+import useOutsideClick from "../../../Hooks/useOutsideClick";
 
 interface CheckinProps{
     setThePage: Dispatch<SetStateAction<string>>

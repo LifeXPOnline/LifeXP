@@ -1,5 +1,5 @@
 import { BsCompass } from "react-icons/bs";
-import { Work, Personal, Fitness } from "../Icons/Icons";
+import { Work, Personal, Fitness } from "../../Icons/Icons";
 
 const Welcomepage = () =>{
 
