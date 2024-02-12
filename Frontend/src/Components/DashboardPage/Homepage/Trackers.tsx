@@ -38,27 +38,34 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
                     </Tippy>
                     {/* Daily streak tracker */}
                     <div className="flex flex-col items-center text-sm">
-                        <h1>A 3 day streak!</h1>
-                        <div className="w-56 h-44 border border-black">
-
-                        </div>
+                       
                         {/* <img src={Streakcalendar} width={250} /> */}
+                    </div>
+                    {/* Tracked quests */}
+                    <div className="space-y-3 text-sm flex flex-col items-center w-full">
+                        <h1 className="underline">Tracked Quests</h1>
+                       
+                        <div className="flex flex-col items-center w-full space-y-2">
+                           <div className="w-72 border border-black h-10">
+
+                           </div>
+                           <div className="w-72 border border-black h-10">
+                            
+                           </div>
+                           <div className="w-72 border border-black h-10">
+                            
+                           </div>
+                        </div>
                     </div>
                     {/* Task tracker */}
                     <div className={styles.quests}>
                         {/* Daily Quests */}
-                        <h1>Daily Quests</h1>
-                        <p>Complete a fitness task</p>
-                        <p>Complete a fitness task</p>
-                        <p>Complete a fitness task</p>
+                        <h1 className="underline">Daily Tasks</h1>
+                        <p>Complete all work tasks</p>
+                        <p>Complete a quest</p>
+                     
                     </div>
-                    <div className="space-y-3 text-sm flex flex-col items-center">
-                        <h1>Your Quests</h1>
-                        {/* Daily Quests */}
-                        <div className="flex flex-col items-center">
-                           
-                        </div>
-                    </div>
+                    
                 </div>
                 {/* level up meter */}
                 <div className="flex flex-col items-center text-sm relative mt-12">
