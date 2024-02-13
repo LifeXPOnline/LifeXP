@@ -106,10 +106,15 @@ const SmallScreenNav: React.FC<SmallScreenNavProps> = ( {hamburgerOption, setHam
         <div className='text-sm absolute bottom-4 left-4 flex flex-row items-center space-x-2 cursor-pointer'>
         <IoMdSettings size = {23} /> <h1>Settings</h1>
         </div>
-
-        <div className='text-sm absolute bottom-4 right-4 flex flex-row items-center space-x-2 cursor-pointer'>
-        <h1>Logout</h1> <FaDoorOpen size={23}/>
-        </div>
+        
+        <NavLink
+            to={"/landing"}>
+            <div
+                onClick={()=>{setHamburgerOption(!hamburgerOption)}} 
+                className='text-sm absolute bottom-4 right-4 flex flex-row items-center space-x-2 cursor-pointer'>
+                <h1>Logout</h1> <FaDoorOpen size={23}/>
+            </div>
+        </NavLink>
     </div>
 )
 }

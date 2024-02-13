@@ -39,7 +39,7 @@ const LandingPage = () => {
             <div className="lg:ml-10 mb-5 mt-10">
                     <div className="hidden lg:flex items-center space-x-4 lg:ml-20 ">
                         <GameIcon width={"37"} height={"37"}/>
-                        <h1 className="text-[40px] tracking-wider text-gray-900">
+                        <h1 className="text-[36px] tracking-wider text-gray-900">
                             Your Life Into XP!
                         </h1> 
                         
@@ -48,7 +48,7 @@ const LandingPage = () => {
                     <div className="flex flex-col justify-center items-center  md:mt-0">
                     
                         <div className="grid lg:grid-cols-2 w-[85%]">
-                            <div className=" flex flex-col justify-center ml-4 lg:ml-0">
+                            <div className=" flex flex-col justify-center ml-6 lg:ml-0">
                                 
                                 <h1 className="text-3xl mb-5">
                                     Get xp from tasks!
@@ -72,7 +72,7 @@ const LandingPage = () => {
             </div>
 
             {/* levelup  section*/}
-            <div className="flex flex-col justify-center items-center h-[580px] ml-8">
+            <div className="hidden lg:flex flex-col justify-center items-center h-[580px] ml-8">
                 <div className="grid lg:grid-cols-2 w-[80%] ">
                     <img src={levelImg} width={400}/>
                     <div className=" flex flex-col items justify-center">
@@ -96,7 +96,7 @@ const LandingPage = () => {
                 </div>
             </div>
             {/* Questing section */}
-            <div className="flex justify-center items-center h-[620px] ml-12">
+            <div className="hidden lg:flex justify-center items-center h-[620px] ml-12">
                 <div className="grid lg:grid-cols-2 w-[90%]">
                     <div className=" flex flex-col items justify-center">
                                 
@@ -119,7 +119,7 @@ const LandingPage = () => {
             </div>
 
              {/* Emotional check-in section */}
-             <div className="flex justify-center items-center h-[620px] ml-12">
+             <div className="hidden lg:flex justify-center items-center h-[620px] ml-12">
                 <div className="grid lg:grid-cols-2 w-[85%]">
                     <img src={emcheckinImg} width={500}/>
                     <div className=" flex flex-col items justify-center">
@@ -145,9 +145,9 @@ const LandingPage = () => {
             </div>
 
             {/* What is LifeXP */}
-            <div className="h-[620px] flex flex-col justify-center items-center space-y-16">
-                <h1 className="text-3xl">What exactly is LifeXP?</h1>
-                <p className="w-[60%] text-xl leading-10 tracking-normal">
+            <div className="h-[620px] mt-32 mb-10 lg:mb-0 md:mt-0 flex flex-col justify-center items-center space-y-16">
+                <h1 className="text-2xl md:text-3xl">What exactly is LifeXP?</h1>
+                <p className="w-[90%] text-center md:text-left text-lg md:w-[60%] md:text-xl leading-10 tracking-normal">
                     Life XP is a gamified productivity app designed to cater to a broader range of needs beyond task management. 
                     Life XP integrates features that focus on emotional well-being, personal development, and highly customizable 
                     user engagement models. Life XP aims to be a holistic tool for life management. This innovative blend makes Life XP 
@@ -171,7 +171,7 @@ const LandingPage = () => {
                     </h2>
                 </div>
                 <div className="flex justify-between mt-12">
-                    <div className="flex flex-row space-x-12 ml-6">
+                    <div className="flex flex-row space-x-4 lg:space-x-12 ml-6">
                         <h2 className="hover:underline cursor-pointer">Privacy Policy</h2>
                         <h2 className="hover:underline cursor-pointer">Terms of Use</h2>
                     </div>

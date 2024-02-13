@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react"
+import { Fitness, Work } from "../../Icons/Icons";
 
 import PropTypes from 'prop-types'
 
@@ -25,7 +26,7 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
     return (
         
         <div className="w-full border-t border-black flex-col md2:flex lg1:w-96 lg1:border-r lg1:rounded-t-md ">
-            <div className="flex flex-col  justify-between items-center mt-5 ">
+            <div className="flex flex-col mt-5 space-y-20">
                 <div className="space-y-8 ">
                     {/* change page button */}
                     <Tippy 
@@ -41,22 +42,7 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
                        
                         {/* <img src={Streakcalendar} width={250} /> */}
                     </div>
-                    {/* Tracked quests */}
-                    <div className="space-y-3 text-sm flex flex-col items-center w-full">
-                        <h1 className="underline">Tracked Quests</h1>
-                       
-                        <div className="flex flex-col items-center w-full space-y-2">
-                           <div className="w-72 border border-black h-10">
-
-                           </div>
-                           <div className="w-72 border border-black h-10">
-                            
-                           </div>
-                           <div className="w-72 border border-black h-10">
-                            
-                           </div>
-                        </div>
-                    </div>
+                   
                     {/* Task tracker */}
                     <div className={styles.quests}>
                         {/* Daily Quests */}
@@ -64,6 +50,23 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
                         <p>Complete all work tasks</p>
                         <p>Complete a quest</p>
                      
+                    </div>
+                     {/* Tracked quests */}
+                     <div className="space-y-3 text-sm flex flex-col items-center w-full">
+                        <h1 className="underline">Tracked Quests</h1>
+                       
+                        <div className="flex flex-col items-center w-full space-y-2">
+                           <div className="flex flex-row w-72 border border-black h-10">
+                                <Fitness />
+                                <p>Complete a mile</p>
+                           </div>
+                           <div className="w-72 border border-black h-10">
+                                <Work />
+                           </div>
+                           <div className="w-72 border border-black h-10">
+                            
+                           </div>
+                        </div>
                     </div>
                     
                 </div>

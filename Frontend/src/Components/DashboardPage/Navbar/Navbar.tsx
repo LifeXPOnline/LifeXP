@@ -112,22 +112,22 @@ const Navbar = () =>{
                 {openProfileOptions&&
                 <div ref={ProfileOptionsRef} className='absolute right-3 top-11 hidden md:block'>
                     <div className='flex flex-col items  w-32 h-32 border border-b-2 border-black bg-white'>
-                        <div className='flex items-center space-x-1 flex-row ml-2 mt-2 hover:underline cursor-pointer'>
+                        <div className='flex items-center space-x-1 flex-row mt-2 h-6 hover:bg-gray-200 cursor-pointer'>
                            
-                            <h1 className='text-sm '>
+                            <h1 className='text-sm ml-2'>
                                 Settings
                             </h1>
                         </div>
                         
-                        <div className='flex items-center flex-row ml-2 mt-3 hover:underline cursor-pointer'>
+                        <div className='flex items-center flex-row mt-2 h-6 hover:bg-gray-200 cursor-pointer'>
                            
-                            <h1 className='text-sm '>
+                            <h1 className='text-sm ml-2 '>
                                 Achievements
                             </h1> 
                         </div>
                         <NavLink to={"/landing"}>
-                            <div className='flex items-center space-x-1 flex-row ml-2 mt-3 hover:underline cursor-pointer'>
-                                    <h1 className='text-sm '>
+                            <div className='flex items-center space-x-1 flex-row hover:bg-gray-200 mt-2 h-6 cursor-pointer'>
+                                    <h1 className='text-sm ml-2'>
                                         Logout
                                     </h1> 
                             </div>
