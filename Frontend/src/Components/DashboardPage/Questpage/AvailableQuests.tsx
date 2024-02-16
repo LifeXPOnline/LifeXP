@@ -7,22 +7,22 @@ const AvailableQuests = ()=> {
 
     const quests = {
         "Daily Quest":{
-            Icon:(<Fitness/>),
+            Icon:(<Fitness width={"45"} height={"45"}/>),
             Description:"Run 1 mile",
             Reward:"300 XP"
         },
         "Work" : {
-            Icon:(<Work />),
+            Icon:(<Work width={"45"} height={"45"}/>),
             Description:"Complete a work task",
             Reward:"200 XP"
         },
         "Personal" : {
-            Icon:(<Personal />),
+            Icon:(<Personal width={"45"} height={"45"}/>),
             Description:"Meditate 15 minutes",
             Reward:"250 XP"
         },
         "Fitness":{
-            Icon:(<Fitness />),
+            Icon:(<Fitness width={"45"} height={"45"}/>),
             Description:"Curl 20lb dumbbells",
             Reward:"210 XP"
         }

@@ -25,7 +25,7 @@ const Welcomepage = () =>{
                 <div className="grid grid-cols-1 gap-2 lmd:grid-cols-2 lmd:gap-14 lg2:grid-cols-3 lg2:gap-16 ">
                     <div className={css.path}>
                         <h1 className="mt-3">Fitness</h1>
-                        <Fitness />
+                        <Fitness width={"45"} height={"45"}/>
                         <p className="text-sm px-4 w-72">Lorem ipsum dolor sit, amet consectetur ad voluptate esse voluptatibus repellat atque! Tenetur laudantium quo corrupti molestias itaque dolore veritatis, at tempora.</p>
                         <button className={css.button}>
                             Select
@@ -33,7 +33,7 @@ const Welcomepage = () =>{
                     </div>
                     <div className={css.path}>
                         <h1 className="mt-3">Work</h1>
-                        <Work />
+                        <Work width={"45"} height={"45"}/>
                         <p className="text-sm px-4 w-72">Lorem ipsum dolor sit, amet consectetur ad voluptate esse voluptatibus repellat atque! Tenetur laudantium quo corrupti molestias itaque dolore veritatis, at tempora.</p>
                         <button className={css.button}>
                             Select
@@ -41,7 +41,7 @@ const Welcomepage = () =>{
                     </div>
                     <div className={css.path}>
                         <h1 className="mt-3">Personal</h1>
-                        <Personal />
+                        <Personal width={"45"} height={"45"}/>
                         <p className="text-sm px-4 w-72">Lorem ipsum dolor sit, amet consectetur ad voluptate esse voluptatibus repellat atque! Tenetur laudantium quo corrupti molestias itaque dolore veritatis, at tempora.</p>
                         <button className={css.button}>
                             Select

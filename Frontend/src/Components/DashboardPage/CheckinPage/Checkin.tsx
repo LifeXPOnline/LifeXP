@@ -91,7 +91,7 @@ const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
                     How&#39;s your mood today?
                 </h1>
                
-                <div className={selectedMood != null? cardClass.center : cardClass.grid}>
+                <div className={selectedMood != ""? cardClass.center : cardClass.grid}>
                     {Object.entries(moodFace).map(([title, moodElement]) => {
                         // Render the cards only if no mood is selected or the current card is the selected one
                         if (!selectedMood || selectedMood === title) {

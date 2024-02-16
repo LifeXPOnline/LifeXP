@@ -71,6 +71,16 @@ li div {
   height: 28px;
 
 }
+.tippy-box2 {
+  background-color: white;
+  border-width: 1px;
+  border-color: black;
+  color: black;
+  font-size: 12px;
+  font-family: Source Code Pro;
+  height: 28px;
+
+}
 
 .tippy-arrow {
   background-color: rgb(44, 44, 44);
@@ -130,46 +140,20 @@ li div {
 	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* 
-.hover-lift {
-    position: relative;
-    transition: transform 0.2s;
-  }
-  
-  .hover-lift::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: opacity 0.2s;
-  }
-  
-  .hover-lift:hover {
-    transform: translateY(-5px);
-  }
-  
-  .hover-lift:hover::before {
-    opacity: 0; 
-  }
-   */
 
    /* For WebKit (Chrome, Safari) */
 ::-webkit-scrollbar {
-  width: 5px;  /* Width of the vertical scrollbar */
+  width: 5px; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #757575;  /* Color of the scroll thumb */
+  background: #757575;  
   border-radius: 10px;
   border: 1.5px solid black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5c5c5c;  /* Color of the scroll thumb on hover */
+  background: #5c5c5c; 
   border-radius: 10px;
   border: 1.5px solid black;
 }
