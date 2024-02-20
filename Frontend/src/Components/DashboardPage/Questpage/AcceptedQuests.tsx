@@ -23,6 +23,7 @@ const AcceptedQuests = () => {
                 </div>
                 {/* quest cards */}
                 <div className="flex flex-col justify-center">
+                    {/* No quests display */}
                     <div className="flex items-center justify-center w-[240px] mb-2 ml-2 mt-10">   
                         {scroll()}
                     </div>

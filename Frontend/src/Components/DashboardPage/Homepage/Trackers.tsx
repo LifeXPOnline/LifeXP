@@ -77,24 +77,27 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
                         <h1 className="underline mb-2">Tracked Quests</h1>
                        
                         <div className="flex flex-col items-center  w-full space-y-3">
-                           <div className="cursor-pointer hover:border-2 flex flex-row items-center space-x-3 w-[278px] border border-black h-10 rounded-md">
+                           <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
                                 <span className="ml-2">
-                                    <Fitness width={"32"} height={"32"}/>
+                                    <Fitness width={"28"} height={"28"}/>
                                 </span>
                                 <p>Complete 1 mile</p>
+                                <p className="px-2 text-xs">...</p>
                                 
                            </div>
-                           <div className="cursor-pointer hover:border-2 flex flex-row items-center space-x-3 w-[278px] border border-black h-10 rounded-md">
+                           <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
                                 <span className="ml-2">
-                                    <Work width={"32"} height={"32"}/>
+                                    <Work width={"28"} height={"28"}/>
                                 </span>
                                 <p>Complete a work task</p>
+                                <p className="px-2 text-xs">...</p>
                            </div>
-                           <div className="cursor-pointer hover:border-2 flex flex-row items-center space-x-3 w-[278px] border border-black h-10 rounded-md">
+                           <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
                                 <span className="ml-2">
-                                    <Personal width={"32"} height={"32"}/>
+                                    <Personal width={"28"} height={"28"}/>
                                 </span>
                                 <p>Meditate 15 minutes</p>
+                                <p className="px-2 text-xs">...</p>
                            </div>
                         </div>
                     

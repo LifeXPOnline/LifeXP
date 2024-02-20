@@ -107,7 +107,7 @@ const Navbar = () =>{
                     className='hidden md:flex border border-black rounded-full w-[40px] h-[40px] mr-4 cursor-pointer'>
             
                 </div>
-
+                
                 {/* menu */}
                 {openProfileOptions&&
                 <div ref={ProfileOptionsRef} className='absolute right-3 top-11 hidden md:block'>
