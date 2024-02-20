@@ -76,7 +76,7 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
                      <div className="space-y-3 text-sm flex flex-col items-center w-full">
                         <h1 className="underline mb-2">Tracked Quests</h1>
                        
-                        <div className="flex flex-col items-center  w-full space-y-2">
+                        <div className="flex flex-col items-center  w-full space-y-3">
                            <div className="cursor-pointer hover:border-2 flex flex-row items-center space-x-3 w-[278px] border border-black h-10 rounded-md">
                                 <span className="ml-2">
                                     <Fitness width={"32"} height={"32"}/>
