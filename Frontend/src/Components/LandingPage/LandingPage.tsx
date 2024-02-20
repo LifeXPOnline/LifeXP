@@ -11,7 +11,7 @@ const LandingPage = () => {
     return(
         <div className="h-screen">
             {/* Nav */}
-            <div className="flex flex-row items-center justify-between h-14">
+            <div className="flex flex-row items-center justify-between h-14 w-full">
                 <div className='flex flex-row cursor-pointer items-center ml-6 mt-1'> 
                         <GameIcon height={"22"} width={"22"} />
                         <h1 className='text-lg ml-2' >
@@ -22,7 +22,7 @@ const LandingPage = () => {
                <NavLink to={"/"}>
                     <button
                        
-                        className="flex flex-row items-center justify-center h-9 w-32 mr-6 mt-1 border custom-gray 
+                        className="flex flex-row items-center justify-center h-9 w-32 sm:mr-6 mt-1 border custom-gray 
                                 border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 
                                 cursor-pointer">
                         <h1 className="mr-2">Login</h1>
@@ -47,8 +47,8 @@ const LandingPage = () => {
 
                     <div className="flex flex-col justify-center items-center  md:mt-0">
                     
-                        <div className="grid lg:grid-cols-2 w-[85%]">
-                            <div className=" flex flex-col justify-center ml-6 lg:ml-0">
+                        <div className="grid lg:grid-cols-2 w-[85%] justify-center">
+                            <div className=" flex flex-col justify-center items-center lg:items-start ml-6 lg:ml-0">
                                 
                                 <h1 className="text-3xl mb-5">
                                     Get xp from tasks!
@@ -56,13 +56,14 @@ const LandingPage = () => {
                                 <p className="text-xl mb-10 w-[450px]">
                                     Gain experience points from your day to day tasks!
                                 </p>
-                                
-                                <button className="flex flex-row space-x-4 items-center justify-center 
-                                                    h-10 w-40 mr-6 mt-1 mb-2 border custom-gray border-black shadow-sharp 
-                                                    shadow-transition hover:shadow-sharp-xl icon-hover4 cursor-pointer">
-                                    <span>Get Started</span>
-                                    <GameIcon width={"14"} height={"14"}/>
-                                </button>
+                                <NavLink to={"/"}>
+                                    <button className="flex flex-row space-x-4 items-center justify-center 
+                                                        h-10 w-40 mr-6 mt-1 mb-2 border custom-gray border-black shadow-sharp 
+                                                        shadow-transition hover:shadow-sharp-xl icon-hover4 cursor-pointer">
+                                        <span>Get Started</span>
+                                        <GameIcon width={"14"} height={"14"}/>
+                                    </button>
+                                </NavLink>
                             </div>
                             <div>
                                 <img src={taskImg} width={600} height={600}/>
@@ -85,12 +86,14 @@ const LandingPage = () => {
                             </p>
                             
                             <div className="flex lg:justify-end ">
-                                <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  
-                                                    mt-1 border custom-gray border-black shadow-sharp shadow-transition 
-                                                    hover:shadow-sharp-xl icon-hover4 cursor-pointer   ">
-                                    <span>Level Up</span>
-                                    <GameIcon width={"14"} height={"14"}/>
-                                </button>
+                                <NavLink to={"/"}>
+                                    <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  
+                                                        mt-1 border custom-gray border-black shadow-sharp shadow-transition 
+                                                        hover:shadow-sharp-xl icon-hover4 cursor-pointer   ">
+                                        <span>Level Up</span>
+                                        <GameIcon width={"14"} height={"14"}/>
+                                    </button>
+                                </NavLink>
                             </div>
                     </div>
                 </div>
@@ -106,13 +109,14 @@ const LandingPage = () => {
                         <p className="text-xl mb-10 w-[500px]">
                             Take on quests similar to your day to day tasks and gain Rewards and levels!
                         </p>
-                        
-                        <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  
-                                            mt-1 border custom-gray border-black shadow-sharp shadow-transition 
-                                            hover:shadow-sharp-xl icon-hover4 cursor-pointer">
-                            <span>Get Questing</span>
-                            <GameIcon width={"14"} height={"14"}/>
-                        </button>
+                        <NavLink to={"/"}>
+                            <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  
+                                                mt-1 border custom-gray border-black shadow-sharp shadow-transition 
+                                                hover:shadow-sharp-xl icon-hover4 cursor-pointer">
+                                <span>Get Questing</span>
+                                <GameIcon width={"14"} height={"14"}/>
+                            </button>
+                        </NavLink>
                         </div>
                     <img src={questingImg} width={500}/>
                 </div>
@@ -132,12 +136,14 @@ const LandingPage = () => {
                             where you can document your thoughts!
                         </p>
                         <div className="flex justify-end">
-                            <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  
-                                                mt-1 border custom-gray border-black shadow-sharp shadow-transition 
-                                                hover:shadow-sharp-xl icon-hover4 cursor-pointer">
-                                <span>Get Started</span>
-                                <GameIcon width={"14"} height={"14"}/>
-                            </button>
+                            <NavLink to={"/"}>
+                                <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  
+                                                    mt-1 border custom-gray border-black shadow-sharp shadow-transition 
+                                                    hover:shadow-sharp-xl icon-hover4 cursor-pointer">
+                                    <span>Get Started</span>
+                                    <GameIcon width={"14"} height={"14"}/>
+                                </button>
+                            </NavLink>
                         </div>
                     </div>
                     
@@ -147,21 +153,23 @@ const LandingPage = () => {
             {/* What is LifeXP */}
             <div className="h-[620px] mt-32 mb-10 lg:mb-0 md:mt-0 flex flex-col justify-center items-center space-y-16">
                 <h1 className="text-2xl md:text-3xl">What exactly is LifeXP?</h1>
-                <p className="w-[90%] text-center md:text-left text-lg md:w-[60%] md:text-xl leading-10 tracking-normal">
+                <p className="w-[90%] text-center text-lg leading-10 tracking-normal md:text-left md:w-[60%] md:text-xl ">
                     Life XP is a gamified productivity app designed to cater to a broader range of needs beyond task management. 
                     Life XP integrates features that focus on emotional well-being, personal development, and highly customizable 
                     user engagement models. Life XP aims to be a holistic tool for life management. This innovative blend makes Life XP 
                     a comprehensive solution for boosting productivity and emotional health.
                 </p>
-                <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  
-                                    mt-1 border custom-gray border-black shadow-sharp shadow-transition 
-                                    hover:shadow-sharp-xl icon-hover4 cursor-pointer">
-                    <span>Get Started</span>
-                    <GameIcon width={"14"} height={"14"}/>
-                </button>
+                <NavLink to={"/"}>
+                    <button className="flex flex-row space-x-4 items-center justify-center h-10 w-40  
+                                        mt-1 border custom-gray border-black shadow-sharp shadow-transition 
+                                        hover:shadow-sharp-xl icon-hover4 cursor-pointer">
+                        <span>Get Started</span>
+                        <GameIcon width={"14"} height={"14"}/>
+                    </button>
+                </NavLink>
             </div>
             
-            <footer className="border-t border-black h-[130px]">
+            <footer className="border-t border-black h-[130px] mt-40 lg:mt-10">
                 <div className="flex justify-center items-center cursor-default mt-3">
                     <h1 className="text-2xl border-r border-black px-2 mr-2">
                         Life XP
