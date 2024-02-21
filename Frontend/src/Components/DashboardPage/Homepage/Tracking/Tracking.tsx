@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react"
-import { Fitness, Work, Personal, FireIcon } from "../../Icons/Icons";
+import { Fitness, Work, Personal, FireIcon } from "../../../Icons/Icons";
 
 import PropTypes from 'prop-types'
 
@@ -8,11 +8,11 @@ import Tippy from "@tippyjs/react";
 
 // import Streakcalendar from '../../assets/Streakcalendar.png'
 
-interface TrackersProps {
+interface TrackingProps {
     setThePage : Dispatch<SetStateAction<string>>
 }
 
-const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
+const Tracking: React.FC<TrackingProps> = ({ setThePage }) => {
     const styles = {
         "quests" : "space-y-3 text-sm flex flex-col items-center",
         "hoverBase":"relative bottom-14 left-0 border-2 bg-white border-black w-80 h-24 rounded-md text-xs space-y-3 flex flex-col justify-center",
@@ -38,70 +38,68 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
             </Tippy>
            <div className="flex flex-col items-center space-y-20 h-full ">
                 
-                    {/* change page button */}
-                    <Tippy 
-                        content="Tasks"
-                        delay={700}>
-                        <div onClick={()=>{setThePage("Tasks")}}
-                                className={styles.pageButton}>
-                                <BsListTask size={25}/>
-                        </div>
-                    </Tippy>
-                    {/* Daily streak tracker */}
-                    {/* <div className="flex flex-col items-center text-sm"> */}
-                       
-                        {/* <img src={Streakcalendar} width={250} /> */}
-                    {/* </div> */}
-                   
+                {/* change page button */}
+                <Tippy 
+                    content="Tasks"
+                    delay={700}>
+                    <div onClick={()=>{setThePage("Tasks")}}
+                            className={styles.pageButton}>
+                            <BsListTask size={25}/>
+                    </div>
+                </Tippy>
+                {/* Daily streak tracker */}
+                {/* <div className="flex flex-col items-center text-sm"> */}
                     
-                    {/* Task tracker */}
-                    <div className={styles.quests}>
-                        {/* Streak number */}
-                        
-                        {/* Daily Quests */}
-                        <h1 className="underline mb-2">Daily Tasks</h1>
-                        <div>
-                            <label>Complete all work tasks</label>
-                            <input type="checkbox" />
-                            <label>50 XP</label>
-                        </div>
+                    {/* <img src={Streakcalendar} width={250} /> */}
+                {/* </div> */}
+                
+                
+                {/* Task tracker */}
+                <div className={styles.quests}>
+                    {/* Streak number */}
+                    
+                    {/* Daily Quests */}
+                    <h1 className="underline mb-2">Daily Tasks</h1>
+                    <div>
+                        <label>Complete all work tasks</label>
+                        <input type="checkbox" />
+                        <label>50 XP</label>
+                    </div>
 
-                        <div>
-                            <label>Complete a quest</label>
-                            <input type="checkbox" />
-                            <label>50 XP</label>
+                    <div>
+                        <label>Complete a quest</label>
+                        <input type="checkbox" />
+                        <label>50 XP</label>
+                    </div>
+                </div>
+                {/* Tracked quests */}
+                <div className="space-y-3 text-sm flex flex-col items-center w-full">
+                    <h1 className="underline mb-2">Tracked Quests</h1>
+                    
+                    <div className="flex flex-col items-center  w-full space-y-3">
+                        <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
+                            <span className="ml-2">
+                                <Fitness width={"28"} height={"28"}/>
+                            </span>
+                            <p>Complete 1 mile</p>
+                            <p className="px-2 text-xs">...</p>
+                            
+                        </div>
+                        <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
+                            <span className="ml-2">
+                                <Work width={"28"} height={"28"}/>
+                            </span>
+                            <p>Complete a work task</p>
+                            <p className="px-2 text-xs">...</p>
+                        </div>
+                        <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
+                            <span className="ml-2">
+                                <Personal width={"28"} height={"28"}/>
+                            </span>
+                            <p>Meditate 15 minutes</p>
+                            <p className="px-2 text-xs">...</p>
                         </div>
                     </div>
-                     {/* Tracked quests */}
-                     <div className="space-y-3 text-sm flex flex-col items-center w-full">
-                        <h1 className="underline mb-2">Tracked Quests</h1>
-                       
-                        <div className="flex flex-col items-center  w-full space-y-3">
-                           <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
-                                <span className="ml-2">
-                                    <Fitness width={"28"} height={"28"}/>
-                                </span>
-                                <p>Complete 1 mile</p>
-                                <p className="px-2 text-xs">...</p>
-                                
-                           </div>
-                           <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
-                                <span className="ml-2">
-                                    <Work width={"28"} height={"28"}/>
-                                </span>
-                                <p>Complete a work task</p>
-                                <p className="px-2 text-xs">...</p>
-                           </div>
-                           <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
-                                <span className="ml-2">
-                                    <Personal width={"28"} height={"28"}/>
-                                </span>
-                                <p>Meditate 15 minutes</p>
-                                <p className="px-2 text-xs">...</p>
-                           </div>
-                        </div>
-                    
-                    
                 </div>
                 {/* level up meter */}
                 <div className="flex flex-col items-center text-sm relative mt-12">
@@ -155,8 +153,8 @@ const Trackers: React.FC<TrackersProps> = ({ setThePage }) => {
     )
 }
 
-Trackers.propTypes = {
+Tracking.propTypes = {
     setThePage : PropTypes.func.isRequired
 }
 
-export default Trackers
+export default Tracking

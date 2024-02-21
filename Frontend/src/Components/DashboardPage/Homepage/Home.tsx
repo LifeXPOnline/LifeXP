@@ -1,5 +1,5 @@
-import Tasks from "./Tasks";
-import Trackers from "./Trackers";
+import Tasks from "./Tasks/Tasks";
+import Tracking from "./Tracking/Tracking";
 import { useState } from "react";
 import useIsLargeScreen from "../../../Hooks/useIsLargeScreen";
 
@@ -12,7 +12,7 @@ const Home = ()=> {
 
             <div className=" md:border-black md:w-[100%] md:mt-20 md:flex md:flex-row md:space-x-8">
                 {/* if screen width is greater than 1024px, show both components - otherwise set based on state("Tasks") */}
-                {(isLargeScreen || thePage === "Trackers")&&<Trackers setThePage = {setThePage} />}
+                {(isLargeScreen || thePage === "Trackers")&&<Tracking setThePage = {setThePage} />}
                 {(isLargeScreen || thePage === "Tasks")&&<Tasks setThePage = {setThePage}/>}
             </div>
 
