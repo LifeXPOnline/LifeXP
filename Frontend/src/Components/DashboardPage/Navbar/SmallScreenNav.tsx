@@ -17,7 +17,7 @@ interface SmallScreenNavProps {
 
 const SmallScreenNav: React.FC<SmallScreenNavProps> = ( {hamburgerOption, setHamburgerOption} ) => {
     return(
-    <div className={`${hamburgerOption?'block':'hidden'} md:hidden flex flex-col items-center justify-center fixed inset-0 bg-slate-50 z-50`}>
+    <div className={`${hamburgerOption?'block':'hidden'} md:hidden flex flex-col items-center justify-center fixed inset-0 bg-white z-50`}>
             
         <div className='absolute top-[11.8px] right-[24.9px]'>
             <RxHamburgerMenu 

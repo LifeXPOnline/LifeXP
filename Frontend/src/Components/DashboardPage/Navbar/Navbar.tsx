@@ -23,13 +23,13 @@ const Navbar = () =>{
                     Life XP
                 </h1>
             </div>
-            <div className='md:hidden'>
+            <button className='md:hidden'>
                 <RxHamburgerMenu 
                     size={25} 
                     className='cursor-pointer mr-6 icon-hover2' 
                     onClick={()=>{setHamburgerOption(!hamburgerOption)}}
                 />
-            </div>
+            </button>
             {/* Navbar md screen and up */}
             <MdScreenNavPlus />
 
