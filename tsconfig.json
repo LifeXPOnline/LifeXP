@@ -16,8 +16,6 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true
   },
-  "references": [
-    { "path": "./Backend/tsconfig.json" },
-    { "path": "./Frontend/tsconfig.json" }
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "tailwind.config.js", "postcss.config.js"],
+  "exclude": ["node_modules"]
 }
