@@ -1,7 +1,10 @@
 import { FaFilter } from "react-icons/fa";
-import { useState, useRef } from "react";
-import useOutsideClick from "../../../Hooks/useOutsideClick";
 import { IoIosCheckbox } from "react-icons/io";
+
+import { useState, useRef } from "react";
+
+import useOutsideClick from "../../../Hooks/useOutsideClick";
+
 const FilterMenu = () => {
     const[filterOpen, setFilterOpen] = useState<boolean>(false)
     const filterRef:React.MutableRefObject<null> = useRef(null)

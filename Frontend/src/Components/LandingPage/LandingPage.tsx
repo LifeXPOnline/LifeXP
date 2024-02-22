@@ -1,8 +1,10 @@
-import { GameIcon, Enter } from "../Icons/Icons"
 import taskImg from "../../assets/Tasks.png"
 import levelImg from "../../assets/levelmeter.png"
 import questingImg from "../../assets/Questing.png"
 import emcheckinImg from "../../assets/Emcheckin.png"
+
+import { GameIcon, Enter } from "../Icons/Icons"
+
 import { NavLink } from "react-router-dom"
 
 // const backendUrl = "http://localhost:5000";

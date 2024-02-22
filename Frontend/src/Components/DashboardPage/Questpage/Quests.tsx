@@ -1,10 +1,13 @@
 import AcceptedQuests from "./AcceptedQuests"
 import AvailableQuests from "./AvailableQuests"
+
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; // optional for styling
+import 'tippy.js/dist/tippy.css'; 
+
 import { GiScrollQuill } from "react-icons/gi";
-import { useState } from 'react'
 import { TbCards } from "react-icons/tb";
+
+import { useState } from 'react'
 
 const Quests = () =>{
     const [changePage, setChangePage] = useState(false)

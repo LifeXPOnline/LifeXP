@@ -1,10 +1,12 @@
 import { WiStars } from "react-icons/wi";
-import { CiSquarePlus } from "react-icons/ci";
-import { IoIosCheckbox } from "react-icons/io";
+
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional for styling
+
 import { Dispatch, SetStateAction } from "react";
+
 import PropTypes from 'prop-types'
+
 import Work from "./Work";
 import Personal from "./Personal";
 import Fitness from "./Fitness";

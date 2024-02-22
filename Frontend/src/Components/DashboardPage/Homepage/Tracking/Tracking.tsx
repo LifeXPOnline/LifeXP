@@ -1,5 +1,8 @@
 import { Dispatch, SetStateAction } from "react"
+
 import { Fitness, Work, Personal, FireIcon } from "../../../Icons/Icons";
+
+import { PiDotsThree,PiDotsThreeLight } from "react-icons/pi";
 
 import PropTypes from 'prop-types'
 
@@ -82,22 +85,24 @@ const Tracking: React.FC<TrackingProps> = ({ setThePage }) => {
                                 <Fitness width={"28"} height={"28"}/>
                             </span>
                             <p>Complete 1 mile</p>
-                            <p className="px-2 text-xs">...</p>
-                            
+                            {/* <p className="px-2 text-xs">...</p> */}
+                            <span className="px-2"><PiDotsThreeLight size={25}/></span>
                         </div>
                         <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
                             <span className="ml-2">
                                 <Work width={"28"} height={"28"}/>
                             </span>
                             <p>Complete a work task</p>
-                            <p className="px-2 text-xs">...</p>
+                            {/* <p className="px-2 text-xs">...</p> */}
+                            <span className="px-2"><PiDotsThreeLight size={25}/></span>
                         </div>
                         <div className=" flex flex-row justify-between items-center cursor-pointer hover:border-2 hover:w-[282px] space-x-3 w-[278px] border border-black h-10 rounded-md">
                             <span className="ml-2">
                                 <Personal width={"28"} height={"28"}/>
                             </span>
                             <p>Meditate 15 minutes</p>
-                            <p className="px-2 text-xs">...</p>
+                          
+                            <span className="px-2"><PiDotsThreeLight size={25}/></span>
                         </div>
                     </div>
                 </div>

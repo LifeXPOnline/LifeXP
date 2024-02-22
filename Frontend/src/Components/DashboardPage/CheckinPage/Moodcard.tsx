@@ -15,7 +15,7 @@ const Moodcard: React.FC<MoodcardProps> = ({ Mood, Title, onSelect, isActive, se
             className={`${hoverClass} flex flex-col items-center w-28 h-44 
                         rounded-md border-[1.2px] border-black shadow-sharp-md 
                         hover:shadow-sharp-lg icon-hover3 cursor-pointer`}
-            onClick={() => {onSelect(Title)}} // Attach the onClick event here
+            onClick={() => {onSelect(Title)}} 
         >        
             <h1 className="mt-1 mb-2">
                 {Title}

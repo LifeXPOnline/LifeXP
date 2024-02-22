@@ -1,5 +1,5 @@
-
 import { FaStar } from "react-icons/fa";
+
 import PropTypes from 'prop-types'
 
 
