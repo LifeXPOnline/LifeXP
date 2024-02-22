@@ -64,10 +64,10 @@ const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
                     <RxHamburgerMenu size={28}/>
                 </button>
 
-                {/* menu */}
+                {/* menu - Journal entry / Mood graph*/}
                 {menuOpen&&
                 <div ref={menuRef} className="relative">
-                   <div  className="flex flex-col border border-b-2 border-black bg-slate-50 w-40 h-20 absolute left-5 top-[-15px] z-0">
+                   <div  className="flex flex-col border border-b-2 border-black bg-white w-40 h-20 absolute left-5 top-[-15px] z-0">
                         <div
                             onClick={()=>{setThePage("logs")}} 
                             className="flex flex-row ml-2 mt-3 cursor-pointer hover:underline">

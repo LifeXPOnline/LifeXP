@@ -25,7 +25,7 @@ const FilterMenu = () => {
         {/* filter menu */}
         {filterOpen&&
         <div ref={filterRef} className="absolute right-10 top-8 z-50">
-            <div className=" border border-black border-b-2 bg-slate-50 w-44 h-33 z-50">
+            <div className=" border border-black border-b-2 bg-white w-44 h-33 z-50">
                 <div className="flex flex-col items-center text-sm mt-3 space-y-1">
                     <div className="flex flex-row space-x-2">
                         <label htmlFor="daily-quest">
