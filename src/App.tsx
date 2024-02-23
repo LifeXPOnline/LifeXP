@@ -17,13 +17,18 @@ const App = ()=> {
   // }
   return (
       <div >
+        {/* landing page */}
         <div className=" bg-white font-source-code-pro tracking-tight">
-
           <Routes>
                 <Route path="/landing" element={<LandingPage />}/>
           </Routes>
         </div>
-        
+        {/* login/register */}
+        <div>
+          <Routes></Routes>
+        </div>
+
+        {/* main content */}
         <div className=" bg-white font-source-code-pro">
         
           <Navbar />
