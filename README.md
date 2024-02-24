@@ -7,9 +7,7 @@ LifeXP uniquely merges gamification with holistic tools for emotional well-being
 ## Setup
 First clone or download the file
 1. npm install
-2. cd frontend
-3. npm install just to make sure everything is installed
-3. npm run dev
+2. npm run dev
 
 ## Technologies
 Frontend
