@@ -10,14 +10,7 @@ First clone or download the file
 2. npm run dev
 
 ## Technologies
-Frontend
 1. Vite js
 2. React js
 3. Typescript
 4. Tailwindcss
-
-Backend
-1. Node
-2. Express
-3. PostgreSQL
-4. Passport js
