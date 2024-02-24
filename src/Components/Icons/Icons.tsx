@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 interface IconsProps{
     width:string
@@ -103,4 +104,29 @@ export const FireIcon: React.FC<IconsProps> = ({width, height}) =>{
     <path d="M4.5 0.559233C4.5 0.00142117 3.86146 -0.208813 3.58021 0.253608C1 4.49649 4.66667 4.68751 4.66667 6.75001C4.66667 7.58508 4.06021 8.26079 3.31562 8.24977C2.58292 8.23922 2 7.55204 2 6.72774V4.7236C2 4.21501 1.44854 3.96821 1.13688 4.33688C0.579167 4.99595 0 6.12493 0 7.50001C0 9.98133 1.79437 12 4 12C6.20563 12 8 9.98133 8 7.50001C8 3.50884 4.5 2.97657 4.5 0.559233Z" fill="black"/>
     </svg>
     )
+}
+
+GameIcon.propTypes = {
+    width: PropTypes.string.isRequired,
+    height:PropTypes.string.isRequired
+}
+
+Fitness.propTypes = {
+    width: PropTypes.string.isRequired,
+    height:PropTypes.string.isRequired
+}
+
+Work.propTypes = {
+    width: PropTypes.string.isRequired,
+    height:PropTypes.string.isRequired
+}
+
+Personal.propTypes = {
+    width: PropTypes.string.isRequired,
+    height:PropTypes.string.isRequired
+}
+
+FireIcon.propTypes = {
+    width: PropTypes.string.isRequired,
+    height:PropTypes.string.isRequired
 }

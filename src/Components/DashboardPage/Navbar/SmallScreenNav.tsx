@@ -9,6 +9,7 @@ import { Dispatch, SetStateAction } from 'react';
 
 import { NavLink } from "react-router-dom"
 
+import PropTypes from 'prop-types'
 
 interface SmallScreenNavProps {
     hamburgerOption : boolean
@@ -120,3 +121,8 @@ const SmallScreenNav: React.FC<SmallScreenNavProps> = ( {hamburgerOption, setHam
 }
 
 export default SmallScreenNav
+
+SmallScreenNav.propTypes = {
+    hamburgerOption: PropTypes.bool.isRequired,
+    setHamburgerOption: PropTypes.func.isRequired
+}
