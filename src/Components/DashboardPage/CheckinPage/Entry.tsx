@@ -6,8 +6,6 @@ interface EntryProps {
 }
 
 const Entry: React.FC<EntryProps> = () => {
-
-    
  
     return (
         // <div>
@@ -26,12 +24,9 @@ const Entry: React.FC<EntryProps> = () => {
                             className="border border-black text-sm py-1 w-11/12 md:w-10/12 h-64 "
                             placeholder="Journal your thoughts here"
                         />
-                        <div className='w-10/12 flex justify-end'>
-                            <button className=" bg-quest-gray2 border-[1.5px] border-black text-white 
-                                    w-[100px] h-8  text-xs hover:bg-quest-gray4">
-                                Submit
-                            </button>
-                        </div>
+                        <button className="relative">
+                            Submit
+                        </button>
                     </div>
               
                 </div> 
