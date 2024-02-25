@@ -23,6 +23,7 @@ const App = ()=> {
                 <Route path="/landing" element={<LandingPage />}/>
           </Routes>
         </div>
+        
         {/* login/register */}
         <div>
           <Routes></Routes>

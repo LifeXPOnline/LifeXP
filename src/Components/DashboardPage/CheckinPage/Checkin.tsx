@@ -24,6 +24,7 @@ const Checkin: React.FC<CheckinProps> = ({setThePage}) => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
     const menuRef:React.MutableRefObject<null> = useRef(null)
 
+    // to close the menu
     useOutsideClick({ ref: menuRef, callback: () => { setMenuOpen(false) }});
 
     const handleMoodSelect = (mood: string) => {
