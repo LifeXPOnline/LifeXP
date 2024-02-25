@@ -10,7 +10,7 @@ const MdScreenNavPlus = () => {
     <ul className='flex flex-row items-center  space-x-9'>
         <li>
             <NavLink 
-                to ="/" 
+                to ="/home" 
                 className={({ isActive }) => isActive ? 'active-link' : ''}>
                 <div className='flex items-center cursor-pointer icon-hover2 space-x-2'>
                     <MdHome size = {30}/>

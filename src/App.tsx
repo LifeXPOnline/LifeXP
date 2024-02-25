@@ -20,7 +20,7 @@ const App = ()=> {
         {/* landing page */}
         <div className=" bg-white font-source-code-pro tracking-tight">
           <Routes>
-                <Route path="/landing" element={<LandingPage />}/>
+                <Route path="/" element={<LandingPage />}/>
           </Routes>
         </div>
         {/* login/register */}
@@ -35,7 +35,7 @@ const App = ()=> {
 
           <Routes>
               {/* Webapp nav links */}
-              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/quests" element={<Quests />} />
               <Route path="/checkin" element={<CheckinParent />} />
               <Route path="/skilltree" element={<Welcomepage />} /> 

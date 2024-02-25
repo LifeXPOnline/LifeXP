@@ -36,7 +36,7 @@ return(<div className='hidden md:flex relative'>
                Achievements
            </h1> 
        </div>
-       <NavLink to={"/landing"}>
+       <NavLink to={"/"}>
            <div className='flex items-center space-x-1 flex-row hover:bg-gray-200 mt-2 h-6 cursor-pointer'>
                    <h1 className='text-sm ml-2'>
                        Logout

@@ -21,7 +21,8 @@ const LandingPage = () => {
                         </h1>
                 </div>
                
-               <NavLink to={"/"}>
+               {/* TODO: login form should pop up after clicking the login button */}
+               <NavLink to={"/home"}>
                     <button
                        
                         className="flex flex-row items-center justify-center h-9 w-32 sm:mr-6 mt-1 border custom-gray 
