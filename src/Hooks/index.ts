@@ -1,4 +1,24 @@
-import { useEffect, RefObject } from "react";
+import {useState, useEffect, RefObject} from 'react';
+
+export const useIsLargeScreen = (): boolean => {
+    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1024); // breakpoint for window > 1024px
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsLargeScreen(window.innerWidth > 1024);
+        };
+
+        window.addEventListener('resize', checkScreenSize);
+
+        // when done, remove eventlistener
+        return () => {
+            window.removeEventListener('resize', checkScreenSize);
+        };
+    }, []);
+
+    return isLargeScreen;
+};
+
 /**
  * Custom hook to detect a click outside a referenced element.
  * 
@@ -12,7 +32,7 @@ interface UseOutsideClickProps<T extends HTMLElement> {
     callback: () => void;
 }
 
-const useOutsideClick = <T extends HTMLElement>({
+export const useOutsideClick = <T extends HTMLElement>({
     ref,
     callback,
 }: UseOutsideClickProps<T>): void => {
@@ -30,5 +50,3 @@ const useOutsideClick = <T extends HTMLElement>({
         };
     }, [ref, callback]);
 };
-
-export default useOutsideClick;
