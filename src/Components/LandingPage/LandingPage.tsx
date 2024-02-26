@@ -11,7 +11,7 @@ import {NavLink} from "react-router-dom"
 
 const LandingPage = () => {
     return (
-        <div className="h-screen">
+        <div className="h-screen tracking-tight">
             {/* Nav */}
             <div className="flex flex-row items-center justify-between h-14 w-full">
                 <div className='flex flex-row cursor-pointer items-center ml-6 mt-1'>

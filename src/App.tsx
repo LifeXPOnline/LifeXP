@@ -16,34 +16,21 @@ const App = () => {
     //   return <Navigate to="/" />;
     // }
     return (
-        <div >
-            {/* landing page */}
-            <div className=" bg-white font-source-code-pro tracking-tight">
-                <Routes>
-                    <Route path="/" element={<LandingPage />} />
-                </Routes>
-            </div>
-            {/* login/register */}
-            <div>
-                <Routes></Routes>
-            </div>
+        <div className="bg-white font-source-code-pro">
+            <Routes>
+                {/* landing page */}
+                <Route path="/" element={<LandingPage />} />
 
-            {/* main content */}
-            <div className=" bg-white font-source-code-pro">
+                {/* TODO: login/register route */}
 
-                <Navbar />
-
-                <Routes>
-                    {/* Webapp nav links */}
+                {/* main content */}
+                <Route element={<Navbar />} >
                     <Route path="/home" element={<Home />} />
                     <Route path="/quests" element={<Quests />} />
                     <Route path="/checkin" element={<CheckinParent />} />
                     <Route path="/skilltree" element={<Welcomepage />} />
-                    {/* Link for authentication */}
-                    {/* <Route path="/login/success" element={handleLoginSuccess()} />    */}
-                </ Routes>
-
-            </div>
+                </Route>
+            </Routes>
         </div>
     )
 }
