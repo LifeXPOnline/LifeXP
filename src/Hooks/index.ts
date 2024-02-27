@@ -50,3 +50,24 @@ export const useOutsideClick = <T extends HTMLElement>({
         };
     }, [ref, callback]);
 };
+
+export interface IUseInputField {
+    value: string;
+    type: string;
+    onChange: (event: React.SyntheticEvent) => void;
+}
+
+export const useInputField = (type: string): IUseInputField => {
+    const [value, setValue] = useState<string>("");
+
+    const onChange = (event: React.SyntheticEvent) => {
+        event.preventDefault();
+        setValue(event.target.value);
+    }
+
+    return {
+        value,
+        type,
+        onChange
+    }
+}

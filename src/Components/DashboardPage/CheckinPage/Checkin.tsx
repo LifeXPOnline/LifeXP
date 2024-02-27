@@ -1,4 +1,4 @@
-import {Happy, Ok, Angry, Sad, ReallySad, Depressed, Book, Graph} from "../../Icons/Icons"
+import {Happy, Ok, Angry, Sad, ReallySad, Depressed, Book, Graph} from "../../Icons"
 import {RxHamburgerMenu} from "react-icons/rx";
 
 import Moodcard from "./Moodcard"

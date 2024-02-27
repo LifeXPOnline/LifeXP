@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 
-interface MoodcardProps  {
+interface MoodcardProps {
     Mood: React.ReactElement
     Title: string
     isActive: boolean
     onSelect: (moodTitle: string) => void //funct with string parameter
     selectedMood: string | null
 }
-const Moodcard: React.FC<MoodcardProps> = ({ Mood, Title, onSelect, isActive, selectedMood }) => {
+const Moodcard: React.FC<MoodcardProps> = ({Mood, Title, onSelect, isActive, selectedMood}) => {
     const hoverClass = isActive ? "" : "hover-reveal"; // Apply hover class only when not active
 
     return (
-        <div 
+        <div
             className={`${hoverClass} flex flex-col items-center w-28 h-44 
                         rounded-md border-[1.2px] border-black shadow-sharp-md 
                         hover:shadow-sharp-lg icon-hover3 cursor-pointer`}
-            onClick={() => {onSelect(Title)}} 
-        >        
+            onClick={() => {onSelect(Title)}}
+        >
             <h1 className="mt-1 mb-2">
                 {Title}
             </h1>
@@ -25,7 +25,7 @@ const Moodcard: React.FC<MoodcardProps> = ({ Mood, Title, onSelect, isActive, se
             >
                 Select
             </button>
-            {selectedMood&&<h1 className='mt-7'>Selected!</h1>}
+            {selectedMood && <h1 className='mt-7'>Selected!</h1>}
         </div>
     );
 };

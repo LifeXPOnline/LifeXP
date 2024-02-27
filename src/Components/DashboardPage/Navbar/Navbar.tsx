@@ -2,13 +2,13 @@ import {useState, } from 'react'
 
 import {RxHamburgerMenu} from 'react-icons/rx'
 
-import {GameIcon} from "../../Icons/Icons"
+import {GameIcon} from "../../Icons"
 
 import SmallScreenNav from './SmallScreenNav';
 import MdScreenNavPlus from './MdScreenNavPlus';
 import ProfileAndMenu from './ProfileandMenu';
 
-import { Outlet } from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 
 
 

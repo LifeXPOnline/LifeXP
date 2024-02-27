@@ -2,15 +2,15 @@
 import Checkin from "./Checkin"
 import Logs from "./Logs"
 
-import { useState } from "react"
+import {useState} from "react"
 
 
-const CheckinParent = ()=> {
-    const [thePage,setThePage] = useState<string>("checkin")
+const CheckinParent = () => {
+    const [thePage, setThePage] = useState<string>("checkin")
 
-    return(<div>
-        {thePage === "logs"&& <Logs setThePage={setThePage}/>}
-        {thePage === "checkin"&& <Checkin setThePage={setThePage} />}
+    return (<div>
+        {thePage === "logs" && <Logs setThePage={setThePage} />}
+        {thePage === "checkin" && <Checkin setThePage={setThePage} />}
     </div>)
 
 }
