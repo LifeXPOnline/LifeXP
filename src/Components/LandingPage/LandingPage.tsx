@@ -3,38 +3,39 @@ import levelImg from "../../assets/levelmeter.png"
 import questingImg from "../../assets/Questing.png"
 import emcheckinImg from "../../assets/Emcheckin.png"
 
-import {GameIcon, Enter} from "../Icons/Icons"
-
+import {GameIcon, Enter} from "../Icons";
 import {NavLink} from "react-router-dom"
+import {LogoWithBrandName} from "../Reusables"
+import LoginForm from "../Forms/LoginForm";
+import {useState} from "react";
 
 // const backendUrl = "http://localhost:5000";
 
 const LandingPage = () => {
+    const [loginFormShowing, setLoginFormState] = useState<boolean>(false);
+
+    const toggleLoginForm = (event: React.SyntheticEvent): void => {
+        event.preventDefault();
+        setLoginFormState(!loginFormShowing);
+    }
+
     return (
         <div className="h-screen tracking-tight">
+            <LoginForm isOpen={loginFormShowing} />
             {/* Nav */}
             <div className="flex flex-row items-center justify-between h-14 w-full">
-                <div className='flex flex-row cursor-pointer items-center ml-6 mt-1'>
-                    <GameIcon height={"22"} width={"22"} />
-                    <h1 className='text-lg ml-2' >
-                        Life XP
-                    </h1>
-                </div>
-               
-               {/* TODO: login form should pop up after clicking the login button */}
-               <NavLink to={"/home"}>
-                    <button
+                <LogoWithBrandName />
 
-                        className="flex flex-row items-center justify-center h-9 w-32 sm:mr-6 mt-1 border custom-gray 
+                {/* TODO: login form should pop up after clicking the login button */}
+
+                <button
+                    onClick={toggleLoginForm}
+                    className="flex flex-row items-center justify-center h-9 w-32 sm:mr-6 mt-1 border custom-gray 
                                 border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 
                                 cursor-pointer">
-                        <h1 className="mr-2">Login</h1>
-                        <Enter />
-                    </button>
-                </NavLink>
-
-
-
+                    <h1 className="mr-2">Login</h1>
+                    <Enter />
+                </button>
             </div>
             {/* {toHomeScreen && <Navigate to="/"/>} */}
             {/* main content */}
