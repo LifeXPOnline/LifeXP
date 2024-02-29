@@ -6,7 +6,7 @@ import emcheckinImg from "../../assets/Emcheckin.png"
 import {GameIcon, Enter} from "../Icons";
 import {NavLink} from "react-router-dom"
 import {LogoWithBrandName} from "../Reusables"
-import LoginForm from "../Forms/LoginForm";
+import Login from "../DashboardPage/Login-Register/Login";
 import {useState} from "react";
 
 // const backendUrl = "http://localhost:5000";
@@ -21,13 +21,10 @@ const LandingPage = () => {
 
     return (
         <div className="h-screen tracking-tight">
-            <LoginForm isOpen={loginFormShowing} />
+            <Login isOpen={loginFormShowing} />
             {/* Nav */}
             <div className="flex flex-row items-center justify-between h-14 w-full">
                 <LogoWithBrandName />
-
-                {/* TODO: login form should pop up after clicking the login button */}
-
                 <button
                     onClick={toggleLoginForm}
                     className="flex flex-row items-center justify-center h-9 w-32 sm:mr-6 mt-1 border custom-gray 
