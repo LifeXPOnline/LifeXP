@@ -1,6 +1,3 @@
-//This file contains all the Components that repeat across multiple pages
-//Intention of this file is too reduce reduncy
-//Anything that is used on multple pages should be put here
 import {GameIcon} from "./Icons"
 
 export const LogoWithBrandName = () => {
@@ -14,19 +11,6 @@ export const LogoWithBrandName = () => {
     )
 }
 
-interface IMainButton {
-    label: string;
-    type: "button" | "reset" | "submit";
-    handler?: (event: React.SyntheticEvent) => void;
-}
 
-export const MainButton = ({label, type, handler}: IMainButton) => {
-    return (
-        <button onClick={handler} type={type} className="bg-quest-gray2 border-[1.5px] border-black text-white 
-                                w-7/12 h-10 rounded-md text-xs hover:bg-quest-gray4">
-            {label}
-        </button>
-    )
-}
 
 
