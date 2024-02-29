@@ -9,8 +9,6 @@ import {LogoWithBrandName} from "../Reusables"
 import Login from "../DashboardPage/Login-Register/Login";
 import {useState} from "react";
 
-// const backendUrl = "http://localhost:5000";
-
 const LandingPage = () => {
     const [loginFormShowing, setLoginFormState] = useState<boolean>(false);
 

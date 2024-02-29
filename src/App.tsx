@@ -8,6 +8,7 @@ import Welcomepage from "./Components/DashboardPage/SkillTree/Welcomepage"
 import './index.css'
 
 import {Route, Routes, } from "react-router-dom"
+import Register from "./Components/DashboardPage/Login-Register/Register"
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/" element={<LandingPage />} />
 
                 {/* TODO: login/register route */}
+                <Route path="/register" element={<Register />} />
 
                 {/* main content */}
                 <Route element={<Navbar />} >

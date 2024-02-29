@@ -60,11 +60,12 @@ export const Modal = ({isOpen, hasCloseBtn, children}: IModal) => {
 
 interface IFormContainer {
     sumbitHandler: (event: React.SyntheticEvent) => void;
+    className: string;
 }
 
-export const FormContainer = ({sumbitHandler, children}: React.PropsWithChildren<IFormContainer>) => {
+export const FormContainer = ({sumbitHandler, className, children}: React.PropsWithChildren<IFormContainer>) => {
     return (
-        <form onSubmit={sumbitHandler} className="flex flex-col space-y-6 items-center justify-center rounded-xl border-black w-[320px] h-[480px] border-1 shadow-sharp-md">
+        <form onSubmit={sumbitHandler} className={className}>
             {children}
         </form>
     );
@@ -74,9 +75,19 @@ interface IInputTextField {
     label: string;
     id: string;
     inputHook: IUseInputField;
+    required?: boolean;
 }
 
-export const FormTextFields = ({label, id, inputHook}: IInputTextField) => {
+export const FormTextFields = ({label, id, inputHook, required}: IInputTextField) => {
+    if (required === true) {
+        return (
+            <div className="flex flex-col">
+                <label htmlFor={id}>{label}</label>
+                <input className="border-black border-2" id={id} required {...inputHook} />
+            </div>
+        );
+    }
+
     return (
         <div className="flex flex-col">
             <label htmlFor={id}>{label}</label>
