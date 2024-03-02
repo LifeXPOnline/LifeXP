@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function isElementVisible(ref: any) {
+export function isSectionVisible(ref: any) {
     const [isIntersecting, setIntersecting] = useState(false);
 
     useEffect(() => {

@@ -7,7 +7,8 @@ import {GameIcon, Enter} from "../Icons";
 import {NavLink} from "react-router-dom"
 import {LogoWithBrandName} from "../Reusables"
 import Login from "../DashboardPage/Login-Register/Login";
-import {useState} from "react";
+import {useRef, useState} from "react";
+import { isSectionVisible } from "./IsSectionVisible";
 
 const LandingPage = () => {
     const [loginFormShowing, setLoginFormState] = useState<boolean>(false);
@@ -17,11 +18,28 @@ const LandingPage = () => {
         setLoginFormState(!loginFormShowing);
     }
 
+    const navBarSectionRef = useRef<HTMLInputElement>(null);
+    const tasksSectionRef = useRef<HTMLInputElement>(null);
+    const levelUpSectionRef = useRef<HTMLInputElement>(null);
+    const questSectionRef = useRef<HTMLInputElement>(null);
+    const emotionalCheckInSectionRef = useRef<HTMLInputElement>(null);
+    const aboutSectionRef = useRef<HTMLInputElement>(null);
+    const footerSectionRef = useRef<HTMLInputElement>(null);
+
+    const isNavBarSectionVisible = isSectionVisible(navBarSectionRef);
+    const isTasksSectionVisible = isSectionVisible(tasksSectionRef);
+    const isLevelUpSectionVisible = isSectionVisible(levelUpSectionRef);
+    const isQuestSectionVisible = isSectionVisible(questSectionRef);
+    const isEmotionalCheckInSectionVisible = isSectionVisible(emotionalCheckInSectionRef);
+    const isAboutSectionVisible = isSectionVisible(aboutSectionRef);
+    const isFooterSectionVisible = isSectionVisible(footerSectionRef);
+
     return (
         <div className="h-screen tracking-tight">
             <Login isOpen={loginFormShowing} />
+
             {/* Nav */}
-            <div className="flex flex-row items-center justify-between h-14 w-full">
+            <div ref={navBarSectionRef} className={`flex flex-row items-center justify-between h-14 w-full transition-opacity ease-in duration-700 ${isNavBarSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <LogoWithBrandName />
                 <button
                     onClick={toggleLoginForm}
@@ -32,10 +50,11 @@ const LandingPage = () => {
                     <Enter />
                 </button>
             </div>
+
             {/* {toHomeScreen && <Navigate to="/"/>} */}
             {/* main content */}
             {/* Tasks section */}
-            <div className="lg:ml-10 mb-5 mt-10">
+            <div ref={tasksSectionRef} className={`lg:ml-10 mb-5 mt-10 transition-opacity ease-in duration-700 ${isTasksSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <div className="hidden lg:flex items-center space-x-4 lg:ml-20 ">
                     <GameIcon width={"37"} height={"37"} />
                     <h1 className="text-[36px] tracking-wider text-gray-900">
@@ -72,7 +91,7 @@ const LandingPage = () => {
             </div>
 
             {/* levelup  section*/}
-            <div className="hidden lg:flex flex-col justify-center items-center h-[580px] ml-8">
+            <div ref={levelUpSectionRef} className={`hidden lg:flex flex-col justify-center items-center h-[580px] ml-8 transition-opacity ease-in duration-700 ${isLevelUpSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <div className="grid lg:grid-cols-2 w-[80%] ">
                     <img src={levelImg} width={400} />
                     <div className=" flex flex-col items justify-center">
@@ -97,8 +116,9 @@ const LandingPage = () => {
                     </div>
                 </div>
             </div>
+
             {/* Questing section */}
-            <div className="hidden lg:flex justify-center items-center h-[620px] ml-12">
+            <div ref={questSectionRef} className={`hidden lg:flex justify-center items-center h-[620px] ml-12 transition-opacity ease-in duration-700 ${isQuestSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <div className="grid lg:grid-cols-2 w-[90%]">
                     <div className=" flex flex-col items justify-center">
 
@@ -122,7 +142,7 @@ const LandingPage = () => {
             </div>
 
             {/* Emotional check-in section */}
-            <div className="hidden lg:flex justify-center items-center h-[620px] ml-12">
+            <div ref={emotionalCheckInSectionRef} className={`hidden lg:flex justify-center items-center h-[620px] ml-12 transition-opacity ease-in duration-700 ${isEmotionalCheckInSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <div className="grid lg:grid-cols-2 w-[85%]">
                     <img src={emcheckinImg} width={500} />
                     <div className=" flex flex-col items justify-center">
@@ -150,7 +170,7 @@ const LandingPage = () => {
             </div>
 
             {/* What is LifeXP */}
-            <div className="h-[620px] mt-32 mb-10 lg:mb-0 md:mt-0 flex flex-col justify-center items-center space-y-16">
+            <div ref={aboutSectionRef} className={`h-[620px] mt-32 mb-10 lg:mb-0 md:mt-0 flex flex-col justify-center items-center space-y-16 transition-opacity ease-in duration-700 ${isAboutSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <h1 className="text-2xl md:text-3xl">What exactly is LifeXP?</h1>
                 <p className="w-[90%] text-center text-lg leading-10 tracking-normal md:text-left md:w-[60%] md:text-xl ">
                     Life XP is a gamified productivity app designed to cater to a broader range of needs beyond task management.
@@ -168,7 +188,7 @@ const LandingPage = () => {
                 </NavLink>
             </div>
 
-            <footer className="border-t border-black h-[130px] mt-40 lg:mt-10">
+            <footer ref={footerSectionRef} className={`border-t border-black h-[130px] mt-40 lg:mt-10 transition-opacity ease-in duration-700 ${isFooterSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <div className="flex justify-center items-center cursor-default mt-3">
                     <h1 className="text-2xl border-r border-black px-2 mr-2">
                         Life XP
