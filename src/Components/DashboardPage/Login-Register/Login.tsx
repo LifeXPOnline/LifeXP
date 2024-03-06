@@ -2,6 +2,7 @@ import {IUseInputField, useInputField} from "../../../Hooks";
 import {FormButton, FormContainer, FormTextFields, Modal} from "../../Forms";
 import {GameIcon} from "../../Icons";
 import {NavLink} from "react-router-dom";
+import {login} from "../../../services/auth";
 
 interface ILoginForm {
     isOpen: boolean;
@@ -12,9 +13,13 @@ const Login = ({isOpen}: ILoginForm) => {
     const pw: IUseInputField = useInputField("password");
     const rememberpw: IUseInputField = useInputField("checkbox");
 
-    const handleLogin = (event: React.SyntheticEvent): void => {
+    const handleLogin = async (event: React.SyntheticEvent): Promise<void> => {
         event.preventDefault();
-        console.log({email: email.value, password: pw.value, remember: rememberpw.value});
+        const userData = {
+            email: email.value,
+            password: pw.value,
+        }
+        const loginRes = await login(userData);
     }
 
     return (
