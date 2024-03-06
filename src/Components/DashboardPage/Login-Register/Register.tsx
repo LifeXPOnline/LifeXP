@@ -2,6 +2,7 @@ import {useInputField, IUseInputField} from "../../../Hooks";
 import {LogoWithBrandName} from "../../Reusables";
 import {FormContainer, FormTextFields} from "../../Forms";
 import {NavLink} from "react-router-dom";
+import {register} from "../../../services/auth";
 
 
 const Register = () => {
@@ -11,10 +12,11 @@ const Register = () => {
     const firstName: IUseInputField = useInputField("text");
     const lastName: IUseInputField = useInputField("text");
 
-    const handleRegister = (event: React.SyntheticEvent): void => {
+    const handleRegister = async (event: React.SyntheticEvent): Promise<void> => {
         event.preventDefault();
         if (pw.value === confirmpw.value) {
-            console.log({email: email.value, password: pw.value, lastName: lastName.value, firstName: firstName.value});
+            const registerData = {email: email.value, password: pw.value, lastName: lastName.value, firstName: firstName.value};
+            const registerRes = await register(registerData);
         } else {
             console.log("Passwords don't match");
         }
