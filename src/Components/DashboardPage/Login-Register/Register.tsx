@@ -18,7 +18,7 @@ const Register = () => {
             const registerData = {email: email.value, password: pw.value, lastName: lastName.value, firstName: firstName.value};
             const registerRes = await register(registerData);
         } else {
-            console.log("Passwords don't match");
+            alert("Password entered does not match.");
         }
     }
 
