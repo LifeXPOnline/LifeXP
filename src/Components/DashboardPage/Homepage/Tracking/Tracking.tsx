@@ -1,13 +1,13 @@
-import {Dispatch, SetStateAction} from "react"
+import { Dispatch, SetStateAction } from "react";
 
-import {Fitness, Work, Personal, FireIcon} from "../../../Icons";
+import { FireIcon, Fitness, Personal, Work } from "../../../Icons";
 
-import {PiDotsThree, PiDotsThreeLight} from "react-icons/pi";
+import { PiDotsThreeLight } from "react-icons/pi";
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import {BsListTask} from 'react-icons/bs';
 import Tippy from "@tippyjs/react";
+import { BsListTask } from 'react-icons/bs';
 
 // import Streakcalendar from '../../assets/Streakcalendar.png'
 
