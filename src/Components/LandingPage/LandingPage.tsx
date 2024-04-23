@@ -1,22 +1,21 @@
-import taskImg from "../../assets/Tasks.png"
-import levelImg from "../../assets/levelmeter.png"
-import questingImg from "../../assets/Questing.png"
-import emcheckinImg from "../../assets/Emcheckin.png"
+import emcheckinImg from "../../assets/Emcheckin.png";
+import questingImg from "../../assets/Questing.png";
+import taskImg from "../../assets/Tasks.png";
+import levelImg from "../../assets/levelmeter.png";
 
-import {GameIcon, Enter} from "../Icons";
-import {NavLink} from "react-router-dom"
-import {LogoWithBrandName} from "../Reusables"
-import Login from "../DashboardPage/Login-Register/Login";
-import {useRef, useState} from "react";
+import { useRef } from "react";
+import { NavLink } from "react-router-dom";
+import { Enter, GameIcon } from "../Icons";
+import { LogoWithBrandName } from "../Reusables";
 import { isSectionVisible } from "./IsSectionVisible";
 
 const LandingPage = () => {
-    const [loginFormShowing, setLoginFormState] = useState<boolean>(false);
+    // const [loginFormShowing, setLoginFormState] = useState<boolean>(false);
 
-    const toggleLoginForm = (event: React.SyntheticEvent): void => {
-        event.preventDefault();
-        setLoginFormState(!loginFormShowing);
-    }
+    // const toggleLoginForm = (event: React.SyntheticEvent): void => {
+    //     event.preventDefault();
+    //     setLoginFormState(!loginFormShowing);
+    // }
 
     const navBarSectionRef = useRef<HTMLInputElement>(null);
     const tasksSectionRef = useRef<HTMLInputElement>(null);
@@ -36,19 +35,21 @@ const LandingPage = () => {
 
     return (
         <div className="h-screen tracking-tight">
-            <Login isOpen={loginFormShowing} />
+            {/* <Login isOpen={loginFormShowing} /> */}
 
             {/* Nav */}
             <div ref={navBarSectionRef} className={`flex flex-row items-center justify-between h-14 w-full transition-opacity ease-in duration-700 ${isNavBarSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <LogoWithBrandName />
-                <button
-                    onClick={toggleLoginForm}
-                    className="flex flex-row items-center justify-center h-9 w-32 sm:mr-6 mt-1 border custom-gray 
-                                border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 
-                                cursor-pointer">
-                    <h1 className="mr-2">Login</h1>
-                    <Enter />
-                </button>
+                <NavLink to="/home">
+                    <button
+                        // onClick={toggleLoginForm}
+                        className="flex flex-row items-center justify-center h-9 w-32 sm:mr-6 mt-1 border custom-gray 
+                                    border-black shadow-sharp shadow-transition hover:shadow-sharp-xl icon-hover4 
+                                    cursor-pointer">
+                        <h1 className="mr-2">Login</h1>
+                        <Enter />
+                    </button>
+                </NavLink>
             </div>
 
             {/* {toHomeScreen && <Navigate to="/"/>} */}
@@ -65,13 +66,13 @@ const LandingPage = () => {
 
                 <div className="flex flex-col justify-center items-center  md:mt-0">
 
-                    <div className="grid lg:grid-cols-2 w-[85%] justify-center">
+                    <div className="grid lg:grid-cols-2 w-[82%] justify-center">
                         <div className=" flex flex-col justify-center items-center lg:items-start ml-6 lg:ml-0">
 
                             <h1 className="text-3xl mb-5">
                                 Get xp from tasks!
                             </h1>
-                            <p className="text-xl mb-10 w-[450px]">
+                            <p className="text-xl mb-10 w-[475px]">
                                 Gain experience points from your day to day tasks!
                             </p>
                             <NavLink to={"/"}>
@@ -91,7 +92,7 @@ const LandingPage = () => {
             </div>
 
             {/* levelup  section*/}
-            <div ref={levelUpSectionRef} className={`hidden lg:flex flex-col justify-center items-center h-[580px] ml-8 transition-opacity ease-in duration-700 ${isLevelUpSectionVisible? "opacity-100" : "opacity-0"}`}>
+            <div ref={levelUpSectionRef} className={`hidden lg:flex flex-col justify-center items-center h-[520px] ml-8 transition-opacity ease-in duration-700 ${isLevelUpSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <div className="grid lg:grid-cols-2 w-[80%] ">
                     <img src={levelImg} width={400} />
                     <div className=" flex flex-col items justify-center">
@@ -172,7 +173,7 @@ const LandingPage = () => {
             {/* What is LifeXP */}
             <div ref={aboutSectionRef} className={`h-[620px] mt-32 mb-10 lg:mb-0 md:mt-0 flex flex-col justify-center items-center space-y-16 transition-opacity ease-in duration-700 ${isAboutSectionVisible? "opacity-100" : "opacity-0"}`}>
                 <h1 className="text-2xl md:text-3xl">What exactly is LifeXP?</h1>
-                <p className="w-[90%] text-center text-lg leading-10 tracking-normal md:text-left md:w-[60%] md:text-xl ">
+                <p className="w-[90%] text-center text-lg leading-10 lg:leading-10 tracking-normal md:text-left md:w-[60%] md:text-xl ">
                     Life XP is a gamified productivity app designed to cater to a broader range of needs beyond task management.
                     Life XP integrates features that focus on emotional well-being, personal development, and highly customizable
                     user engagement models. Life XP aims to be a holistic tool for life management. This innovative blend makes Life XP

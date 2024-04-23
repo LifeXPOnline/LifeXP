@@ -1,15 +1,15 @@
-import {WiStars} from "react-icons/wi";
+import { WiStars } from "react-icons/wi";
 
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional for styling
 
-import {Dispatch, SetStateAction} from "react";
+import { Dispatch, SetStateAction } from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import Work from "./Work";
-import Personal from "./Personal";
 import Fitness from "./Fitness";
+import Personal from "./Personal";
+import Work from "./Work";
 
 interface TasksProps {
     setThePage: Dispatch<SetStateAction<string>>
@@ -22,7 +22,7 @@ const Tasks: React.FC<TasksProps> = ({setThePage}) => {
             "transition-transform duration-200 hover:shadow-sharp-md"
     }
     return (
-        <div className="flex flex-col lg1:border-l md:border-t lg1:rounded-l-md md:border-black w-full lg2:w-9/12 items-center space-y-6">
+        <div className="flex flex-col lg1:border-l md:border-t lg1:rounded-l-md md:border-black w-full lg2:w-9/12 items-center space-y-6 relative">
 
             <div className="flex flex-row mt-20 md:mt-14 items-center w-10/12">
                 <Tippy
@@ -51,7 +51,8 @@ const Tasks: React.FC<TasksProps> = ({setThePage}) => {
 
             {/* Personal */}
             <Personal />
-
+            
+            {/* <Popup /> */}
         </div>
     )
 }

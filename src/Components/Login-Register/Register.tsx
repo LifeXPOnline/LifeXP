@@ -1,8 +1,8 @@
-import {useInputField, IUseInputField} from "../../../Hooks";
-import {LogoWithBrandName} from "../../Reusables";
-import {FormContainer, FormTextFields} from "../../Forms";
-import {NavLink} from "react-router-dom";
-import {register} from "../../../services/auth";
+import { NavLink } from "react-router-dom";
+import { IUseInputField, useInputField } from "../../Hooks";
+import { register } from "../../services/auth";
+import { FormContainer, FormTextFields } from "../Forms";
+import { LogoWithBrandName } from "../Reusables";
 
 
 const Register = () => {

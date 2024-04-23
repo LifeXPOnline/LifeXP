@@ -1,14 +1,15 @@
-import Navbar from "./Components/DashboardPage/Navbar/Navbar"
-import Home from "./Components/DashboardPage/Homepage/Home"
-import Quests from "./Components/DashboardPage/Questpage/Quests"
 import CheckinParent from "./Components/DashboardPage/CheckinPage/CheckinParent"
-import LandingPage from "./Components/LandingPage/LandingPage"
+import Home from "./Components/DashboardPage/Homepage/Home"
+import Navbar from "./Components/DashboardPage/Navbar/Navbar"
+import Quests from "./Components/DashboardPage/Questpage/Quests"
 import Welcomepage from "./Components/DashboardPage/SkillTree/Welcomepage"
+import LandingPage from "./Components/LandingPage/LandingPage"
+import Register from "./Components/Login-Register/Register"
 
 import './index.css'
 
-import {Route, Routes, } from "react-router-dom"
-import Register from "./Components/DashboardPage/Login-Register/Register"
+import { Route, Routes, } from "react-router-dom"
+
 
 
 const App = () => {

@@ -1,8 +1,8 @@
-import {IUseInputField, useInputField} from "../../../Hooks";
-import {FormButton, FormContainer, FormTextFields, Modal} from "../../Forms";
-import {GameIcon} from "../../Icons";
-import {NavLink} from "react-router-dom";
-import {login} from "../../../services/auth";
+import { NavLink } from "react-router-dom";
+import { IUseInputField, useInputField } from "../../Hooks";
+import { login } from "../../services/auth";
+import { FormContainer, FormTextFields, Modal } from "../Forms";
+import { GameIcon } from "../Icons";
 
 interface ILoginForm {
     isOpen: boolean;

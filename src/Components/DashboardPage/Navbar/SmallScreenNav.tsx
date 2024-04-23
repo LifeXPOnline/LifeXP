@@ -1,15 +1,15 @@
-import {RxHamburgerMenu} from 'react-icons/rx'
-import {MdHome} from "react-icons/md";
-import {GiScrollUnfurled, } from "react-icons/gi";
-import {FaTree, FaDoorOpen} from "react-icons/fa";
-import {PiSmileyFill} from "react-icons/pi";
-import {IoMdSettings} from "react-icons/io";
+import { FaDoorOpen, FaTree } from "react-icons/fa";
+import { GiScrollUnfurled, } from "react-icons/gi";
+import { IoMdSettings } from "react-icons/io";
+import { MdHome } from "react-icons/md";
+import { PiSmileyFill } from "react-icons/pi";
+import { RxHamburgerMenu } from 'react-icons/rx';
 
-import {Dispatch, SetStateAction} from 'react';
+import { Dispatch, SetStateAction } from 'react';
 
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 interface SmallScreenNavProps {
     hamburgerOption: boolean
@@ -38,7 +38,7 @@ const SmallScreenNav: React.FC<SmallScreenNavProps> = ({hamburgerOption, setHamb
                 <ul className='flex flex-col items-start space-y-12'>
                     <li >
                         <NavLink
-                            to="/"
+                            to="/home"
                             className={({isActive}) => isActive ? 'active-link2' : ''}
                         >
 
