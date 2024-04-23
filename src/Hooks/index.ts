@@ -1,4 +1,4 @@
-import {useState, useEffect, RefObject} from 'react';
+import { RefObject, useEffect, useState } from 'react';
 
 export const useIsLargeScreen = (): boolean => {
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1024); // breakpoint for window > 1024px
@@ -54,13 +54,13 @@ export const useOutsideClick = <T extends HTMLElement>({
 export interface IUseInputField {
     value: string;
     type: string;
-    onChange: (event: React.SyntheticEvent) => void;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const useInputField = (type: string): IUseInputField => {
     const [value, setValue] = useState<string>("");
 
-    const onChange = (event: React.SyntheticEvent) => {
+    const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         setValue(event.target.value);
     }
