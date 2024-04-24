@@ -33,6 +33,7 @@ const App = () => {
                     <Route path="/checkin" element={<CheckinParent />} />
                     <Route path="/skilltree" element={<Welcomepage />} />
                 </Route>
+                
             </Routes>
         </div>
     )
